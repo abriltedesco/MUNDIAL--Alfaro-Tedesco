@@ -119,8 +119,6 @@ texture_filter = 1
 position = Vector2(550, 413)
 scale = Vector2(3.382811, 3.0056818)
 sprite_frames = SubResource("SpriteFrames_tb13o")
-animation = &"walkR"
-frame_progress = 0.106983535
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1544336448]
 position = Vector2(563, 438)

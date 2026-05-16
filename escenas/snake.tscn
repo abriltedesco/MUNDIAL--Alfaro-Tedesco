@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cm6kwvqnepfuw"]
+
+[ext_resource type="Script" uid="uid://bx1f6hcxjwoy5" path="res://scripts/snake.gd" id="1_kp7at"]
+[ext_resource type="PackedScene" uid="uid://b3k6hw8024aj2" path="res://escenas/serpiente.tscn" id="2_ccv7t"]
+[ext_resource type="Texture2D" uid="uid://3toll55frd6m" path="res://assets/bg.png" id="2_ve2cw"]
+[ext_resource type="PackedScene" uid="uid://cc5c155v6jirh" path="res://escenas/barra_puntaje.tscn" id="3_ve2cw"]
+
+[node name="snake" type="Node2D" unique_id=1677063918]
+script = ExtResource("1_kp7at")
+serpienteEscena = ExtResource("2_ccv7t")
+
+[node name="fondo" type="Sprite2D" parent="." unique_id=1886054209]
+position = Vector2(571.5, 321.5)
+scale = Vector2(0.6151042, 0.65092593)
+texture = ExtResource("2_ve2cw")
+
+[node name="barraPuntaje" parent="." unique_id=1394473309 instance=ExtResource("3_ve2cw")]

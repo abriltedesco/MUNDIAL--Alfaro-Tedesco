@@ -2,8 +2,8 @@ extends Node2D
 @export var serpienteEscena:PackedScene
 var puntaje:int
 var juegoEmpezado:bool=false
-var cantCeldasX:int=20
-var cantCeldasY:int=15
+var cantCeldasX:int=22
+var cantCeldasY:int=12
 var tamanioCelda:int=50 #en pixeles
 
 #serpiente
@@ -11,30 +11,36 @@ var datosViejos:Array
 var datos:Array
 var serpiente: Array
 var posInicio=Vector2(9,2)
-var arriba=Vector2(0,1)
-var abajo=Vector2(-1,0)
+var arriba=Vector2(0,-1)
+var abajo=Vector2(0,1)
 var derecha=Vector2(1,0)
-var izquierda=Vector2(1,1)
+var izquierda=Vector2(-1,0)
 var direccion:Vector2
-var seMueve:bool
-# Called when the node enters the scene tree for the first time.
+var puedeMoverse:bool=true
+
+var comidaPos:Vector2
+var regenerarComida: bool=true
+
 func _ready() -> void:
-	iniciar()
+	nuevoJuego()
 	
-func iniciar() -> void:
+func nuevoJuego():
+	get_tree().paused=false
+	get_tree().call_group("segmentos","queue_free")
+	$game_over.hide()
 	puntaje=0
 	$barraPuntaje.get_node("Label").text="PUNTAJE: "+str(puntaje)
-	direccion=arriba
 	nuevaSerpiente()
+	crearComida()
 	
-func nuevaSerpiente() -> void:
+func nuevaSerpiente():
 	datosViejos.clear()
 	datos.clear()
 	serpiente.clear()
 	for i in range(3):
 		nuevoSegmento(posInicio+Vector2(0,i))
 		
-func nuevoSegmento(pos) -> void:
+func nuevoSegmento(pos):
 	datos.append(pos)
 	var segmentoSerpiente=serpienteEscena.instantiate()
 	segmentoSerpiente.position=(pos*tamanioCelda)+Vector2(0,tamanioCelda)
@@ -42,4 +48,75 @@ func nuevoSegmento(pos) -> void:
 	serpiente.append(segmentoSerpiente)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	mover()
+	
+func mover():
+	if Input.is_action_just_pressed("moverAb") and direccion!=arriba:
+		if puedeMoverse:
+			direccion=abajo
+			puedeMoverse=false
+		if not juegoEmpezado:
+			iniciar()
+	if Input.is_action_just_pressed("moverArr") and direccion!=abajo:
+		if puedeMoverse:
+			direccion=arriba
+			puedeMoverse=false
+		if not juegoEmpezado:
+			iniciar()
+	if Input.is_action_just_pressed("moverI") and direccion!=derecha:
+		if puedeMoverse:
+			direccion=izquierda
+			puedeMoverse=false
+		if not juegoEmpezado:
+			iniciar()
+	if Input.is_action_just_pressed("moverD") and direccion!=izquierda:
+		if puedeMoverse:
+			direccion=derecha
+			puedeMoverse=false
+		if not juegoEmpezado:
+			iniciar()
+			
+func iniciar():
+	juegoEmpezado=true
+	$Timer.start()
+
+func _on_timer_timeout() -> void:
+	puedeMoverse=true
+	datosViejos=[] + datos
+	datos[0]+=direccion
+	for i in range(len(datos)):
+		if i > 0:
+			datos[i]=datosViejos[i - 1]
+		serpiente[i].position= (datos[i]*tamanioCelda)+Vector2(0,tamanioCelda)
+	chequearEstaEnMapa()
+	chequearComida()
+	
+func chequearEstaEnMapa():
+	if datos[0].x<0 or datos[0].x>cantCeldasX-1 or datos[0].y<0 or datos[0].y>cantCeldasY-1:
+		perder()
+		
+func chequearComida():
+	if datos[0]==comidaPos:
+		puntaje+=1
+		$barraPuntaje.get_node("Label").text="PUNTAJE: "+str(puntaje)
+		nuevoSegmento(datosViejos[-1])
+		crearComida()
+		
+func crearComida():
+	while regenerarComida:
+		regenerarComida=false
+		comidaPos=Vector2(randi_range(0,cantCeldasX-1), randi_range(0,cantCeldasY-1))
+		for i in datos:
+			if comidaPos==i:
+				regenerarComida=true
+	$comida.position=(comidaPos*tamanioCelda+Vector2(0, tamanioCelda))
+	regenerarComida=true
+func perder():
+	get_tree().paused=true
+	juegoEmpezado=false
+	$game_over.show()
+	$Timer.stop()
+
+
+func _on_game_over_reempezar() -> void:
+	nuevoJuego()

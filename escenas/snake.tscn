@@ -4,14 +4,29 @@
 [ext_resource type="PackedScene" uid="uid://b3k6hw8024aj2" path="res://escenas/serpiente.tscn" id="2_ccv7t"]
 [ext_resource type="Texture2D" uid="uid://3toll55frd6m" path="res://assets/bg.png" id="2_ve2cw"]
 [ext_resource type="PackedScene" uid="uid://cc5c155v6jirh" path="res://escenas/barra_puntaje.tscn" id="3_ve2cw"]
+[ext_resource type="Texture2D" uid="uid://byt2bbdiutgoe" path="res://assets/apple.png" id="5_jr4iw"]
+[ext_resource type="PackedScene" uid="uid://b76spwqv0xhsr" path="res://escenas/game_over.tscn" id="6_mr7gd"]
 
 [node name="snake" type="Node2D" unique_id=1677063918]
 script = ExtResource("1_kp7at")
 serpienteEscena = ExtResource("2_ccv7t")
 
 [node name="fondo" type="Sprite2D" parent="." unique_id=1886054209]
-position = Vector2(571.5, 321.5)
-scale = Vector2(0.6151042, 0.65092593)
+position = Vector2(576.5, 350.00003)
+scale = Vector2(0.5994792, 0.5537038)
 texture = ExtResource("2_ve2cw")
 
 [node name="barraPuntaje" parent="." unique_id=1394473309 instance=ExtResource("3_ve2cw")]
+
+[node name="Timer" type="Timer" parent="." unique_id=384258272]
+wait_time = 0.1
+
+[node name="comida" type="Sprite2D" parent="." unique_id=433594477]
+texture = ExtResource("5_jr4iw")
+offset = Vector2(25, 25)
+
+[node name="game_over" parent="." unique_id=240897710 instance=ExtResource("6_mr7gd")]
+process_mode = 2
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="reempezar" from="game_over" to="." method="_on_game_over_reempezar"]

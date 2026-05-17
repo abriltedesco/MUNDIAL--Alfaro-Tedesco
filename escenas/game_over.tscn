@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://b76spwqv0xhsr"]
+
+[ext_resource type="FontFile" uid="uid://pr6n8kfsqxqb" path="res://assets/retropix.ttf" id="1_5bjgx"]
+[ext_resource type="Script" uid="uid://b04cyf6nkw8dl" path="res://game_over.gd" id="1_8d5yl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8d5yl"]
+bg_color = Color(0.2627451, 0.53333336, 0.1882353, 1)
+shadow_color = Color(0, 0, 0, 0.14901961)
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2mkai"]
+bg_color = Color(0.62352943, 0.8901961, 0.45490196, 1)
+border_color = Color(0.62352943, 0.8901961, 0.45490196, 0)
+expand_margin_left = 10.0
+expand_margin_top = 5.0
+expand_margin_right = 10.0
+expand_margin_bottom = 5.0
+
+[node name="game_over" type="CanvasLayer" unique_id=240897710]
+script = ExtResource("1_8d5yl")
+
+[node name="Panel" type="Panel" parent="." unique_id=1092049641]
+offset_left = 422.0
+offset_top = 209.0
+offset_right = 722.0
+offset_bottom = 409.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8d5yl")
+
+[node name="Label" type="Label" parent="." unique_id=203435016]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -72.0
+offset_top = -52.5
+offset_right = 72.0
+offset_bottom = -19.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_5bjgx")
+theme_override_font_sizes/font_size = 30
+text = "PERDISTE :("
+
+[node name="Button" type="Button" parent="." unique_id=1009980199]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.0
+offset_top = -9.0
+offset_right = 58.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.12050641, 0.39230052, 0, 1)
+theme_override_fonts/font = ExtResource("1_5bjgx")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2mkai")
+text = "Volver a intentar"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

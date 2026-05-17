@@ -7,7 +7,7 @@ corner_radius_top_right = 2
 corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
 
-[node name="serpiente" type="Panel" unique_id=758491510]
+[node name="serpiente" type="Panel" unique_id=758491510 groups=["segmentos"]]
 offset_right = 50.0
 offset_bottom = 50.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_i86a8")

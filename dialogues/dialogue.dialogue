@@ -1,0 +1,18 @@
+~ start
+Kiki: Hola Nani
+Nani: Hola Kiki..
+do nani.play("llorando")
+Kiki: ¿Qué pasó? ¿Por qué lloras?
+Nani: Perdí todos mis huesitos por el mundo...
+do kiki.play("ladrar")
+Kiki: No te preocupes! Yo te ayudaré a buscarlos
+do kiki.play("walkF")
+Nani: Pero... no podemos solas.
+Kiki: Tienes razón... [wait=3] AY! Ya se quien podría ayudarnos
+Nani: Enserio????
+Kiki: Si!!! [wait=2] ¿Te unirás a nuestra aventura?
+- ¡Por supuesto que las ayudaré! 
+- No puedo ahora... => END
+Kiki: Que alegróa que te nos unas!
+Nani: Muchas gracias por darme la pata! Se que juntos lo lograremos.
+~ END

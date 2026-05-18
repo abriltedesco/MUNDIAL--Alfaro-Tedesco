@@ -1,12 +1,14 @@
 extends CharacterBody2D
 @onready var animacion = $AnimatedSprite2D
+var movIntro = false
 const SPEED = 200.0 
 
 func _ready() -> void:
 	animacion.play("default")
 
 func _physics_process(delta: float) -> void:
-	moverse()
+	if !movIntro:
+		moverse()
 	
 func moverse() -> void:
 	var dir = Vector2.ZERO
@@ -30,3 +32,6 @@ func moverse() -> void:
 		
 	velocity = dir.normalized() * SPEED
 	move_and_slide()
+
+func play(nombreAnimacion: String) -> void:
+	animacion.play(nombreAnimacion)

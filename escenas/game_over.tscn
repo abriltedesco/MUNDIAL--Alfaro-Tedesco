@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b76spwqv0xhsr"]
 
 [ext_resource type="FontFile" uid="uid://pr6n8kfsqxqb" path="res://assets/retropix.ttf" id="1_5bjgx"]
-[ext_resource type="Script" uid="uid://b04cyf6nkw8dl" path="res://game_over.gd" id="1_8d5yl"]
+[ext_resource type="Script" uid="uid://b04cyf6nkw8dl" path="res://scripts/game_over.gd" id="1_8d5yl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8d5yl"]
 bg_color = Color(0.2627451, 0.53333336, 0.1882353, 1)

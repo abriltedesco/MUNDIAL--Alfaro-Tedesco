@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bvdtnvamehtfy"]
+
+[ext_resource type="Script" uid="uid://bg2s24wcyqaxx" path="res://scripts/introduccion.gd" id="1_bgv6q"]
+[ext_resource type="PackedScene" uid="uid://dx33uyvug4c1i" path="res://escenas/dog2.tscn" id="2_2tfop"]
+[ext_resource type="PackedScene" uid="uid://dueiv3oruaibj" path="res://escenas/dog1.tscn" id="3_m7esa"]
+
+[node name="introduccion" type="Node2D" unique_id=795473019]
+script = ExtResource("1_bgv6q")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=599266698]
+offset_right = 1157.0
+offset_bottom = 640.0
+color = Color(0.69411767, 0.5411765, 0.46666667, 1)
+
+[node name="nani" parent="." unique_id=32347266 instance=ExtResource("2_2tfop")]
+position = Vector2(798, 242)
+
+[node name="kiki" parent="." unique_id=2074595676 instance=ExtResource("3_m7esa")]
+position = Vector2(19, -203)

@@ -145,11 +145,10 @@ script = ExtResource("1_sxf1b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1195439473]
 texture_filter = 1
-position = Vector2(519, 427.5)
 scale = Vector2(3.3125014, 3.1212113)
 sprite_frames = SubResource("SpriteFrames_eweag")
 animation = &"ladrar"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=813979889]
-position = Vector2(518, 445)
+position = Vector2(0, 18)
 shape = SubResource("RectangleShape2D_fxkju")

@@ -79,6 +79,13 @@ dialogic_default_action={
 
 locale/translations_pot_files=PackedStringArray("res://dialogues/dialogue.dialogue")
 
+[layer_names]
+
+2d_physics/layer_1="perro"
+2d_physics/layer_2="entorno"
+2d_physics/layer_3="enemigo"
+2d_physics/layer_4="huesos"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

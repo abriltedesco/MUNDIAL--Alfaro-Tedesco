@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bu8uk5nrke6e0"]
+
+[ext_resource type="Texture2D" uid="uid://bfq2ln3fx0ex7" path="res://assets/Textured_Brick_03-128x32.png" id="1_vnx3b"]
+[ext_resource type="Script" uid="uid://bude2x481tyql" path="res://gds/ladrillo.gd" id="2_0gopq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0gopq"]
+size = Vector2(128, 32)
+
+[node name="ladrillo" type="StaticBody2D" unique_id=498220206]
+script = ExtResource("2_0gopq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1392215475]
+texture_filter = 1
+texture = ExtResource("1_vnx3b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1117718353]
+shape = SubResource("RectangleShape2D_0gopq")

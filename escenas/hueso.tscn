@@ -8,7 +8,8 @@ radius = 4.8901978
 height = 22.574951
 
 [node name="hueso" type="Area2D" unique_id=686890677]
-collision_layer = 2
+scale = Vector2(1.5, 1.5)
+collision_layer = 8
 script = ExtResource("1_aw50r")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1378385826]

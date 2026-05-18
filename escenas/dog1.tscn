@@ -137,10 +137,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fxkju"]
-size = Vector2(53, 43)
+size = Vector2(53, 51.5)
 
 [node name="kiki" type="CharacterBody2D" unique_id=2074595676]
-collision_mask = 2
+collision_mask = 6
 script = ExtResource("1_sxf1b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1195439473]
@@ -150,5 +150,5 @@ sprite_frames = SubResource("SpriteFrames_eweag")
 animation = &"ladrar"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=813979889]
-position = Vector2(0, 18)
+position = Vector2(0, 22.25)
 shape = SubResource("RectangleShape2D_fxkju")

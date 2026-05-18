@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://btjwwo6m6a16o"]
+
+[ext_resource type="Script" uid="uid://dowik2rtlf3f0" path="res://gds/paleta.gd" id="1_esf1k"]
+[ext_resource type="Texture2D" uid="uid://dremrwtgbftj0" path="res://assets/paddle.png" id="2_q82lm"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4kmjt"]
+radius = 47.981922
+height = 615.9546
+
+[node name="paleta" type="CharacterBody2D" unique_id=1167816071]
+motion_mode = 1
+script = ExtResource("1_esf1k")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=837255873]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_q82lm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1568746647]
+rotation = 1.5719244
+scale = Vector2(0.25, 0.25)
+shape = SubResource("CapsuleShape2D_4kmjt")

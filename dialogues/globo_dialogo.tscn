@@ -66,8 +66,9 @@ PanelContainer/styles/panel = SubResource("StyleBoxFlat_qkmqt")
 [sub_resource type="Theme" id="Theme_pky7w"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wvjsw"]
-bg_color = Color(0.46167338, 0.33917302, 0.27908638, 1)
+bg_color = Color(0.3363585, 0.5286541, 0.62174183, 1)
 border_color = Color(0, 0, 0, 1)
+corner_detail = 12
 
 [sub_resource type="Animation" id="Animation_nlsx6"]
 length = 0.001
@@ -106,12 +107,23 @@ _data = {
 }
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pky7w"]
-bg_color = Color(0.4627451, 0.3372549, 0.2784314, 1)
+bg_color = Color(0.3372549, 0.5294118, 0.62352943, 1)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
 border_color = Color(0, 0, 0, 1)
+expand_margin_top = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pky7w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rvau3"]
+bg_color = Color(0.1669032, 0.28998426, 0.3495988, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wvjsw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rvau3"]
 
 [node name="ExampleBalloon" type="CanvasLayer" unique_id=1434168376]
 layer = 100
@@ -134,12 +146,11 @@ anchor_left = 0.28819445
 anchor_top = 0.662037
 anchor_right = 0.8680556
 anchor_bottom = 0.92901236
-offset_left = -89.0
-offset_top = -4.0
-offset_right = -64.0
-offset_bottom = -4.0
-grow_horizontal = 2
-grow_vertical = 0
+offset_left = -47.0
+offset_top = -345.0
+offset_right = -115.0
+offset_bottom = -368.0
+grow_vertical = 2
 theme = SubResource("Theme_pky7w")
 
 [node name="PanelContainer" type="PanelContainer" parent="Balloon/MarginContainer" unique_id=810051587]
@@ -196,9 +207,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -212.75
-offset_top = -329.0
+offset_top = -399.0
 offset_right = 212.75
-offset_bottom = -259.0
+offset_bottom = -329.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_vertical = 8
@@ -210,6 +221,10 @@ response_template = NodePath("ResponseExample")
 [node name="ResponseExample" type="Button" parent="Balloon/ResponsesMenu" unique_id=914537232]
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_pky7w")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pky7w")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rvau3")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_wvjsw")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rvau3")
 text = "Response example"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1116280512]

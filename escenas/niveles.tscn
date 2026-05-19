@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://btljtapri4lxh"]
+
+[ext_resource type="Texture2D" uid="uid://bpxundketmokr" path="res://assets/mundo.jpg" id="1_n0pam"]
+[ext_resource type="PackedScene" uid="uid://s0oepovxt0vb" path="res://escenas/candado.tscn" id="2_g6lji"]
+
+[node name="mundo" type="Node2D" unique_id=1570216129]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2139303823]
+offset_right = 1148.0
+offset_bottom = 648.0
+mouse_filter = 2
+texture = ExtResource("1_n0pam")
+
+[node name="candado" parent="." unique_id=1283534197 instance=ExtResource("2_g6lji")]
+position = Vector2(347, 494)
+
+[node name="candado3" parent="." unique_id=1781934707 instance=ExtResource("2_g6lji")]
+position = Vector2(668, 198)
+numNivel = 3
+
+[node name="candado4" parent="." unique_id=1632938465 instance=ExtResource("2_g6lji")]
+position = Vector2(958, 504)
+numNivel = 4
+
+[node name="candado2" parent="." unique_id=102005199 instance=ExtResource("2_g6lji")]
+position = Vector2(202, 222)
+numNivel = 2

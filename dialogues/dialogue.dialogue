@@ -16,4 +16,5 @@ Kiki: Si!!! [wait=2] ¿Te unirás a nuestra aventura?
 	do get_tree().quit()
 Kiki: Que alegría que te nos unas!
 Nani: Muchas gracias por darme la pata! Se que juntos lo lograremos.
+do get_tree().change_scene_to_file("res://escenas/niveles.tcsn")
 => END

@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://b2hdpk22vrasj" path="res://scripts/dog_2.gd" id="1_1l066"]
 [ext_resource type="Texture2D" uid="uid://crvpywvtfi1t3" path="res://assets/dogs/goldie.png" id="1_q6qqt"]
-[ext_resource type="Texture2D" uid="uid://ca0be03qcw76u" path="res://characters/triste.png" id="2_u644f"]
-[ext_resource type="Texture2D" uid="uid://bplcuyfphg3o5" path="res://characters/llorando1.png" id="3_1l066"]
-[ext_resource type="Texture2D" uid="uid://dgjrcyjnjpf6o" path="res://characters/llorando2.png" id="4_hh77p"]
+[ext_resource type="Texture2D" uid="uid://8gu6trhek6gp" path="res://assets/dogs/triste.png" id="3_1l066"]
+[ext_resource type="Texture2D" uid="uid://dq1qxqx4wun6q" path="res://assets/dogs/llorando1.png" id="4_hh77p"]
+[ext_resource type="Texture2D" uid="uid://0plt7pxmnihk" path="res://assets/dogs/llorando2.png" id="5_3hcfe"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8uoa2"]
 atlas = ExtResource("1_q6qqt")
@@ -19,16 +19,16 @@ atlas = ExtResource("1_q6qqt")
 region = Rect2(96, 0, 32, 33)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b8rlx"]
-atlas = ExtResource("2_u644f")
-region = Rect2(25, 39, 404, 451)
+atlas = ExtResource("3_1l066")
+region = Rect2(0, 0, 453, 515)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ms31e"]
-atlas = ExtResource("3_1l066")
-region = Rect2(39, 47, 380, 437)
+atlas = ExtResource("4_hh77p")
+region = Rect2(0, 0, 453, 515)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uoglb"]
-atlas = ExtResource("4_hh77p")
-region = Rect2(39, 47, 380, 437)
+atlas = ExtResource("5_3hcfe")
+region = Rect2(0, 0, 453, 515)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u644f"]
 atlas = ExtResource("1_q6qqt")
@@ -180,10 +180,10 @@ script = ExtResource("1_1l066")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1501835711]
 texture_filter = 1
-position = Vector2(-10, -12)
-scale = Vector2(4, 3.428)
+position = Vector2(1.9073486e-06, 4.000001)
+scale = Vector2(0.2294426, 0.23103276)
 sprite_frames = SubResource("SpriteFrames_tb13o")
-animation = &"sleep"
+animation = &"llorando"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1544336448]
 position = Vector2(-2, 16)

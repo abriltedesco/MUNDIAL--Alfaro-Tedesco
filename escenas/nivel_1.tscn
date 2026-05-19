@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c52ob5hy8jrwh" path="res://escenas/hueso.tscn" id="3_rgjns"]
 
 [node name="nivel1" type="Node2D" unique_id=1647993528]
+position = Vector2(4, 0)
 metadata/_edit_vertical_guides_ = [-874.0]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1198513327]

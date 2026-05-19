@@ -13,7 +13,7 @@ offset_bottom = 640.0
 color = Color(0.69411767, 0.5411765, 0.46666667, 1)
 
 [node name="nani" parent="." unique_id=32347266 instance=ExtResource("2_2tfop")]
-position = Vector2(798, 242)
+position = Vector2(827, 227)
 
 [node name="kiki" parent="." unique_id=2074595676 instance=ExtResource("3_m7esa")]
-position = Vector2(165, -192)
+position = Vector2(64, 34)

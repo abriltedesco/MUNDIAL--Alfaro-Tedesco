@@ -19,3 +19,6 @@ func _ready() -> void:
 	var escenaGlobo = load("res://dialogues/globo_dialogo.tscn").instantiate()
 	add_child(escenaGlobo)
 	escenaGlobo.start(dialogo, "start", [self])
+	
+	await DialogueManager.dialogue_ended
+	get_tree().change_scene_to_file("res://escenas/nivel_1.tscn")

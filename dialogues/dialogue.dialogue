@@ -11,8 +11,9 @@ Nani: Pero... no podemos solas.
 Kiki: Tienes razón... [wait=3] AY! Ya se quien podría ayudarnos
 Nani: Enserio????
 Kiki: Si!!! [wait=2] ¿Te unirás a nuestra aventura?
-- ¡Por supuesto que las ayudaré! 
-- No puedo ahora... => END
-Kiki: Que alegróa que te nos unas!
+- ¡Por supuesto que las ayudaré!
+- No puedo ahora...
+	do get_tree().quit()
+Kiki: Que alegría que te nos unas!
 Nani: Muchas gracias por darme la pata! Se que juntos lo lograremos.
-~ END
+=> END

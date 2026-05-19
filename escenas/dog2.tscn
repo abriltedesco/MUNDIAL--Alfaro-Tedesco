@@ -176,6 +176,7 @@ animations = [{
 size = Vector2(37.75, 15.5)
 
 [node name="nani" type="CharacterBody2D" unique_id=32347266]
+collision_mask = 6
 script = ExtResource("1_1l066")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1501835711]

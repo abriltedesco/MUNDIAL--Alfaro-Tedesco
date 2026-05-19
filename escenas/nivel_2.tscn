@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://cs0gsof0v85xj"]
+
+[ext_resource type="Texture2D" uid="uid://dwo834m0rocd6" path="res://assets/china.webp" id="1_rcqas"]
+[ext_resource type="PackedScene" uid="uid://cmxphiwuuykvs" path="res://escenas/dragon.tscn" id="2_h74xc"]
+[ext_resource type="PackedScene" uid="uid://dx33uyvug4c1i" path="res://escenas/dog2.tscn" id="2_wyhoh"]
+[ext_resource type="PackedScene" uid="uid://c52ob5hy8jrwh" path="res://escenas/hueso.tscn" id="4_h74xc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wyhoh"]
+size = Vector2(1223, 20)
+
+[node name="nivel_2" type="Node2D" unique_id=1294128552]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1911484944]
+offset_right = 1162.0
+offset_bottom = 655.0
+texture = ExtResource("1_rcqas")
+
+[node name="nani" parent="." unique_id=32347266 instance=ExtResource("2_wyhoh")]
+position = Vector2(211, 577)
+
+[node name="dragon" parent="." unique_id=354094147 instance=ExtResource("2_h74xc")]
+position = Vector2(738, 564)
+scale = Vector2(4, 4)
+
+[node name="Limites" type="StaticBody2D" parent="." unique_id=708135692]
+collision_layer = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Limites" unique_id=761197665]
+polygon = PackedVector2Array(10, 644, 546, 517, 616, 512, 1164, 649, 1156, 6, 4, -7)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites" unique_id=2032867440]
+position = Vector2(588.5, 655)
+shape = SubResource("RectangleShape2D_wyhoh")
+
+[node name="hueso" parent="." unique_id=686890677 instance=ExtResource("4_h74xc")]
+position = Vector2(464, 322)

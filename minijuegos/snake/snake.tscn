@@ -1,15 +1,36 @@
 [gd_scene format=3 uid="uid://cm6kwvqnepfuw"]
 
-[ext_resource type="Script" uid="uid://bx1f6hcxjwoy5" path="res://scripts/snake.gd" id="1_kp7at"]
-[ext_resource type="PackedScene" uid="uid://b3k6hw8024aj2" path="res://escenas/serpiente.tscn" id="2_ccv7t"]
+[ext_resource type="Script" uid="uid://bx1f6hcxjwoy5" path="res://minijuegos/snake/snake.gd" id="1_kp7at"]
 [ext_resource type="Texture2D" uid="uid://3toll55frd6m" path="res://assets/bg.png" id="2_ve2cw"]
-[ext_resource type="PackedScene" uid="uid://cc5c155v6jirh" path="res://escenas/barra_puntaje.tscn" id="3_ve2cw"]
-[ext_resource type="Texture2D" uid="uid://byt2bbdiutgoe" path="res://assets/apple.png" id="5_jr4iw"]
-[ext_resource type="PackedScene" uid="uid://b76spwqv0xhsr" path="res://escenas/game_over.tscn" id="6_mr7gd"]
+[ext_resource type="PackedScene" uid="uid://cc5c155v6jirh" path="res://minijuegos/snake/barra_puntaje.tscn" id="3_ve2cw"]
+[ext_resource type="Texture2D" uid="uid://cyprh18cosxvc" path="res://minijuegos/snake/apple.png" id="4_2mq6b"]
+[ext_resource type="PackedScene" uid="uid://b76spwqv0xhsr" path="res://minijuegos/snake/game_over.tscn" id="6_mr7gd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i86a8"]
+bg_color = Color(0.37876904, 0.6914442, 0.23968402, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="PackedScene" id="PackedScene_jr4iw"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"id_paths": [],
+"names": PackedStringArray("serpiente", "Panel", "segmentos", "offset_right", "offset_bottom", "theme_override_styles/panel"),
+"node_count": 1,
+"node_ids": PackedInt32Array(758491510),
+"node_paths": [],
+"nodes": PackedInt32Array(-1, -1, 1, 0, -1, 3, 3, 0, 4, 1, 5, 2, 1, 2),
+"variants": [50.0, 50.0, SubResource("StyleBoxFlat_i86a8")],
+"version": 3
+}
 
 [node name="snake" type="Node2D" unique_id=1677063918]
 script = ExtResource("1_kp7at")
-serpienteEscena = ExtResource("2_ccv7t")
+serpienteEscena = SubResource("PackedScene_jr4iw")
 
 [node name="fondo" type="Sprite2D" parent="." unique_id=1886054209]
 position = Vector2(576.5, 350.00003)
@@ -22,7 +43,7 @@ texture = ExtResource("2_ve2cw")
 wait_time = 0.1
 
 [node name="comida" type="Sprite2D" parent="." unique_id=433594477]
-texture = ExtResource("5_jr4iw")
+texture = ExtResource("4_2mq6b")
 offset = Vector2(25, 25)
 
 [node name="game_over" parent="." unique_id=240897710 instance=ExtResource("6_mr7gd")]

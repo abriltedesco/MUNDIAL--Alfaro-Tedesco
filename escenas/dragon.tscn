@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cmxphiwuuykvs"]
+
+[ext_resource type="Texture2D" uid="uid://bwhoam5ydeuii" path="res://assets/dragon.png" id="1_0cqr8"]
+[ext_resource type="Script" uid="uid://c6knislmoitxf" path="res://scripts/dragon.gd" id="1_io5n6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_io5n6"]
+radius = 20.615528
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0cqr8"]
+radius = 38.118237
+
+[node name="dragon" type="StaticBody2D" unique_id=354094147]
+script = ExtResource("1_io5n6")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=707751171]
+texture = ExtResource("1_0cqr8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1964636462]
+shape = SubResource("CircleShape2D_io5n6")
+
+[node name="ZonaDialogo" type="Area2D" parent="." unique_id=1715561789]
+position = Vector2(-3, 4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaDialogo" unique_id=245943639]
+position = Vector2(-4, 1)
+shape = SubResource("CircleShape2D_0cqr8")
+
+[connection signal="body_entered" from="ZonaDialogo" to="." method="_on_zona_dialogo_body_entered"]

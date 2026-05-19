@@ -18,3 +18,19 @@ Kiki: Que alegría que te nos unas!
 Nani: Muchas gracias por darme la pata! Se que juntos lo lograremos.
 do get_tree().change_scene_to_file("res://escenas/niveles.tcsn")
 => END
+
+
+
+~ charla_serpiente
+Serpiente: Ay perrito penzzazz que te dare azzzi de rapido el huezzzito? ja!
+Serpiente: Si quierezz que te lo devuelva deberás zzuperar mi juego...
+- Jugar
+	do irAlMinijuego()
+=> END
+
+~ charla_dragon
+Dragon: Podras haber superado a la serpiente pero dudo que a mi... 
+Dragon: Te reto a que lo intentes
+- Jugar
+	do irAlMinijuego()
+=> END

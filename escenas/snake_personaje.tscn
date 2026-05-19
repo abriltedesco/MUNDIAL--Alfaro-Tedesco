@@ -1,18 +1,32 @@
 [gd_scene format=3 uid="uid://grc1h0aer7ce"]
 
 [ext_resource type="Texture2D" uid="uid://cd4thvlohn8gy" path="res://assets/snake.png" id="1_3lhxi"]
+[ext_resource type="Script" uid="uid://lwpm141c1t1n" path="res://scripts/snake_personaje.gd" id="1_s74oe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s74oe"]
-size = Vector2(120, 117)
+size = Vector2(88, 95)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3lhxi"]
+radius = 110.82531
 
 [node name="snakePersonaje" type="StaticBody2D" unique_id=189556083]
 light_mask = 0
 visibility_layer = 4
 collision_layer = 4
+script = ExtResource("1_s74oe")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=572072332]
 texture = ExtResource("1_3lhxi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1093330030]
-position = Vector2(3, -0.5)
+position = Vector2(2, 0.5)
 shape = SubResource("RectangleShape2D_s74oe")
+
+[node name="ZonaDialogo" type="Area2D" parent="." unique_id=733019172]
+position = Vector2(3, -0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaDialogo" unique_id=995203091]
+position = Vector2(-28, 17.5)
+shape = SubResource("CircleShape2D_3lhxi")
+
+[connection signal="body_entered" from="ZonaDialogo" to="." method="_on_zona_dialogo_body_entered"]

@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://d1j5hy7idyra2"]
+
+[ext_resource type="Script" uid="uid://dlhn2xiuestnw" path="res://minijuegos/catcher/catcher.gd" id="1_1i6gj"]
+[ext_resource type="PackedScene" uid="uid://dimn784ocrf4i" path="res://minijuegos/catcher/kikiCatcher.tscn" id="1_r7v1j"]
+[ext_resource type="PackedScene" uid="uid://b6fop0038m08w" path="res://minijuegos/catcher/objeto.tscn" id="2_bnarl"]
+[ext_resource type="PackedScene" uid="uid://past6dx8elys" path="res://minijuegos/catcher/barra_puntaje.tscn" id="5_2yt0b"]
+[ext_resource type="Texture2D" uid="uid://3toll55frd6m" path="res://assets/bg.png" id="6_2yt0b"]
+[ext_resource type="PackedScene" uid="uid://3dhmde027lpv" path="res://minijuegos/catcher/game_over.tscn" id="6_lmv6b"]
+
+[node name="catcher" type="Node2D" unique_id=688498017]
+script = ExtResource("1_1i6gj")
+
+[node name="fondo" type="Sprite2D" parent="." unique_id=1122352044]
+position = Vector2(576.5, 350.00003)
+scale = Vector2(0.5994792, 0.5537038)
+texture = ExtResource("6_2yt0b")
+
+[node name="kikiCatcher" parent="." unique_id=2074595676 instance=ExtResource("1_r7v1j")]
+position = Vector2(165, 588)
+
+[node name="objeto" parent="." unique_id=407178618 instance=ExtResource("2_bnarl")]
+position = Vector2(39, 25)
+
+[node name="barraPuntaje" parent="." unique_id=1394473309 instance=ExtResource("5_2yt0b")]
+
+[node name="Timer" type="Timer" parent="." unique_id=248149387]
+wait_time = 1.5
+autostart = true
+
+[node name="game_over" parent="." unique_id=637978623 instance=ExtResource("6_lmv6b")]
+
+[connection signal="catchObjetoBueno" from="kikiCatcher" to="." method="_on_kiki_catcher_catch_objeto_bueno"]
+[connection signal="catchObjetoMalo" from="kikiCatcher" to="." method="_on_kiki_catcher_catch_objeto_malo"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="reempezar" from="game_over" to="." method="_on_game_over_reempezar"]

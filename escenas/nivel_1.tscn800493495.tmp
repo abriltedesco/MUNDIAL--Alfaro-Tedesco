@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://ci2gq246b2yt0"]
+
+[ext_resource type="Texture2D" uid="uid://ctyqpbcx1fsfx" path="res://assets/rioDeJaneiro.jpg" id="1_oh5vl"]
+[ext_resource type="PackedScene" uid="uid://dueiv3oruaibj" path="res://escenas/dog1.tscn" id="2_rgjns"]
+[ext_resource type="PackedScene" uid="uid://grc1h0aer7ce" path="res://escenas/snake_personaje.tscn" id="3_43uub"]
+[ext_resource type="PackedScene" uid="uid://c52ob5hy8jrwh" path="res://escenas/hueso.tscn" id="3_rgjns"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_43uub"]
+size = Vector2(680.5, 20)
+
+[node name="nivel1" type="Node2D" unique_id=1647993528]
+position = Vector2(4, 0)
+metadata/_edit_vertical_guides_ = [-874.0]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1198513327]
+offset_left = -2.0
+offset_top = 1.0
+offset_right = 1156.0
+offset_bottom = 648.0
+size_flags_horizontal = 3
+texture = ExtResource("1_oh5vl")
+
+[node name="kiki" parent="." unique_id=2074595676 instance=ExtResource("2_rgjns")]
+visibility_layer = 2
+position = Vector2(57, 593)
+
+[node name="snakePersonaje" parent="." unique_id=189556083 instance=ExtResource("3_43uub")]
+position = Vector2(741, 401)
+
+[node name="hueso" parent="." unique_id=686890677 instance=ExtResource("3_rgjns")]
+position = Vector2(437, 112)
+
+[node name="Limites" type="StaticBody2D" parent="." unique_id=1907969333]
+position = Vector2(37, 66)
+collision_layer = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Limites" unique_id=1846914122]
+light_mask = 2
+position = Vector2(-37, -70)
+polygon = PackedVector2Array(-12, 9, -7, 494, 472, 405, 806, 365, 1034, 346, 865, 420, 742, 507, 651, 613, 620, 652, 1162, 655, 1157, 4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites" unique_id=85954502]
+position = Vector2(289.75, 589)
+shape = SubResource("RectangleShape2D_43uub")

@@ -16,7 +16,6 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 
 [autoload]
 
-Dialogic="uid://ds2q0uclmolvu"
 DialogueManager="*uid://c3rodes2l3gxb"
 Progreso="*uid://bbyagrlq7nlyc"
 

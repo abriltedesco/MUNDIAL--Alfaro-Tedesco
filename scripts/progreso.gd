@@ -1,10 +1,20 @@
 extends Node
-var nivelDesbloq  =1
+
+const rutaGuardado = "user://partida.tres"
+var datos: DatosJuego
 
 func _ready() -> void:
-	pass # Replace with function body.
+	cargarPartida()
 
+func cargarPartida() -> void:
+	if ResourceLoader.exists(rutaGuardado):
+		datos = load(rutaGuardado)
+		print("cargada")
+	else:
+		# si juega x primera vez, creamos una planilla nueva en blanco
+		datos = DatosJuego.new()
+		print("planilla nueva creada")
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func guardarPartida() -> void:
+	ResourceSaver.save(datos, rutaGuardado)
+	print("partida guardada")

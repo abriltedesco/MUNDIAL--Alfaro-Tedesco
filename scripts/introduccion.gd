@@ -21,4 +21,8 @@ func _ready() -> void:
 	escenaGlobo.start(dialogo, "start", [self])
 	
 	await DialogueManager.dialogue_ended
-	get_tree().change_scene_to_file("res://escenas/nivel_1.tscn")
+	
+	Progreso.datos.vioIntro = true
+	Progreso.guardarPartida() 
+	
+	get_tree().change_scene_to_file("res://escenas/niveles.tscn")

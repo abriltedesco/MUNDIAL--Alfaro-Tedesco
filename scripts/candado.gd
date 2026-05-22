@@ -11,7 +11,7 @@ func _ready() -> void:
 	mouse_exited.connect(_on_mouse_exited)
 	$Label.text = str(numNivel)
 		
-	if numNivel <= Progreso.nivelDesbloq:
+	if numNivel <= Progreso.datos.nivelDesbloq:
 		$spriteCerrado.visible = false
 		$spriteAbierto.visible = true
 		establoq = false

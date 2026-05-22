@@ -32,9 +32,21 @@ func restar_ladrillo() -> void:
 	cantLadrillos -= 1
 	
 	if cantLadrillos <= 0:
+		ganar()
+
+func ganar() -> void:
+		Progreso.datos.huesitosRecolectado+=1
+		if Progreso.datos.nivelDesbloq < 3:
+			Progreso.datos.nivelDesbloq = 3
+		Progreso.guardarPartida()
+		
 		ganasteCartel.visible = true
 		$pelota.activa = false
 		
+		await get_tree().create_timer(2.0).timeout 
+		get_tree().change_scene_to_file("res://escenas/niveles.tscn")
+
+
 # calculo para q quede lindo y centrado la matriz de ladrillos por ancho y alto
 func generar_grilla() -> void:
 	var ancho_total = cols * ancho + (cols - 1) * sepX 
@@ -76,4 +88,4 @@ func _on_pelota_vidas_perdidas() -> void:
 	gameOverCartel.visible = true
 	
 	await get_tree().create_timer(3.5).timeout 
-	await get_tree().change_scene_to_file("res://minijuegos/arkanoid/escenas/menu.tscn") 
+	await get_tree().reload_current_scene()

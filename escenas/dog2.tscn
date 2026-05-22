@@ -3,8 +3,10 @@
 [ext_resource type="Script" uid="uid://b2hdpk22vrasj" path="res://scripts/dog_2.gd" id="1_1l066"]
 [ext_resource type="Texture2D" uid="uid://crvpywvtfi1t3" path="res://assets/dogs/goldie.png" id="1_q6qqt"]
 [ext_resource type="Texture2D" uid="uid://8gu6trhek6gp" path="res://assets/dogs/triste.png" id="3_1l066"]
+[ext_resource type="Texture2D" uid="uid://dastcc0er1lgu" path="res://assets/dogs/llorando3.png" id="3_3hcfe"]
 [ext_resource type="Texture2D" uid="uid://dq1qxqx4wun6q" path="res://assets/dogs/llorando1.png" id="4_hh77p"]
 [ext_resource type="Texture2D" uid="uid://0plt7pxmnihk" path="res://assets/dogs/llorando2.png" id="5_3hcfe"]
+[ext_resource type="Texture2D" uid="uid://bknvgyvpd5fsr" path="res://assets/dogs/feliz.png" id="7_b8rlx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8uoa2"]
 atlas = ExtResource("1_q6qqt")
@@ -18,6 +20,26 @@ region = Rect2(64, 0, 32, 33)
 atlas = ExtResource("1_q6qqt")
 region = Rect2(96, 0, 32, 33)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_5yrtx"]
+atlas = ExtResource("3_3hcfe")
+region = Rect2(0, 0, 453, 515)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h0vam"]
+atlas = ExtResource("5_3hcfe")
+region = Rect2(0, 0, 453, 515)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4e0gk"]
+atlas = ExtResource("4_hh77p")
+region = Rect2(0, 0, 453, 515)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trucd"]
+atlas = ExtResource("3_1l066")
+region = Rect2(0, 0, 453, 515)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l4me7"]
+atlas = ExtResource("7_b8rlx")
+region = Rect2(0, 0, 453, 515)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_b8rlx"]
 atlas = ExtResource("3_1l066")
 region = Rect2(0, 0, 453, 515)
@@ -28,6 +50,10 @@ region = Rect2(0, 0, 453, 515)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uoglb"]
 atlas = ExtResource("5_3hcfe")
+region = Rect2(0, 0, 453, 515)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dbnip"]
+atlas = ExtResource("3_3hcfe")
 region = Rect2(0, 0, 453, 515)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u644f"]
@@ -100,6 +126,26 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_5yrtx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h0vam")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4e0gk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_trucd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4me7")
+}],
+"loop": true,
+"name": &"dejaDeLlorar",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_b8rlx")
 }, {
 "duration": 1.0,
@@ -107,6 +153,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_uoglb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dbnip")
 }],
 "loop": true,
 "name": &"llorando",
@@ -184,7 +233,7 @@ texture_filter = 1
 position = Vector2(1.9073486e-06, 4.000001)
 scale = Vector2(0.2294426, 0.23103276)
 sprite_frames = SubResource("SpriteFrames_tb13o")
-animation = &"llorando"
+animation = &"dejaDeLlorar"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1544336448]
 position = Vector2(-2, 16)

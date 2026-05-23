@@ -73,12 +73,12 @@ func actualizarUi() -> void:
 func ganar() -> void:
 	timer.stop()
 	
-	Progreso.datos.huesitosRecolectado+=1
+	Progreso.marcarMinijuegoGanado(4)
 	if Progreso.datos.nivelDesbloq < 5:
 		Progreso.datos.nivelDesbloq = 5
 	Progreso.guardarPartida()
 	
-	
+	get_tree().change_scene_to_file("res://escenas/nivel_4.tscn")	
 	
 func gameOver() -> void:
 	timer.stop()

@@ -105,7 +105,7 @@ func chequearComida():
 		crearComida()
 		
 func ganaste() -> void:
-		Progreso.datos.huesitosRecolectado+=1
+		Progreso.marcarMinijuegoGanado(1)
 		if Progreso.datos.nivelDesbloq < 2:
 			Progreso.datos.nivelDesbloq = 2
 		Progreso.guardarPartida()

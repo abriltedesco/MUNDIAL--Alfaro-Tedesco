@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ci2gq246b2yt0"]
 
 [ext_resource type="Texture2D" uid="uid://ctyqpbcx1fsfx" path="res://assets/rioDeJaneiro.jpg" id="1_oh5vl"]
+[ext_resource type="Script" uid="uid://bi17ssukw3omj" path="res://scripts/nivel_1.gd" id="1_ylyhu"]
 [ext_resource type="PackedScene" uid="uid://dueiv3oruaibj" path="res://escenas/dog1.tscn" id="2_rgjns"]
 [ext_resource type="PackedScene" uid="uid://grc1h0aer7ce" path="res://escenas/snake_personaje.tscn" id="3_43uub"]
 [ext_resource type="PackedScene" uid="uid://c52ob5hy8jrwh" path="res://escenas/hueso.tscn" id="3_rgjns"]
@@ -10,6 +11,7 @@ size = Vector2(680.5, 20)
 
 [node name="nivel1" type="Node2D" unique_id=1647993528]
 position = Vector2(4, 0)
+script = ExtResource("1_ylyhu")
 metadata/_edit_vertical_guides_ = [-874.0]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1198513327]

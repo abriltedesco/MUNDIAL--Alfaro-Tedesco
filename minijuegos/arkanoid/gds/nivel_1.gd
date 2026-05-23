@@ -35,7 +35,7 @@ func restar_ladrillo() -> void:
 		ganar()
 
 func ganar() -> void:
-		Progreso.datos.huesitosRecolectado+=1
+		Progreso.marcarMinijuegoGanado(2)
 		if Progreso.datos.nivelDesbloq < 3:
 			Progreso.datos.nivelDesbloq = 3
 		Progreso.guardarPartida()

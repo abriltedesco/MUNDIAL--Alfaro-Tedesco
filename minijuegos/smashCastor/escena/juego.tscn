@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://000ky6tg407b"]
+
+[ext_resource type="Script" uid="uid://bpiaym3nivo2v" path="res://minijuegos/smashCastor/scripts/juego.gd" id="1_wg1hr"]
+[ext_resource type="Texture2D" uid="uid://c7dw21ph0ovpk" path="res://minijuegos/smashCastor/assets/fondo.webp" id="1_x8kjt"]
+[ext_resource type="PackedScene" uid="uid://cffxbuj61mmi" path="res://minijuegos/smashCastor/escena/pozo.tscn" id="2_x8kjt"]
+[ext_resource type="PackedScene" uid="uid://past6dx8elys" path="res://minijuegos/catcher/barra_puntaje.tscn" id="4_e5udq"]
+
+[node name="juego" type="Node2D" unique_id=95531039]
+script = ExtResource("1_wg1hr")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=987820046]
+offset_right = 1325.0
+offset_bottom = 773.0
+texture = ExtResource("1_x8kjt")
+expand_mode = 5
+
+[node name="pozo" parent="." unique_id=1238289553 instance=ExtResource("2_x8kjt")]
+position = Vector2(169, 222)
+
+[node name="pozo3" parent="." unique_id=777823020 instance=ExtResource("2_x8kjt")]
+position = Vector2(980, 540)
+
+[node name="pozo2" parent="." unique_id=495508246 instance=ExtResource("2_x8kjt")]
+position = Vector2(986, 213)
+
+[node name="pozo5" parent="." unique_id=1291492724 instance=ExtResource("2_x8kjt")]
+position = Vector2(582, 526)
+
+[node name="pozo4" parent="." unique_id=1766628198 instance=ExtResource("2_x8kjt")]
+position = Vector2(580, 218)
+
+[node name="pozo6" parent="." unique_id=136409817 instance=ExtResource("2_x8kjt")]
+position = Vector2(166, 516)
+
+[node name="barraPuntaje" parent="." unique_id=1394473309 instance=ExtResource("4_e5udq")]
+
+[node name="Timer" type="Timer" parent="." unique_id=2005950123]

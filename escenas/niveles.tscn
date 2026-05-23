@@ -15,13 +15,13 @@ texture = ExtResource("1_n0pam")
 position = Vector2(347, 494)
 
 [node name="candado3" parent="." unique_id=1781934707 instance=ExtResource("2_g6lji")]
-position = Vector2(668, 198)
+position = Vector2(604, 213)
 numNivel = 3
 
 [node name="candado4" parent="." unique_id=1632938465 instance=ExtResource("2_g6lji")]
-position = Vector2(958, 504)
+position = Vector2(199, 219)
 numNivel = 4
 
 [node name="candado2" parent="." unique_id=102005199 instance=ExtResource("2_g6lji")]
-position = Vector2(202, 222)
+position = Vector2(888, 226)
 numNivel = 2

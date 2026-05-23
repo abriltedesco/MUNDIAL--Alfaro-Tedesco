@@ -78,6 +78,8 @@ func ganar() -> void:
 		Progreso.datos.nivelDesbloq = 5
 	Progreso.guardarPartida()
 	
+	
+	
 func gameOver() -> void:
 	timer.stop()
 	get_tree().reload_current_scene()

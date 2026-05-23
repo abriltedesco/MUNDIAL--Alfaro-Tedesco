@@ -222,7 +222,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u644f"]
-size = Vector2(37.75, 15.5)
+size = Vector2(41.875, 45.75)
 
 [node name="nani" type="CharacterBody2D" unique_id=32347266]
 collision_mask = 6
@@ -236,5 +236,5 @@ sprite_frames = SubResource("SpriteFrames_tb13o")
 animation = &"dejaDeLlorar"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1544336448]
-position = Vector2(-2, 16)
+position = Vector2(0.0625, 31.125)
 shape = SubResource("RectangleShape2D_u644f")

@@ -33,3 +33,11 @@ Dragon: Te reto a que lo intentes
 - Jugar
 	do irAlMinijuego()
 => END
+
+~ charla_ardilla
+Ardilla: Ah mira vos! llegaste hasta acá... seré chiquita pero tambien rápida 
+Ardilla: A ver si pueden atraparlo a su querido hueso, deberán conseguirlo 10 veces
+Ardilla: Y ojito que si me tocan pierden vida y me quedo con lo que me pertenece
+- Jugar
+	do irAlMinijuego()
+=> END

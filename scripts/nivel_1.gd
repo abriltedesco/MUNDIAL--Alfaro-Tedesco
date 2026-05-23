@@ -1,5 +1,5 @@
 extends Node2D
-@onready var enemigo = $ardilla
+@onready var enemigo = $snakePersonaje
 @onready var hueso = $hueso
 
 func _ready() -> void:

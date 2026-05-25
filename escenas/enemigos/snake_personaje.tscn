@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://grc1h0aer7ce"]
 
 [ext_resource type="Texture2D" uid="uid://cd4thvlohn8gy" path="res://assets/snake.png" id="1_3lhxi"]
-[ext_resource type="Script" uid="uid://lwpm141c1t1n" path="res://scripts/snake_personaje.gd" id="1_s74oe"]
+[ext_resource type="Script" uid="uid://lwpm141c1t1n" path="res://scripts/enemigos/snake_personaje.gd" id="1_s74oe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s74oe"]
 size = Vector2(88, 95)

@@ -44,7 +44,7 @@ func ganar() -> void:
 		$pelota.activa = false
 		
 		await get_tree().create_timer(2.0).timeout 
-		get_tree().change_scene_to_file("res://escenas/niveles.tscn")
+		get_tree().change_scene_to_file("res://escenas/niveles/nivel_2.tscn")
 
 
 # calculo para q quede lindo y centrado la matriz de ladrillos por ancho y alto

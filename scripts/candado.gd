@@ -26,7 +26,7 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 		if !establoq:
 			# para q no quede la manito flotando en el minijuego.
 			Input.set_default_cursor_shape(Input.CURSOR_ARROW)
-			get_tree().change_scene_to_file("res://escenas/nivel_" + str(numNivel) + ".tscn")
+			get_tree().change_scene_to_file("res://escenas/niveles/nivel_" + str(numNivel) + ".tscn")
 		else:
 			print("nivel bloqueado todavía")
 		

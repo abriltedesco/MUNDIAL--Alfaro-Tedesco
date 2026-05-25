@@ -98,13 +98,14 @@ func chequearEstaEnMapa():
 func chequearComida():
 	if datos[0]==comidaPos:
 		puntaje+=1
-		if puntaje == 8:
+		if puntaje == 1:
 			ganaste()
 		$barraPuntaje.get_node("Label").text="PUNTAJE: "+str(puntaje)
 		nuevoSegmento(datosViejos[-1])
 		crearComida()
 		
 func ganaste() -> void:
+		$Timer.stop()
 		Progreso.marcarMinijuegoGanado(1)
 		if Progreso.datos.nivelDesbloq < 2:
 			Progreso.datos.nivelDesbloq = 2
@@ -113,7 +114,7 @@ func ganaste() -> void:
 		# ganasteCartel.visible = true --> una cosa asi hay q poner cuando tengamos todos los carteles iguales para todos los juegos
 		
 		await get_tree().create_timer(2.0).timeout 
-		get_tree().change_scene_to_file("res://escenas/niveles.tscn")
+		get_tree().change_scene_to_file("res://escenas/niveles/nivel_1.tscn")
 		
 func crearComida():
 	while regenerarComida:

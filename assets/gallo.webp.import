@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dva30ueisdsqm"
-path="res://.godot/imported/llorando2.png-73d990134284f09d41b9079ace6161fa.ctex"
+uid="uid://chp3qsqtf0ot7"
+path="res://.godot/imported/gallo.webp-dc4ce4fc5f44893cf8f4e93e9af63f3b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://llorando2.png"
-dest_files=["res://.godot/imported/llorando2.png-73d990134284f09d41b9079ace6161fa.ctex"]
+source_file="res://assets/gallo.webp"
+dest_files=["res://.godot/imported/gallo.webp-dc4ce4fc5f44893cf8f4e93e9af63f3b.ctex"]
 
 [params]
 

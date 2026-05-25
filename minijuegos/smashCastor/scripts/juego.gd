@@ -78,7 +78,7 @@ func ganar() -> void:
 		Progreso.datos.nivelDesbloq = 5
 	Progreso.guardarPartida()
 	
-	get_tree().change_scene_to_file("res://escenas/nivel_4.tscn")	
+	get_tree().change_scene_to_file("res://escenas/niveles/nivel_4.tscn")	
 	
 func gameOver() -> void:
 	timer.stop()

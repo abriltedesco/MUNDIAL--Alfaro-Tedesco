@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://byb500354qvsc"]
 
 [ext_resource type="Texture2D" uid="uid://c7xxhp2d7s86j" path="res://minijuegos/smashCastor/assets/squirrel.png" id="1_6iqe5"]
-[ext_resource type="Script" uid="uid://cq0wuukcwnycr" path="res://scripts/ardilla.gd" id="1_unhup"]
+[ext_resource type="Script" uid="uid://cq0wuukcwnycr" path="res://scripts/enemigos/ardilla.gd" id="1_unhup"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_unhup"]
 size = Vector2(55, 78)

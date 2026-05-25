@@ -41,3 +41,10 @@ Ardilla: Y ojito que si me tocan pierden vida y me quedo con lo que me pertenece
 - Jugar
 	do irAlMinijuego()
 => END
+
+~ charla_gallo
+Gallo: Que te pensas perrito que vas a ganar?
+Gallo: Te desafio a este juego... tene cuidado con lo que consumas!
+- Jugar
+	do irAlMinijuego()
+=> END

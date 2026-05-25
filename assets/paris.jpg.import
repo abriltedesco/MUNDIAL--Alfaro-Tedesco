@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctfsscty50ljl"
-path="res://.godot/imported/llorando1.png-4447bf1243f106ef798b274eb673509c.ctex"
+uid="uid://4alkb3bu7ghf"
+path="res://.godot/imported/paris.jpg-00c0221cf30af1b658c36160e6887c6d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://llorando1.png"
-dest_files=["res://.godot/imported/llorando1.png-4447bf1243f106ef798b274eb673509c.ctex"]
+source_file="res://assets/paris.jpg"
+dest_files=["res://.godot/imported/paris.jpg-00c0221cf30af1b658c36160e6887c6d.ctex"]
 
 [params]
 

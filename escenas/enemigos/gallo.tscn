@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cfjqoh7ns0ihp"]
+
+[ext_resource type="Script" uid="uid://ca3tbchv2lu5t" path="res://scripts/enemigos/gallo.gd" id="1_nypa3"]
+[ext_resource type="Texture2D" uid="uid://cw8xsmijigjru" path="res://assets/gallo.png" id="1_x27k3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nypa3"]
+radius = 95.33625
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xsslg"]
+radius = 61.400326
+
+[node name="gallo" type="StaticBody2D" unique_id=1124119009]
+collision_layer = 4
+script = ExtResource("1_nypa3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1584442717]
+position = Vector2(-2, -1.000001)
+scale = Vector2(0.5474359, 0.51976746)
+texture = ExtResource("1_x27k3")
+
+[node name="ZonaDialogo" type="Area2D" parent="." unique_id=2105641816]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaDialogo" unique_id=1572879429]
+position = Vector2(-38, 13)
+shape = SubResource("CircleShape2D_nypa3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1748662059]
+position = Vector2(-6, -4)
+shape = SubResource("CircleShape2D_xsslg")
+
+[connection signal="body_entered" from="ZonaDialogo" to="." method="_on_zona_dialogo_body_entered"]

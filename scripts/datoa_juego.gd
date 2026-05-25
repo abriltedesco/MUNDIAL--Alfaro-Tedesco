@@ -6,4 +6,4 @@ class_name DatosJuego
 @export var vioIntro= false 
 @export var minijuegosGanados: Array[int] = []
 @export var huesosRecogidos: Array[int] = []
-@export var totalHuesitos = 4
+@export var totalHuesitos = 3

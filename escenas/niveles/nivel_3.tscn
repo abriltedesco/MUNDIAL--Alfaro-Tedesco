@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://bhhavvl30vgm"]
+
+[ext_resource type="Script" uid="uid://dpp1pa43gdod6" path="res://scripts/niveles/nivel_3.gd" id="1_4nfxa"]
+[ext_resource type="Texture2D" uid="uid://4alkb3bu7ghf" path="res://assets/paris.jpg" id="1_g7x3m"]
+[ext_resource type="PackedScene" uid="uid://dueiv3oruaibj" path="res://escenas/dog1.tscn" id="1_hht2n"]
+[ext_resource type="PackedScene" uid="uid://cfjqoh7ns0ihp" path="res://escenas/enemigos/gallo.tscn" id="3_4nfxa"]
+[ext_resource type="PackedScene" uid="uid://c52ob5hy8jrwh" path="res://escenas/hueso.tscn" id="5_gwphi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pqwxa"]
+size = Vector2(1228, 536.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ient"]
+size = Vector2(1253.5, 81)
+
+[node name="Nivel3" type="Node2D" unique_id=1210708688]
+script = ExtResource("1_4nfxa")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=399258092]
+offset_right = 1157.0
+offset_bottom = 654.0
+texture = ExtResource("1_g7x3m")
+
+[node name="kiki" parent="." unique_id=2074595676 instance=ExtResource("1_hht2n")]
+visibility_layer = 2
+position = Vector2(266, 586)
+
+[node name="gallo" parent="." unique_id=1124119009 instance=ExtResource("3_4nfxa")]
+position = Vector2(712, 570)
+
+[node name="hueso" parent="." unique_id=686890677 instance=ExtResource("5_gwphi")]
+position = Vector2(457, 320)
+nivel = 3
+
+[node name="limites" type="StaticBody2D" parent="." unique_id=2140423900]
+collision_layer = 2
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="limites" unique_id=2000603789]
+position = Vector2(573, 262.75)
+shape = SubResource("RectangleShape2D_pqwxa")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="limites" unique_id=1295747809]
+position = Vector2(574, 675)
+shape = SubResource("RectangleShape2D_7ient")

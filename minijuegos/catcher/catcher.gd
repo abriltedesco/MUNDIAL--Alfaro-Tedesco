@@ -4,6 +4,11 @@ var puntaje:int
 var barraPuntajeVida
 var objetoEscena=preload("res://minijuegos/catcher/objeto.tscn")
 var gameOver
+@onready var corazon1 = $barraPuntaje/vidas/contVidas/corazon1
+@onready var corazon2 = $barraPuntaje/vidas/contVidas/corazon2
+@onready var corazon3 =  $barraPuntaje/vidas/contVidas/corazon3
+@onready var gameOverCartel = $perdiste
+@onready var ganasteCartel = $ganaste
 
 func _ready() -> void:
 	puntaje=0
@@ -13,16 +18,22 @@ func _ready() -> void:
 	print("barraPuntaje: ", barraPuntajeVida)
 	gameOver.hide()
 	$barraPuntaje/puntaje.text = "PUNTAJE: " + str(puntaje)
-	$barraPuntaje/vidas.text = "VIDAS: " + str($kikiCatcher.vidas)
 func _on_kiki_catcher_catch_objeto_bueno() -> void:
 	puntaje += 1
 	$barraPuntaje/puntaje.text = "PUNTAJE: " + str(puntaje)
+	
 func _on_kiki_catcher_catch_objeto_malo() -> void:
 	$kikiCatcher.vidas -= 1
-	$barraPuntaje/vidas.text = "VIDAS: " + str($kikiCatcher.vidas)	
+	
+	if $pelota.vidas == 2:
+		corazon3.visible = false
+	elif $pelota.vidas == 1:
+		corazon2.visible = false
+		
 	if $kikiCatcher.vidas<=0:
 		get_tree().paused=true
 		gameOver.show()
+		
 func _on_timer_timeout() -> void:
 	var nuevoObjeto=objetoEscena.instantiate()
 	var anchoPantalla = get_viewport_rect().size.x

@@ -12,16 +12,16 @@ mouse_filter = 2
 texture = ExtResource("1_g6lji")
 
 [node name="candado" parent="." unique_id=1283534197 instance=ExtResource("2_g6lji")]
-position = Vector2(284, 459)
+position = Vector2(438, 480)
 
 [node name="candado3" parent="." unique_id=1781934707 instance=ExtResource("2_g6lji")]
-position = Vector2(569, 254)
+position = Vector2(670, 230)
 numNivel = 3
 
 [node name="candado4" parent="." unique_id=1632938465 instance=ExtResource("2_g6lji")]
-position = Vector2(80, 241)
+position = Vector2(227, 218)
 numNivel = 4
 
 [node name="candado2" parent="." unique_id=102005199 instance=ExtResource("2_g6lji")]
-position = Vector2(1014, 261)
+position = Vector2(1063, 246)
 numNivel = 2

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://wsak508n12oh" path="res://assets/paw.png" id="2_bctok"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bctok"]
-bg_color = Color(0.81535095, 0.3822965, 0.79891264, 1)
+bg_color = Color(0, 0.46666667, 0.44313726, 1)
 corner_detail = 14
 shadow_color = Color(0, 0, 0, 0.26666668)
 shadow_size = 8
@@ -47,6 +47,6 @@ tu huesito :)"
 vertical_alignment = 1
 
 [node name="Paw" type="Sprite2D" parent="." unique_id=117035845]
-position = Vector2(857, 415)
+position = Vector2(857, 406)
 texture = ExtResource("2_bctok")
 flip_h = true

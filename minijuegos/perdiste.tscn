@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://csqnl8lip1r47"]
+
+[ext_resource type="Script" uid="uid://by4eigxmsmfec" path="res://scripts/perdiste.gd" id="1_1ekmo"]
+[ext_resource type="FontFile" uid="uid://pr6n8kfsqxqb" path="res://assets/retropix.ttf" id="1_rrxmj"]
+[ext_resource type="Texture2D" uid="uid://dq1qxqx4wun6q" path="res://assets/dogs/llorando1.png" id="2_1ekmo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t0qqe"]
+bg_color = Color(0, 0.46666667, 0.44313726, 1)
+corner_detail = 14
+shadow_color = Color(0, 0, 0, 0.26666668)
+shadow_size = 8
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rrxmj"]
+bg_color = Color(9.746477e-07, 0.28216684, 0.26695916, 1)
+border_color = Color(0.62352943, 0.8901961, 0.45490196, 0)
+expand_margin_left = 10.0
+expand_margin_top = 5.0
+expand_margin_right = 10.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rrxmj"]
+
+[node name="perdiste" type="CanvasLayer" unique_id=1928346468]
+script = ExtResource("1_1ekmo")
+
+[node name="Panel" type="Panel" parent="." unique_id=767868886]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -373.0
+offset_top = -209.0
+offset_right = 373.0
+offset_bottom = 209.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_t0qqe")
+
+[node name="Label" type="Label" parent="." unique_id=900724032]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -314.0
+offset_top = -143.0
+offset_right = 31.0
+offset_bottom = 86.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_rrxmj")
+theme_override_font_sizes/font_size = 50
+text = "UPS PERDISTE :(
+"
+vertical_alignment = 1
+
+[node name="Llorando1" type="Sprite2D" parent="." unique_id=837733703]
+position = Vector2(758.00006, 318)
+scale = Vector2(0.59657836, 0.57427186)
+texture = ExtResource("2_1ekmo")
+
+[node name="reintentar" type="Button" parent="." unique_id=633740941]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -262.0
+offset_top = 8.0
+offset_right = -69.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_rrxmj")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_rrxmj")
+text = "Volver a intentar"
+
+[node name="salir" type="Button" parent="." unique_id=1606130237]
+offset_left = 306.0
+offset_top = 385.0
+offset_right = 518.0
+offset_bottom = 440.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_rrxmj")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rrxmj")
+text = "Salir"
+
+[connection signal="button_down" from="reintentar" to="." method="_on_reintentar_button_down"]
+[connection signal="button_down" from="salir" to="." method="_on_salir_button_down"]

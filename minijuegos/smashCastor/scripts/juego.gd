@@ -2,6 +2,11 @@ extends Node2D
 
 @onready var pozos = [$pozo, $pozo2, $pozo3, $pozo4] 
 @onready var timer = $Timer
+@onready var corazon1 = $barraPuntaje/vidas/contVidas/corazon1
+@onready var corazon2 = $barraPuntaje/vidas/contVidas/corazon2
+@onready var corazon3 =  $barraPuntaje/vidas/contVidas/corazon3
+@onready var gameOverCartel = $perdiste
+@onready var ganasteCartel = $ganaste
 
 var puntaje = 0
 var vidas = 3
@@ -68,9 +73,12 @@ func _on_pozo_golpeado(esHueso: bool) -> void:
 
 func actualizarUi() -> void:
 	$barraPuntaje/puntaje.text = "Puntaje: " + str(puntaje)
-	$barraPuntaje/vidas.text = "Vidas: " + str(vidas)
+	corazon1.visible = vidas >= 1
+	corazon2.visible = vidas >= 2
+	corazon3.visible = vidas >= 3
 	
 func ganar() -> void:
+	ganasteCartel.visible = true
 	timer.stop()
 	
 	Progreso.marcarMinijuegoGanado(4)
@@ -81,5 +89,5 @@ func ganar() -> void:
 	get_tree().change_scene_to_file("res://escenas/niveles/nivel_4.tscn")	
 	
 func gameOver() -> void:
+	gameOverCartel.visible = true
 	timer.stop()
-	get_tree().reload_current_scene()

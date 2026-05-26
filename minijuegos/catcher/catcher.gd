@@ -13,11 +13,18 @@ var gameOver
 func _ready() -> void:
 	puntaje=0
 	$kikiCatcher.vidas=3
+	gameOverCartel.visible = false
+	ganasteCartel.visible = false
+	corazon1.visible = true
+	corazon2.visible = true
+	corazon3.visible = true
+	$barraPuntaje/puntaje.text = "PUNTAJE: " + str(puntaje)
+	
 	gameOver=get_node("game_over")
 	barraPuntajeVida = get_node("barraPuntaje")
 	print("barraPuntaje: ", barraPuntajeVida)
-	gameOver.hide()
-	$barraPuntaje/puntaje.text = "PUNTAJE: " + str(puntaje)
+	#gameOver.hide()
+	
 func _on_kiki_catcher_catch_objeto_bueno() -> void:
 	puntaje += 1
 	$barraPuntaje/puntaje.text = "PUNTAJE: " + str(puntaje)
@@ -25,14 +32,14 @@ func _on_kiki_catcher_catch_objeto_bueno() -> void:
 func _on_kiki_catcher_catch_objeto_malo() -> void:
 	$kikiCatcher.vidas -= 1
 	
-	if $pelota.vidas == 2:
+	if $kikiCatcher.vidas == 2:
 		corazon3.visible = false
-	elif $pelota.vidas == 1:
+	elif $kikiCatcher.vidas == 1:
 		corazon2.visible = false
 		
 	if $kikiCatcher.vidas<=0:
-		get_tree().paused=true
-		gameOver.show()
+		gameOverCartel.visible = true
+		temporizador.stop()
 		
 func _on_timer_timeout() -> void:
 	var nuevoObjeto=objetoEscena.instantiate()

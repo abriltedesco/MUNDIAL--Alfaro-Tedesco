@@ -23,7 +23,8 @@ var posInicialPaleta: Vector2
 func _ready() -> void:
 	generar_grilla()
 	posInicialPelota = $pelota.position
-	posInicialPaleta = $paleta.position	
+	posInicialPaleta = $paleta.position
+	$barraPuntaje/puntaje.visible = false
 	gameOverCartel.visible = false
 	ganasteCartel.visible = false
 	cantLadrillos = cols * filas
@@ -86,6 +87,4 @@ func _on_pelota_vidas_perdidas() -> void:
 	print("perdiste todas tus vidas")
 	corazon1.visible = false
 	gameOverCartel.visible = true
-	
-	await get_tree().create_timer(3.5).timeout 
-	await get_tree().reload_current_scene()
+	$pelota.activa = false

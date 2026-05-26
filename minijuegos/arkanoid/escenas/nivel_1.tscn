@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://dmw5upqencf1a" path="res://minijuegos/arkanoid/gds/nivel_1.gd" id="1_43uub"]
 [ext_resource type="PackedScene" uid="uid://btjwwo6m6a16o" path="res://minijuegos/arkanoid/escenas/paleta.tscn" id="1_io84i"]
-[ext_resource type="Texture2D" uid="uid://dynx5mq0nwb72" path="res://minijuegos/arkanoid/assets/fondo.jpg" id="2_43uub"]
 [ext_resource type="PackedScene" uid="uid://bshuarc25h3nj" path="res://minijuegos/arkanoid/escenas/pelota.tscn" id="2_oh5vl"]
 [ext_resource type="Script" uid="uid://dxdl1rc07uarx" path="res://minijuegos/arkanoid/escenas/line_2d.gd" id="3_ylyhu"]
-[ext_resource type="PackedScene" uid="uid://past6dx8elys" path="res://minijuegos/catcher/barra_puntaje.tscn" id="6_dahl8"]
-[ext_resource type="PackedScene" uid="uid://d4jsbrh317q78" path="res://escenas/ganaste.tscn" id="7_7fvi4"]
+[ext_resource type="PackedScene" uid="uid://past6dx8elys" path="res://minijuegos/barra_puntaje.tscn" id="6_dahl8"]
+[ext_resource type="PackedScene" uid="uid://d4jsbrh317q78" path="res://minijuegos/ganaste.tscn" id="7_7fvi4"]
+[ext_resource type="PackedScene" uid="uid://csqnl8lip1r47" path="res://minijuegos/perdiste.tscn" id="8_7fvi4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rgjns"]
 size = Vector2(1167, 18)
@@ -15,7 +15,7 @@ size = Vector2(1167, 18)
 size = Vector2(18, 682)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ylyhu"]
-size = Vector2(18, 706)
+size = Vector2(45, 706)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oh5vl"]
 size = Vector2(1169, 50)
@@ -23,13 +23,13 @@ size = Vector2(1169, 50)
 [node name="nivel1" type="Node2D" unique_id=2080461798]
 script = ExtResource("1_43uub")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=265366170]
-offset_left = 3.0
+[node name="TextureRect" type="ColorRect" parent="." unique_id=1188238725]
+offset_left = -77.0
 offset_top = -53.0
-offset_right = 1163.0
-offset_bottom = 734.0
-texture = ExtResource("2_43uub")
-metadata/_edit_lock_ = true
+offset_right = 1238.0
+offset_bottom = 718.0
+
+[node name="barraPuntaje" parent="." unique_id=1394473309 instance=ExtResource("6_dahl8")]
 
 [node name="paredes" type="Node2D" parent="." unique_id=567164613]
 
@@ -48,23 +48,23 @@ script = ExtResource("3_ylyhu")
 [node name="paredDer" type="StaticBody2D" parent="paredes" unique_id=142406672]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="paredes/paredDer" unique_id=76146159]
-position = Vector2(1145, 339)
+position = Vector2(1164, 339)
 shape = SubResource("RectangleShape2D_43uub")
 
 [node name="Line2D" type="Line2D" parent="paredes/paredDer" unique_id=1494527978]
-position = Vector2(-2, 0)
-points = PackedVector2Array(0, 648, 0, 266.79892, 0, 0)
+position = Vector2(-20, 0)
+points = PackedVector2Array(0, 648, 1, 348, 0, 266.79892, 0, 0)
 width = 20.0
 script = ExtResource("3_ylyhu")
 
 [node name="paredIzq" type="StaticBody2D" parent="paredes" unique_id=1357922985]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="paredes/paredIzq" unique_id=1944326069]
-position = Vector2(7, 344)
+position = Vector2(-25.5, 338)
 shape = SubResource("RectangleShape2D_ylyhu")
 
 [node name="Line2D" type="Line2D" parent="paredes/paredIzq" unique_id=784349128]
-position = Vector2(2, 0)
+position = Vector2(30, 1)
 points = PackedVector2Array(1152, 0, 1152, 648)
 width = 20.0
 script = ExtResource("3_ylyhu")
@@ -81,9 +81,10 @@ position = Vector2(568, 568)
 [node name="pelota" parent="." unique_id=1492646839 instance=ExtResource("2_oh5vl")]
 position = Vector2(568, 528)
 
-[node name="barraPuntaje" parent="." unique_id=1394473309 instance=ExtResource("6_dahl8")]
-
 [node name="ganaste" parent="." unique_id=962983920 instance=ExtResource("7_7fvi4")]
+
+[node name="perdiste" parent="." unique_id=1928346468 instance=ExtResource("8_7fvi4")]
+escenaAreintentar = "res://minijuegos/arkanoid/escenas/nivel_1.tscn"
 
 [connection signal="vidaRestada" from="pelota" to="." method="_on_pelota_vida_restada"]
 [connection signal="vidasPerdidas" from="pelota" to="." method="_on_pelota_vidas_perdidas"]

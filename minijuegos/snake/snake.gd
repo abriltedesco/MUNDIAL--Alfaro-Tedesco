@@ -17,19 +17,33 @@ var derecha=Vector2(1,0)
 var izquierda=Vector2(-1,0)
 var direccion:Vector2
 var puedeMoverse:bool=true
+var vidas:int = 3
+var termino:bool = false
 
 var comidaPos:Vector2
 var regenerarComida: bool=true
+
+@onready var corazon1 = $barraPuntaje/vidas/contVidas/corazon1
+@onready var corazon2 = $barraPuntaje/vidas/contVidas/corazon2
+@onready var corazon3 =  $barraPuntaje/vidas/contVidas/corazon3
+@onready var gameOverCartel = $perdiste
+@onready var ganasteCartel = $ganaste
 
 func _ready() -> void:
 	nuevoJuego()
 	
 func nuevoJuego():
+	vidas = 3
+	termino = false
+	ganasteCartel.visible = false
+	gameOverCartel.visible = false
+	corazon1.visible = true
+	corazon2.visible = true
+	corazon3.visible = true
 	get_tree().paused=false
 	get_tree().call_group("segmentos","queue_free")
-	$game_over.hide()
 	puntaje=0
-	$barraPuntaje.get_node("Label").text="PUNTAJE: "+str(puntaje)
+	$barraPuntaje/puntaje.text="PUNTAJE: "+str(puntaje)
 	nuevaSerpiente()
 	crearComida()
 	
@@ -93,28 +107,50 @@ func _on_timer_timeout() -> void:
 	
 func chequearEstaEnMapa():
 	if datos[0].x<0 or datos[0].x>cantCeldasX-1 or datos[0].y<0 or datos[0].y>cantCeldasY-1:
-		perder()
+		restarVida()
 		
+func restarVida() -> void:
+	vidas -= 1
+	$Timer.stop()
+	juegoEmpezado = false
+	puedeMoverse = true
+	
+	if vidas == 2:
+		corazon3.visible = false
+	elif vidas == 1:
+		corazon2.visible = false
+	elif vidas <= 0:
+		corazon1.visible = false
+		perder()
+		return
+	
+	nuevaSerpiente()
+	crearComida()
+	
 func chequearComida():
 	if datos[0]==comidaPos:
 		puntaje+=1
-		if puntaje == 1:
+		if puntaje == 20:
 			ganaste()
-		$barraPuntaje.get_node("Label").text="PUNTAJE: "+str(puntaje)
+		$barraPuntaje/puntaje.text="PUNTAJE: "+str(puntaje)
 		nuevoSegmento(datosViejos[-1])
 		crearComida()
 		
 func ganaste() -> void:
-		$Timer.stop()
-		Progreso.marcarMinijuegoGanado(1)
-		if Progreso.datos.nivelDesbloq < 2:
-			Progreso.datos.nivelDesbloq = 2
-		Progreso.guardarPartida()
+	if termino:
+		return
+	termino = true
+	
+	$Timer.stop()
+	ganasteCartel.visible = true
+	
+	Progreso.marcarMinijuegoGanado(1)
+	if Progreso.datos.nivelDesbloq < 2:
+		Progreso.datos.nivelDesbloq = 2
+	Progreso.guardarPartida()
 		
-		# ganasteCartel.visible = true --> una cosa asi hay q poner cuando tengamos todos los carteles iguales para todos los juegos
-		
-		await get_tree().create_timer(2.0).timeout 
-		get_tree().change_scene_to_file("res://escenas/niveles/nivel_1.tscn")
+	await get_tree().create_timer(2.0).timeout 
+	get_tree().change_scene_to_file("res://escenas/niveles/nivel_1.tscn")
 		
 func crearComida():
 	while regenerarComida:
@@ -125,12 +161,9 @@ func crearComida():
 				regenerarComida=true
 	$comida.position=(comidaPos*tamanioCelda+Vector2(0, tamanioCelda))
 	regenerarComida=true
+	
 func perder():
-	get_tree().paused=true
-	juegoEmpezado=false
-	$game_over.show()
-	$Timer.stop()
-
-
-func _on_game_over_reempezar() -> void:
-	nuevoJuego()
+	if termino:
+		return
+	termino = true
+	gameOverCartel.visible= true

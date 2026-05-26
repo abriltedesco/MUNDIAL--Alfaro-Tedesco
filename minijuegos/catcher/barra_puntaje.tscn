@@ -1,16 +1,23 @@
 [gd_scene format=3 uid="uid://past6dx8elys"]
 
 [ext_resource type="FontFile" uid="uid://pr6n8kfsqxqb" path="res://assets/retropix.ttf" id="1_v8ppw"]
+[ext_resource type="Texture2D" uid="uid://bdofl7331145p" path="res://minijuegos/arkanoid/assets/heart_16x16.png" id="2_lxicl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nxf2x"]
-bg_color = Color(0.41776586, 0.6673863, 0.48872715, 1)
+bg_color = Color(0.61960787, 0.8, 0.7647059, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+border_blend = true
 
 [node name="barraPuntaje" type="CanvasLayer" unique_id=1394473309]
 
 [node name="Panel" type="Panel" parent="." unique_id=1741276886]
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 50.0
+offset_bottom = 60.0
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_nxf2x")
 
@@ -18,29 +25,37 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_nxf2x")
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -62.0
-offset_top = 12.0
-offset_right = 62.0
-offset_bottom = 45.0
+offset_left = 23.5
+offset_top = 15.0
+offset_right = 532.0
+offset_bottom = 48.0
 grow_horizontal = 2
-theme_override_colors/font_color = Color(0, 0.39607844, 0.1764706, 1)
+theme_override_colors/font_color = Color(0.38039216, 0.43137255, 0.34509805, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_v8ppw")
 theme_override_font_sizes/font_size = 30
 text = "PUNTAJE: 0"
+horizontal_alignment = 2
 
-[node name="vidas" type="Label" parent="." unique_id=355855814]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -476.0
+[node name="vidas" type="CanvasLayer" parent="." unique_id=1604470725]
+
+[node name="contVidas" type="HBoxContainer" parent="vidas" unique_id=1915060691]
+offset_left = 30.0
 offset_top = 12.0
-offset_right = -352.0
-offset_bottom = 81.0
-grow_horizontal = 2
-theme_override_colors/font_color = Color(0, 0.39607844, 0.1764706, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_v8ppw")
-theme_override_font_sizes/font_size = 30
-text = "VIDAS: 3
-"
+offset_right = 305.0
+offset_bottom = 51.0
+
+[node name="corazon1" type="TextureRect" parent="vidas/contVidas" unique_id=524487021]
+layout_mode = 2
+texture = ExtResource("2_lxicl")
+expand_mode = 2
+
+[node name="corazon2" type="TextureRect" parent="vidas/contVidas" unique_id=476166453]
+layout_mode = 2
+texture = ExtResource("2_lxicl")
+expand_mode = 2
+
+[node name="corazon3" type="TextureRect" parent="vidas/contVidas" unique_id=208805403]
+layout_mode = 2
+texture = ExtResource("2_lxicl")
+expand_mode = 2

@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://d4jsbrh317q78"]
+
+[ext_resource type="FontFile" uid="uid://pr6n8kfsqxqb" path="res://assets/retropix.ttf" id="1_1fn7c"]
+[ext_resource type="Texture2D" uid="uid://wsak508n12oh" path="res://assets/paw.png" id="2_bctok"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bctok"]
+bg_color = Color(0.81535095, 0.3822965, 0.79891264, 1)
+corner_detail = 14
+shadow_color = Color(0, 0, 0, 0.26666668)
+shadow_size = 8
+shadow_offset = Vector2(1, 1)
+
+[node name="ganaste" type="CanvasLayer" unique_id=962983920]
+
+[node name="Panel" type="Panel" parent="." unique_id=840307921]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -373.0
+offset_top = -209.0
+offset_right = 373.0
+offset_bottom = 209.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bctok")
+
+[node name="Label" type="Label" parent="." unique_id=1158055340]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -348.0
+offset_top = -115.0
+offset_right = 343.0
+offset_bottom = 114.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_1fn7c")
+theme_override_font_sizes/font_size = 50
+text = "FELICIDIDADES!
+Has derrotado a tu enemigo, 
+ahora puedes recolectar
+tu huesito :)"
+vertical_alignment = 1
+
+[node name="Paw" type="Sprite2D" parent="." unique_id=117035845]
+position = Vector2(857, 415)
+texture = ExtResource("2_bctok")
+flip_h = true

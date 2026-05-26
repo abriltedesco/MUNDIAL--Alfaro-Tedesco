@@ -1,10 +1,10 @@
 extends Node2D
 @onready var ladrilloObj = preload("res://minijuegos/arkanoid/escenas/ladrillo.tscn")
-@onready var corazon1 = $vidas/contVidas/corazon1
-@onready var corazon2 = $vidas/contVidas/corazon2
-@onready var corazon3 = $vidas/contVidas/corazon3
-@onready var gameOverCartel = $cartelPerdiste/Label 
-@onready var ganasteCartel = $cartelGanaste/Label 
+@onready var corazon1 = $barraPuntaje/vidas/contVidas/corazon1
+@onready var corazon2 = $barraPuntaje/vidas/contVidas/corazon2
+@onready var corazon3 =  $barraPuntaje/vidas/contVidas/corazon3
+@onready var gameOverCartel = $perdiste
+@onready var ganasteCartel = $ganaste
 
 const cols = 8
 const filas = 5

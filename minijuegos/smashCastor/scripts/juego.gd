@@ -67,8 +67,17 @@ func _on_pozo_golpeado(esHueso: bool) -> void:
 		gameOver()
 
 func actualizarUi() -> void:
+	#CORRECCION: Al convertir barra_puntaje en una escena por separado, lo más correcto
+	# es comunicarnos con un script adjunto en su nodo raiz (barraPuntaje),
+	# o a través de señales en un Singleton quizá.
+	# Aquí mismo tengo que comentar la linea de vidas porque cambió la escena barra_puntaje
+	# y esto no cambió aún, por lo que me da error. 
 	$barraPuntaje/puntaje.text = "Puntaje: " + str(puntaje)
-	$barraPuntaje/vidas.text = "Vidas: " + str(vidas)
+	# Si aquí se llamara a $barraPuntaje.set_vidas(vidas) no aparecía ningún error.
+	#$barraPuntaje/vidas.text = "Vidas: " + str(vidas)
+	
+	#HACK PRO TIP
+	# Cada escena debe modificarse a sí misma, si otra escena necesitara que esta cambie, se lo pide
 	
 func ganar() -> void:
 	timer.stop()

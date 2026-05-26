@@ -98,7 +98,7 @@ func chequearEstaEnMapa():
 func chequearComida():
 	if datos[0]==comidaPos:
 		puntaje+=1
-		if puntaje == 1:
+		if puntaje == 10:
 			ganaste()
 		$barraPuntaje.get_node("Label").text="PUNTAJE: "+str(puntaje)
 		nuevoSegmento(datosViejos[-1])

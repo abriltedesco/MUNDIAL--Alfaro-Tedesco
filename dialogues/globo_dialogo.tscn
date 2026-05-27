@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://kmdluwkj0r84"]
 
 [ext_resource type="Script" uid="uid://ebuyx3fsahv5" path="res://dialogues/globo_dialogo.gd" id="1_pky7w"]
+[ext_resource type="FontFile" uid="uid://pr6n8kfsqxqb" path="res://assets/retropix.ttf" id="2_rvau3"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_wvjsw"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_rvau3"]
 
@@ -65,10 +66,16 @@ PanelContainer/styles/panel = SubResource("StyleBoxFlat_qkmqt")
 
 [sub_resource type="Theme" id="Theme_pky7w"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wvjsw"]
-bg_color = Color(0.3363585, 0.5286541, 0.62174183, 1)
-border_color = Color(0, 0, 0, 1)
-corner_detail = 12
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_utwpm"]
+bg_color = Color(0.8370214, 0.7569227, 0.90638566, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.8231682, 0.4330284, 0.73085016, 1)
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_bottom_right = 20
 
 [sub_resource type="Animation" id="Animation_nlsx6"]
 length = 0.001
@@ -157,7 +164,7 @@ theme = SubResource("Theme_pky7w")
 clip_children = 2
 layout_mode = 2
 mouse_filter = 1
-theme_override_styles/panel = SubResource("StyleBoxFlat_wvjsw")
+theme_override_styles/panel = SubResource("StyleBoxFlat_utwpm")
 
 [node name="MarginContainer" type="MarginContainer" parent="Balloon/MarginContainer/PanelContainer" unique_id=1030936092]
 layout_mode = 2
@@ -174,6 +181,9 @@ unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.501961)
 layout_mode = 2
 mouse_filter = 1
+theme_override_colors/default_color = Color(0.33452877, 0.13684195, 0.20134601, 1)
+theme_override_fonts/normal_font = ExtResource("2_rvau3")
+theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
 text = "Character"
 fit_content = true
@@ -183,6 +193,9 @@ scroll_active = false
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/default_color = Color(0.39781743, 0.2893446, 0.373528, 1)
+theme_override_fonts/normal_font = ExtResource("2_rvau3")
+theme_override_font_sizes/normal_font_size = 25
 text = "Dialogue..."
 
 [node name="Control" type="Control" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=1162966119]
@@ -192,6 +205,7 @@ size_flags_vertical = 8
 
 [node name="Progress" type="Polygon2D" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/Control" unique_id=821575988]
 unique_name_in_owner = true
+color = Color(0.28118682, 0.28118688, 0.28118682, 1)
 polygon = PackedVector2Array(0, 0, 10, 10, 20, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/Control" unique_id=452325722]

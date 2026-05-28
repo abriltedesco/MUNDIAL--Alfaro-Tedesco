@@ -28,6 +28,8 @@ func _ready() -> void:
 func _on_kiki_catcher_catch_objeto_bueno() -> void:
 	puntaje += 1
 	$barraPuntaje/puntaje.text = "PUNTAJE: " + str(puntaje)
+	if puntaje==10:
+		$ganaste.show()
 	
 func _on_kiki_catcher_catch_objeto_malo() -> void:
 	$kikiCatcher.vidas -= 1

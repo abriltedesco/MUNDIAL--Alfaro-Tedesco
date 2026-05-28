@@ -19,6 +19,9 @@ var direccion:Vector2
 var puedeMoverse:bool=true
 var vidas:int = 3
 var termino:bool = false
+var cabeza=StyleBoxTexture.new()
+var cola=StyleBoxTexture.new()
+var cuerpo=StyleBoxTexture.new()
 
 var comidaPos:Vector2
 var regenerarComida: bool=true
@@ -31,6 +34,7 @@ var regenerarComida: bool=true
 
 func _ready() -> void:
 	nuevoJuego()
+	#cabeza=load()
 	
 func nuevoJuego():
 	vidas = 3
@@ -130,7 +134,7 @@ func restarVida() -> void:
 func chequearComida():
 	if datos[0]==comidaPos:
 		puntaje+=1
-		if puntaje == 20:
+		if puntaje == 5:
 			ganaste()
 		$barraPuntaje/puntaje.text="PUNTAJE: "+str(puntaje)
 		nuevoSegmento(datosViejos[-1])

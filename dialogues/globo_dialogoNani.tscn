@@ -1,9 +1,9 @@
-[gd_scene format=3 uid="uid://kmdluwkj0r84"]
+[gd_scene format=3 uid="uid://gfoucewx3dfb"]
 
-[ext_resource type="Script" uid="uid://ebuyx3fsahv5" path="res://dialogues/globo_dialogo.gd" id="1_pky7w"]
-[ext_resource type="FontFile" uid="uid://pr6n8kfsqxqb" path="res://assets/retropix.ttf" id="2_rvau3"]
-[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_wvjsw"]
-[ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_rvau3"]
+[ext_resource type="Script" uid="uid://ebuyx3fsahv5" path="res://dialogues/globo_dialogo.gd" id="1_mlsn1"]
+[ext_resource type="FontFile" uid="uid://pr6n8kfsqxqb" path="res://assets/retropix.ttf" id="2_lihpk"]
+[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="3_0e7my"]
+[ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="4_3o1pb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -67,12 +67,12 @@ PanelContainer/styles/panel = SubResource("StyleBoxFlat_qkmqt")
 [sub_resource type="Theme" id="Theme_pky7w"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_utwpm"]
-bg_color = Color(0.7577043, 0.71446013, 0.95747524, 1)
+bg_color = Color(0.8370214, 0.7569227, 0.90638566, 1)
 border_width_left = 5
 border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
-border_color = Color(0.66563326, 0.48754752, 0.9169144, 1)
+border_color = Color(0.8231682, 0.4330284, 0.73085016, 1)
 border_blend = true
 corner_radius_top_left = 20
 corner_radius_bottom_right = 20
@@ -134,7 +134,7 @@ bg_color = Color(0.1669032, 0.28998426, 0.3495988, 1)
 
 [node name="ExampleBalloon" type="CanvasLayer" unique_id=1434168376]
 layer = 100
-script = ExtResource("1_pky7w")
+script = ExtResource("1_mlsn1")
 
 [node name="Balloon" type="Control" parent="." unique_id=359403728]
 unique_name_in_owner = true
@@ -181,20 +181,20 @@ unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.501961)
 layout_mode = 2
 mouse_filter = 1
-theme_override_colors/default_color = Color(0.27612373, 0.1602523, 0.29894945, 1)
-theme_override_fonts/normal_font = ExtResource("2_rvau3")
+theme_override_colors/default_color = Color(0.33452877, 0.13684195, 0.20134601, 1)
+theme_override_fonts/normal_font = ExtResource("2_lihpk")
 theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
 text = "Character"
 fit_content = true
 scroll_active = false
 
-[node name="DialogueLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1225160028 instance=ExtResource("2_wvjsw")]
+[node name="DialogueLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1225160028 instance=ExtResource("3_0e7my")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/default_color = Color(0.3281422, 0.28889063, 0.5193781, 1)
-theme_override_fonts/normal_font = ExtResource("2_rvau3")
+theme_override_colors/default_color = Color(0.39781743, 0.2893446, 0.373528, 1)
+theme_override_fonts/normal_font = ExtResource("2_lihpk")
 theme_override_font_sizes/normal_font_size = 25
 text = "Dialogue..."
 
@@ -205,7 +205,7 @@ size_flags_vertical = 8
 
 [node name="Progress" type="Polygon2D" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/Control" unique_id=821575988]
 unique_name_in_owner = true
-color = Color(0.28118682, 0.28118688, 0.28118682, 1)
+color = Color(0.464132, 0.10971565, 0.38131708, 1)
 polygon = PackedVector2Array(0, 0, 10, 10, 20, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/Control" unique_id=452325722]
@@ -229,7 +229,7 @@ grow_vertical = 0
 size_flags_vertical = 8
 theme_override_constants/separation = 1
 alignment = 1
-script = ExtResource("3_rvau3")
+script = ExtResource("4_3o1pb")
 response_template = NodePath("ResponseExample")
 
 [node name="ResponseExample" type="Button" parent="Balloon/ResponsesMenu" unique_id=914537232]

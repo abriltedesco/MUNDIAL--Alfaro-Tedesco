@@ -1,8 +1,5 @@
 extends Node2D
 @onready var ladrilloObj = preload("res://minijuegos/arkanoid/escenas/ladrillo.tscn")
-@onready var corazon1 = $barraPuntaje/vidas/contVidas/corazon1
-@onready var corazon2 = $barraPuntaje/vidas/contVidas/corazon2
-@onready var corazon3 =  $barraPuntaje/vidas/contVidas/corazon3
 @onready var gameOverCartel = $perdiste
 @onready var ganasteCartel = $ganaste
 
@@ -24,7 +21,8 @@ func _ready() -> void:
 	generar_grilla()
 	posInicialPelota = $pelota.position
 	posInicialPaleta = $paleta.position
-	$barraPuntaje/puntaje.visible = false
+	$barraPuntaje.ocultar()
+	$barraPuntaje.set_vidas(3)
 	gameOverCartel.visible = false
 	ganasteCartel.visible = false
 	cantLadrillos = cols * filas
@@ -73,10 +71,7 @@ func _on_pelota_vida_restada() -> void:
 	print("vidas restantes: " + str($pelota.vidas))
 	$pelota.velocity = Vector2(-$pelota.veloc, $pelota.veloc)
 
-	if $pelota.vidas == 2:
-		corazon3.visible = false
-	elif $pelota.vidas == 1:
-		corazon2.visible = false
+	$barraPuntaje.set_vidas($pelota.vidas)
 		
 	await get_tree().create_timer(1.5).timeout # para darle tiempo a player y q no caiga d una
 	$pelota.vida_restada = false
@@ -85,6 +80,6 @@ func _on_pelota_vida_restada() -> void:
 
 func _on_pelota_vidas_perdidas() -> void:
 	print("perdiste todas tus vidas")
-	corazon1.visible = false
+	$barraPuntaje.set_vidas(0)
 	gameOverCartel.visible = true
 	$pelota.activa = false

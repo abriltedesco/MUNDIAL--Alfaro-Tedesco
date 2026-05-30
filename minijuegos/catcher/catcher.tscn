@@ -5,7 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://b6fop0038m08w" path="res://minijuegos/catcher/objeto.tscn" id="2_bnarl"]
 [ext_resource type="PackedScene" uid="uid://past6dx8elys" path="res://minijuegos/barra_puntaje.tscn" id="5_2yt0b"]
 [ext_resource type="Texture2D" uid="uid://3toll55frd6m" path="res://assets/bg.png" id="6_2yt0b"]
-[ext_resource type="PackedScene" uid="uid://3dhmde027lpv" path="res://minijuegos/catcher/game_over.tscn" id="6_lmv6b"]
 [ext_resource type="PackedScene" uid="uid://csqnl8lip1r47" path="res://minijuegos/perdiste.tscn" id="7_lmv6b"]
 [ext_resource type="PackedScene" uid="uid://d4jsbrh317q78" path="res://minijuegos/ganaste.tscn" id="8_4gv61"]
 
@@ -27,8 +26,6 @@ position = Vector2(39, 25)
 wait_time = 1.5
 autostart = true
 
-[node name="game_over" parent="." unique_id=637978623 instance=ExtResource("6_lmv6b")]
-
 [node name="barraPuntaje" parent="." unique_id=1394473309 instance=ExtResource("5_2yt0b")]
 
 [node name="perdiste" parent="." unique_id=1928346468 instance=ExtResource("7_lmv6b")]
@@ -39,4 +36,3 @@ escenaAreintentar = "res://minijuegos/catcher/catcher.tscn"
 [connection signal="catchObjetoBueno" from="kikiCatcher" to="." method="_on_kiki_catcher_catch_objeto_bueno"]
 [connection signal="catchObjetoMalo" from="kikiCatcher" to="." method="_on_kiki_catcher_catch_objeto_malo"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="reempezar" from="game_over" to="." method="_on_game_over_reempezar"]

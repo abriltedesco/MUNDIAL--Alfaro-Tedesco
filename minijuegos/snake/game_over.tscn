@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://b76spwqv0xhsr"]
+[gd_scene format=3 uid="uid://5kmvv6jh7e6"]
 
 [ext_resource type="FontFile" uid="uid://pr6n8kfsqxqb" path="res://assets/retropix.ttf" id="1_5bjgx"]
 [ext_resource type="Script" uid="uid://b04cyf6nkw8dl" path="res://scripts/game_over.gd" id="1_8d5yl"]

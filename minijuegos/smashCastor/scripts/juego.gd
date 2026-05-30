@@ -2,9 +2,6 @@ extends Node2D
 
 @onready var pozos = [$pozo, $pozo2, $pozo3, $pozo4] 
 @onready var timer = $Timer
-@onready var corazon1 = $barraPuntaje/vidas/contVidas/corazon1
-@onready var corazon2 = $barraPuntaje/vidas/contVidas/corazon2
-@onready var corazon3 =  $barraPuntaje/vidas/contVidas/corazon3
 @onready var gameOverCartel = $perdiste
 @onready var ganasteCartel = $ganaste
 
@@ -72,10 +69,8 @@ func _on_pozo_golpeado(esHueso: bool) -> void:
 		gameOver()
 
 func actualizarUi() -> void:
-	$barraPuntaje/puntaje.text = "Puntaje: " + str(puntaje)
-	corazon1.visible = vidas >= 1
-	corazon2.visible = vidas >= 2
-	corazon3.visible = vidas >= 3
+	$barraPuntaje.set_puntaje(puntaje)
+	$barraPuntaje.set_vidas(vidas)
 	
 func ganar() -> void:
 	ganasteCartel.visible = true

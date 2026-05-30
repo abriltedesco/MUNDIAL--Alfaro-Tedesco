@@ -26,9 +26,6 @@ var cuerpo=StyleBoxTexture.new()
 var comidaPos:Vector2
 var regenerarComida: bool=true
 
-@onready var corazon1 = $barraPuntaje/vidas/contVidas/corazon1
-@onready var corazon2 = $barraPuntaje/vidas/contVidas/corazon2
-@onready var corazon3 =  $barraPuntaje/vidas/contVidas/corazon3
 @onready var gameOverCartel = $perdiste
 @onready var ganasteCartel = $ganaste
 
@@ -41,13 +38,11 @@ func nuevoJuego():
 	termino = false
 	ganasteCartel.visible = false
 	gameOverCartel.visible = false
-	corazon1.visible = true
-	corazon2.visible = true
-	corazon3.visible = true
+	$barraPuntaje.set_vidas(vidas)
+	puntaje=0
+	$barraPuntaje.set_puntaje(puntaje)
 	get_tree().paused=false
 	get_tree().call_group("segmentos","queue_free")
-	puntaje=0
-	$barraPuntaje/puntaje.text="PUNTAJE: "+str(puntaje)
 	nuevaSerpiente()
 	crearComida()
 	
@@ -119,12 +114,9 @@ func restarVida() -> void:
 	juegoEmpezado = false
 	puedeMoverse = true
 	
-	if vidas == 2:
-		corazon3.visible = false
-	elif vidas == 1:
-		corazon2.visible = false
-	elif vidas <= 0:
-		corazon1.visible = false
+	$barraPuntaje.set_vidas(vidas)
+	
+	if vidas <= 0:
 		perder()
 		return
 	
@@ -136,7 +128,7 @@ func chequearComida():
 		puntaje+=1
 		if puntaje == 5:
 			ganaste()
-		$barraPuntaje/puntaje.text="PUNTAJE: "+str(puntaje)
+		$barraPuntaje.set_puntaje(puntaje)
 		nuevoSegmento(datosViejos[-1])
 		crearComida()
 		

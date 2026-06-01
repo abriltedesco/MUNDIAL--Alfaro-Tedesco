@@ -35,4 +35,4 @@ escena = "res://escenas/niveles/nivel_3.tscn"
 banderaSprite = "res://assets/banderas/francia.png"
 
 [node name="avion" parent="." unique_id=216925273 instance=ExtResource("3_wyxks")]
-position = Vector2(122, 590)
+position = Vector2(528, 365)

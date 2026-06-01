@@ -3,16 +3,11 @@ const SPEED = 250.0
 var puedeMoverse = true
 
 func _physics_process(delta: float) -> void:
-	if !puedeMoverse:
-		velocity = Vector2.ZERO
-		move_and_slide()
-		return
-		
-	var dirX = Input.get_axis("moverI", "moverD")
-	var dirY = Input.get_axis("moverArr", "moverAb")
-	look_at(get_global_mouse_position())
-	
-	velocity = Vector2(dirX, dirY).normalized() * SPEED
+	if puedeMoverse:
+		var direccion=Input.get_vector("moverI","moverD","moverArr","moverAb")
+		velocity = direccion * SPEED
+		if direccion!=Vector2.ZERO:
+			rotation=direccion.angle()
 	move_and_slide()
 
 func detener() -> void:

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cm6kwvqnepfuw"]
 
 [ext_resource type="Script" uid="uid://bx1f6hcxjwoy5" path="res://minijuegos/snake/snake.gd" id="1_kp7at"]
-[ext_resource type="Texture2D" uid="uid://3toll55frd6m" path="res://assets/bg.png" id="2_ve2cw"]
+[ext_resource type="Texture2D" uid="uid://b5hb5x7expyj4" path="res://assets/fondoSnake.png" id="2_alg2p"]
 [ext_resource type="Texture2D" uid="uid://cyprh18cosxvc" path="res://minijuegos/snake/apple.png" id="4_2mq6b"]
 [ext_resource type="PackedScene" uid="uid://d4jsbrh317q78" path="res://minijuegos/ganaste.tscn" id="6_025dy"]
 [ext_resource type="PackedScene" uid="uid://ckwggfc52f1y6" path="res://minijuegos/barra_puntaje.tscn" id="7_025dy"]
@@ -34,9 +34,9 @@ script = ExtResource("1_kp7at")
 serpienteEscena = SubResource("PackedScene_jr4iw")
 
 [node name="fondo" type="Sprite2D" parent="." unique_id=1886054209]
-position = Vector2(576.5, 350.00003)
-scale = Vector2(0.5994792, 0.5537038)
-texture = ExtResource("2_ve2cw")
+position = Vector2(579.291, 373.39352)
+scale = Vector2(3.661644, 2.9408522)
+texture = ExtResource("2_alg2p")
 
 [node name="Timer" type="Timer" parent="." unique_id=384258272]
 wait_time = 0.1

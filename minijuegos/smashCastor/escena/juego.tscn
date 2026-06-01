@@ -37,7 +37,7 @@ position = Vector2(166, 516)
 [node name="Timer" type="Timer" parent="." unique_id=2005950123]
 
 [node name="perdiste" parent="." unique_id=1928346468 instance=ExtResource("5_hnn6f")]
-escenaAreintentar = "res://minijuegos/smashCastor/juego.tscn"
+escenaAreintentar = "res://minijuegos/smashCastor/escena/juego.tscn"
 
 [node name="ganaste" parent="." unique_id=962983920 instance=ExtResource("6_rpcol")]
 

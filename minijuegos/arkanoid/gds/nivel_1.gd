@@ -35,9 +35,6 @@ func restar_ladrillo() -> void:
 
 func ganar() -> void:
 		Progreso.marcarMinijuegoGanado(2)
-		if Progreso.datos.nivelDesbloq < 3:
-			Progreso.datos.nivelDesbloq = 3
-		Progreso.guardarPartida()
 		
 		ganasteCartel.visible = true
 		$pelota.activa = false

@@ -10,6 +10,9 @@ func _ready() -> void:
 func cargarPartida() -> void:
 	if ResourceLoader.exists(rutaGuardado):
 		datos = load(rutaGuardado)
+		if datos.totalHuesitos != 4:
+			datos.totalHuesitos = 4
+			guardarPartida()
 		print("cargada")
 	else:
 		# si juega x primera vez, creamos una planilla nueva en blanco

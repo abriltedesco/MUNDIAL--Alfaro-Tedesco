@@ -165,9 +165,6 @@ func ganaste() -> void:
 	ganasteCartel.visible = true
 	
 	Progreso.marcarMinijuegoGanado(1)
-	if Progreso.datos.nivelDesbloq < 2:
-		Progreso.datos.nivelDesbloq = 2
-	Progreso.guardarPartida()
 		
 	await get_tree().create_timer(2.0).timeout 
 	get_tree().change_scene_to_file("res://escenas/niveles/nivel_1.tscn")

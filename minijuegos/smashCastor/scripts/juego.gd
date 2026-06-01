@@ -77,9 +77,6 @@ func ganar() -> void:
 	timer.stop()
 	
 	Progreso.marcarMinijuegoGanado(4)
-	if Progreso.datos.nivelDesbloq < 5:
-		Progreso.datos.nivelDesbloq = 5
-	Progreso.guardarPartida()
 	
 	get_tree().change_scene_to_file("res://escenas/niveles/nivel_4.tscn")	
 	

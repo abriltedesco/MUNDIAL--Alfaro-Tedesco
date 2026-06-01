@@ -4,6 +4,7 @@ const rutaGuardado = "user://partida.tres"
 var datos: DatosJuego
 
 func _ready() -> void:
+	rutaGuardado.erase(0,0)
 	cargarPartida()
 
 func cargarPartida() -> void:

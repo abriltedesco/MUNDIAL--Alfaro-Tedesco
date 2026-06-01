@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://btjwwo6m6a16o" path="res://minijuegos/arkanoid/escenas/paleta.tscn" id="1_io84i"]
 [ext_resource type="PackedScene" uid="uid://bshuarc25h3nj" path="res://minijuegos/arkanoid/escenas/pelota.tscn" id="2_oh5vl"]
 [ext_resource type="Script" uid="uid://dxdl1rc07uarx" path="res://minijuegos/arkanoid/escenas/line_2d.gd" id="3_ylyhu"]
-[ext_resource type="PackedScene" uid="uid://past6dx8elys" path="res://minijuegos/barra_puntaje.tscn" id="6_dahl8"]
+[ext_resource type="PackedScene" uid="uid://ckwggfc52f1y6" path="res://minijuegos/barra_puntaje.tscn" id="6_dahl8"]
 [ext_resource type="PackedScene" uid="uid://d4jsbrh317q78" path="res://minijuegos/ganaste.tscn" id="7_7fvi4"]
 [ext_resource type="PackedScene" uid="uid://csqnl8lip1r47" path="res://minijuegos/perdiste.tscn" id="8_7fvi4"]
 

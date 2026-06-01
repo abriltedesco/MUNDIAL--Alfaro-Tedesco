@@ -1,30 +1,63 @@
-[gd_scene format=3 uid="uid://past6dx8elys"]
+[gd_scene format=3 uid="uid://ckwggfc52f1y6"]
 
-[ext_resource type="Texture2D" uid="uid://kdl002atjj7n" path="res://assets/mapa.png" id="1_mh8bq"]
-[ext_resource type="PackedScene" uid="uid://3jtmytc0x822" path="res://escenas/bandera.tscn" id="2_6bo6s"]
+[ext_resource type="Script" uid="uid://c3jyoe5x8n5hb" path="res://minijuegos/barra_puntaje.gd" id="1_6bo6s"]
+[ext_resource type="FontFile" uid="uid://pr6n8kfsqxqb" path="res://assets/retropix.ttf" id="1_v8ppw"]
+[ext_resource type="Texture2D" uid="uid://bdofl7331145p" path="res://minijuegos/arkanoid/assets/heart_16x16.png" id="2_lxicl"]
 
-[node name="mundo" type="Node2D" unique_id=1570216129]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nxf2x"]
+bg_color = Color(0.61960787, 0.8, 0.7647059, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+border_blend = true
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=2139303823]
-offset_right = 1148.0
-offset_bottom = 648.0
-mouse_filter = 2
-texture = ExtResource("1_mh8bq")
+[node name="barraPuntaje" type="CanvasLayer" unique_id=1394473309]
+script = ExtResource("1_6bo6s")
 
-[node name="bandera" parent="." unique_id=684662842 instance=ExtResource("2_6bo6s")]
-position = Vector2(441, 486)
-banderaSprite = "res://assets/banderas/brasil.png"
+[node name="Panel" type="Panel" parent="." unique_id=1741276886]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 60.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nxf2x")
 
-[node name="bandera3" parent="." unique_id=1196944879 instance=ExtResource("2_6bo6s")]
-position = Vector2(686, 243)
-escena = "res://escenas/niveles/nivel_3.tscn"
-banderaSprite = "res://assets/banderas/francia.png"
+[node name="puntaje" type="Label" parent="." unique_id=1218314282]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 23.5
+offset_top = 15.0
+offset_right = 532.0
+offset_bottom = 48.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.38039216, 0.43137255, 0.34509805, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_v8ppw")
+theme_override_font_sizes/font_size = 30
+text = "PUNTAJE: 0"
+horizontal_alignment = 2
 
-[node name="bandera2" parent="." unique_id=1915478884 instance=ExtResource("2_6bo6s")]
-position = Vector2(1080, 252)
-escena = "res://escenas/niveles/nivel_2.tscn"
-banderaSprite = "res://assets/banderas/china.png"
+[node name="vidas" type="Control" parent="." unique_id=659779914]
 
-[node name="bandera4" parent="." unique_id=1159311778 instance=ExtResource("2_6bo6s")]
-position = Vector2(268, 224)
-escena = "res://escenas/niveles/nivel_4.tscn"
+[node name="contVidas" type="HBoxContainer" parent="vidas" unique_id=944483828]
+offset_left = 30.0
+offset_top = 12.0
+offset_right = 187.0
+offset_bottom = 51.0
+
+[node name="corazon1" type="TextureRect" parent="vidas/contVidas" unique_id=2040317952]
+layout_mode = 2
+texture = ExtResource("2_lxicl")
+expand_mode = 2
+
+[node name="corazon2" type="TextureRect" parent="vidas/contVidas" unique_id=1448330374]
+layout_mode = 2
+texture = ExtResource("2_lxicl")
+expand_mode = 2
+
+[node name="corazon3" type="TextureRect" parent="vidas/contVidas" unique_id=1858895529]
+layout_mode = 2
+texture = ExtResource("2_lxicl")
+expand_mode = 2

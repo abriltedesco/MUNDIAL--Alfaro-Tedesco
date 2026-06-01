@@ -3,6 +3,7 @@ extends Node2D
 @onready var hueso = $hueso
 
 func _ready() -> void:
+	pass
 	if Progreso.minijuegoGanado(1):
 		enemigo.queue_free()
 		

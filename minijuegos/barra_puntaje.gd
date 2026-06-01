@@ -1,4 +1,5 @@
 extends CanvasLayer
+class_name BarraPuntaje
 
 @onready var puntaje = $puntaje
 @onready var corazon1 = $vidas/contVidas/corazon1

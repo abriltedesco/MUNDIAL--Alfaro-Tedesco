@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://3toll55frd6m" path="res://assets/bg.png" id="2_ve2cw"]
 [ext_resource type="Texture2D" uid="uid://cyprh18cosxvc" path="res://minijuegos/snake/apple.png" id="4_2mq6b"]
 [ext_resource type="PackedScene" uid="uid://d4jsbrh317q78" path="res://minijuegos/ganaste.tscn" id="6_025dy"]
-[ext_resource type="PackedScene" uid="uid://past6dx8elys" path="res://minijuegos/barra_puntaje.tscn" id="7_025dy"]
+[ext_resource type="PackedScene" uid="uid://ckwggfc52f1y6" path="res://minijuegos/barra_puntaje.tscn" id="7_025dy"]
 [ext_resource type="PackedScene" uid="uid://csqnl8lip1r47" path="res://minijuegos/perdiste.tscn" id="7_b1k3v"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i86a8"]
@@ -41,8 +41,6 @@ texture = ExtResource("2_ve2cw")
 [node name="Timer" type="Timer" parent="." unique_id=384258272]
 wait_time = 0.1
 
-[node name="barraPuntaje" parent="." unique_id=1394473309 instance=ExtResource("7_025dy")]
-
 [node name="comida" type="Sprite2D" parent="." unique_id=433594477]
 texture = ExtResource("4_2mq6b")
 offset = Vector2(25, 25)
@@ -51,5 +49,7 @@ offset = Vector2(25, 25)
 
 [node name="perdiste" parent="." unique_id=1928346468 instance=ExtResource("7_b1k3v")]
 escenaAreintentar = "res://minijuegos/snake/snake.tscn"
+
+[node name="barraPuntaje" parent="." unique_id=1394473309 instance=ExtResource("7_025dy")]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

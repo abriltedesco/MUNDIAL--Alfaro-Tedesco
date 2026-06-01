@@ -28,6 +28,7 @@ var regenerarComida: bool=true
 
 @onready var gameOverCartel = $perdiste
 @onready var ganasteCartel = $ganaste
+@onready var barra_puntaje: BarraPuntaje = $barraPuntaje
 
 func _ready() -> void:
 	nuevoJuego()
@@ -36,22 +37,32 @@ func _ready() -> void:
 func nuevoJuego():
 	vidas = 3
 	termino = false
+	juegoEmpezado = false
+	puedeMoverse = true
+	direccion = Vector2.ZERO
 	ganasteCartel.visible = false
 	gameOverCartel.visible = false
-	$barraPuntaje.set_vidas(vidas)
+	$comida.visible = true
+	barra_puntaje.set_vidas(vidas)
 	puntaje=0
-	$barraPuntaje.set_puntaje(puntaje)
+	barra_puntaje.set_puntaje(puntaje)
 	get_tree().paused=false
-	get_tree().call_group("segmentos","queue_free")
 	nuevaSerpiente()
 	crearComida()
 	
 func nuevaSerpiente():
-	datosViejos.clear()
-	datos.clear()
-	serpiente.clear()
+	limpiarSerpiente()
 	for i in range(3):
 		nuevoSegmento(posInicio+Vector2(0,i))
+
+func limpiarSerpiente() -> void:
+	for segmento in get_tree().get_nodes_in_group("segmentos"):
+		if segmento.get_parent() == self:
+			segmento.visible = false
+			segmento.queue_free()
+	serpiente.clear()
+	datos.clear()
+	datosViejos.clear()
 		
 func nuevoSegmento(pos):
 	datos.append(pos)
@@ -64,6 +75,8 @@ func _process(delta: float) -> void:
 	mover()
 	
 func mover():
+	if termino:
+		return
 	if Input.is_action_just_pressed("moverAb") and direccion!=arriba:
 		if puedeMoverse:
 			direccion=abajo
@@ -90,10 +103,14 @@ func mover():
 			iniciar()
 			
 func iniciar():
+	if termino:
+		return
 	juegoEmpezado=true
 	$Timer.start()
 
 func _on_timer_timeout() -> void:
+	if termino or datos.is_empty():
+		return
 	puedeMoverse=true
 	datosViejos=[] + datos
 	datos[0]+=direccion
@@ -102,9 +119,13 @@ func _on_timer_timeout() -> void:
 			datos[i]=datosViejos[i - 1]
 		serpiente[i].position= (datos[i]*tamanioCelda)+Vector2(0,tamanioCelda)
 	chequearEstaEnMapa()
+	if termino or not juegoEmpezado or datos.is_empty():
+		return
 	chequearComida()
 	
 func chequearEstaEnMapa():
+	if datos.is_empty():
+		return
 	if datos[0].x<0 or datos[0].x>cantCeldasX-1 or datos[0].y<0 or datos[0].y>cantCeldasY-1:
 		restarVida()
 		
@@ -114,7 +135,7 @@ func restarVida() -> void:
 	juegoEmpezado = false
 	puedeMoverse = true
 	
-	$barraPuntaje.set_vidas(vidas)
+	barra_puntaje.set_vidas(vidas)
 	
 	if vidas <= 0:
 		perder()
@@ -124,11 +145,14 @@ func restarVida() -> void:
 	crearComida()
 	
 func chequearComida():
+	if termino or datos.is_empty():
+		return
 	if datos[0]==comidaPos:
 		puntaje+=1
+		barra_puntaje.set_puntaje(puntaje)
 		if puntaje == 5:
 			ganaste()
-		$barraPuntaje.set_puntaje(puntaje)
+			return
 		nuevoSegmento(datosViejos[-1])
 		crearComida()
 		
@@ -162,4 +186,9 @@ func perder():
 	if termino:
 		return
 	termino = true
+	juegoEmpezado = false
+	puedeMoverse = false
+	$Timer.stop()
+	limpiarSerpiente()
+	$comida.visible = false
 	gameOverCartel.visible= true

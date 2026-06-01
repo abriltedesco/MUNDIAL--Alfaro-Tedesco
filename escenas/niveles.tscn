@@ -18,21 +18,29 @@ expand_mode = 1
 position = Vector2(427, 453)
 escena = "res://escenas/niveles/nivel_1.tscn"
 banderaSprite = "res://assets/banderas/brasil.png"
+banderaSpriteBloqueada = "res://assets/banderas/brasil_bloqueada.png"
+nivel = 1
 
 [node name="bandera2" parent="." unique_id=1277652008 instance=ExtResource("1_g6lji")]
 position = Vector2(946, 266)
 escena = "res://escenas/niveles/nivel_2.tscn"
 banderaSprite = "res://assets/banderas/china.png"
+banderaSpriteBloqueada = "res://assets/banderas/china_bloqueada.png"
+nivel = 2
 
 [node name="bandera4" parent="." unique_id=975048404 instance=ExtResource("1_g6lji")]
 position = Vector2(211, 195)
 escena = "res://escenas/niveles/nivel_4.tscn"
 banderaSprite = "res://assets/banderas/canada.png"
+banderaSpriteBloqueada = "res://assets/banderas/canada_bloqueada.png"
+nivel = 4
 
 [node name="bandera3" parent="." unique_id=1753212922 instance=ExtResource("1_g6lji")]
 position = Vector2(613, 214)
 escena = "res://escenas/niveles/nivel_3.tscn"
 banderaSprite = "res://assets/banderas/francia.png"
+banderaSpriteBloqueada = "res://assets/banderas/francia_bloqueada.png"
+nivel = 3
 
 [node name="avion" parent="." unique_id=216925273 instance=ExtResource("3_wyxks")]
 position = Vector2(528, 365)

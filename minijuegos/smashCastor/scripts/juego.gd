@@ -11,6 +11,8 @@ var ultimoTipo = null
 var repeticionesTipo = 0
 
 func _ready() -> void:
+	gameOverCartel.visible = false
+	ganasteCartel.visible = false
 	randomize()
 	timer.timeout.connect(_on_timer_timeout)
 	
@@ -77,8 +79,7 @@ func ganar() -> void:
 	timer.stop()
 	
 	Progreso.marcarMinijuegoGanado(4)
-	
-	get_tree().change_scene_to_file("res://escenas/niveles/nivel_4.tscn")	
+	get_tree().change_scene_to_file("res://escenas/niveles/nivel_4.tscn")
 	
 func gameOver() -> void:
 	gameOverCartel.visible = true

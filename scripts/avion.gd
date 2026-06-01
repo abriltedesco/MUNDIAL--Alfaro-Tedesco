@@ -10,6 +10,7 @@ func _physics_process(delta: float) -> void:
 		
 	var dirX = Input.get_axis("moverI", "moverD")
 	var dirY = Input.get_axis("moverArr", "moverAb")
+	look_at(get_global_mouse_position())
 	
 	velocity = Vector2(dirX, dirY).normalized() * SPEED
 	move_and_slide()

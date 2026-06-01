@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfq2ln3fx0ex7"
-path="res://.godot/imported/Textured_Brick_03-128x32.png-ca882ab0173d44abb12583439471fe1e.ctex"
+uid="uid://ci6wv8m4sv14n"
+path="res://.godot/imported/muralla.jpg-340cc9ea6ecfe9c997f8f81d08e0e4ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minijuegos/arkanoid/assets/Textured_Brick_03-128x32.png"
-dest_files=["res://.godot/imported/Textured_Brick_03-128x32.png-ca882ab0173d44abb12583439471fe1e.ctex"]
+source_file="res://minijuegos/arkanoid/assets/muralla.jpg"
+dest_files=["res://.godot/imported/muralla.jpg-340cc9ea6ecfe9c997f8f81d08e0e4ca.ctex"]
 
 [params]
 

@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://n6tdgnqhxe50"]
+
+[ext_resource type="Texture2D" uid="uid://dnoye3hv5ec4b" path="res://assets/avion.png" id="1_1r8py"]
+[ext_resource type="Script" uid="uid://imid7eomkbff" path="res://scripts/avion.gd" id="1_pcra2"]
+[ext_resource type="Texture2D" uid="uid://c5y00xhi7pbmu" path="res://assets/kikiA.png" id="2_pcra2"]
+[ext_resource type="Texture2D" uid="uid://dh2pd3v6j07xr" path="res://assets/naniA.png" id="3_v8k2v"]
+
+[node name="avion" type="CharacterBody2D" unique_id=216925273]
+collision_layer = 16
+collision_mask = 32
+script = ExtResource("1_pcra2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1387793974]
+position = Vector2(-3.8146973e-06, 5.500001)
+scale = Vector2(1.4255319, 1.393617)
+texture = ExtResource("1_1r8py")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=896725026]
+position = Vector2(-44, -0.5)
+scale = Vector2(0.12410073, 0.14545456)
+texture = ExtResource("2_pcra2")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=275040226]
+position = Vector2(38.999992, -2.500002)
+scale = Vector2(0.22929937, 0.27659577)
+texture = ExtResource("3_v8k2v")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=2045713902]
+polygon = PackedVector2Array(0, -44, -16, -34, -11, -15, -67, -15, -67, 12, -12, 12, -25, 40, -26, 49, -15, 54, 19, 54, 26, 49, 26, 39, 11, 11, 52, 12, 59, 11, 65, 6, 65, -9, 63, -14, 57, -15, 11, -15, 17, -33)

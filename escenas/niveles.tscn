@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://3jtmytc0x822" path="res://escenas/bandera.tscn" id="1_g6lji"]
 [ext_resource type="Texture2D" uid="uid://kdl002atjj7n" path="res://assets/mapa.png" id="1_n0pam"]
+[ext_resource type="PackedScene" uid="uid://n6tdgnqhxe50" path="res://escenas/avion.tscn" id="3_wyxks"]
 
 [node name="niveles" type="Node2D" unique_id=649642387]
 
@@ -31,3 +32,6 @@ banderaSprite = "res://assets/banderas/canada.png"
 position = Vector2(613, 214)
 escena = "res://escenas/niveles/nivel_3.tscn"
 banderaSprite = "res://assets/banderas/francia.png"
+
+[node name="avion" parent="." unique_id=216925273 instance=ExtResource("3_wyxks")]
+position = Vector2(122, 590)

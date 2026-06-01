@@ -8,8 +8,9 @@ func _ready() -> void:
 		$Sprite2D.texture = load(banderaSprite)
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.name != "kiki":
+	if body.name != "avion":
 		return
+
 	
 	if escena != "":
 		get_tree().change_scene_to_file(escena)

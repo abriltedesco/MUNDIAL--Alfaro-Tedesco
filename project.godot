@@ -85,6 +85,8 @@ locale/translations_pot_files=PackedStringArray("res://dialogues/dialogue.dialog
 2d_physics/layer_2="entorno"
 2d_physics/layer_3="enemigo"
 2d_physics/layer_4="huesos"
+2d_physics/layer_5="avion"
+2d_physics/layer_6="bandera"
 
 [physics]
 

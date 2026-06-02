@@ -34,8 +34,8 @@ script = ExtResource("1_kp7at")
 serpienteEscena = SubResource("PackedScene_jr4iw")
 
 [node name="fondo" type="Sprite2D" parent="." unique_id=1886054209]
-position = Vector2(577.6884, 331.45737)
-scale = Vector2(7.6974883, 3.245426)
+position = Vector2(554, 332.75003)
+scale = Vector2(1.198, 1.2870002)
 texture = ExtResource("2_alg2p")
 
 [node name="Timer" type="Timer" parent="." unique_id=384258272]

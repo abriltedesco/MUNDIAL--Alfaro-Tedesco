@@ -75,7 +75,9 @@ border_width_bottom = 5
 border_color = Color(0.66563326, 0.48754752, 0.9169144, 1)
 border_blend = true
 corner_radius_top_left = 20
+corner_radius_top_right = 20
 corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [sub_resource type="Animation" id="Animation_nlsx6"]
 length = 0.001
@@ -113,15 +115,18 @@ _data = {
 &"progress": SubResource("Animation_qkmqt")
 }
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pky7w"]
-bg_color = Color(0.3372549, 0.5294118, 0.62352943, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0, 0, 0, 1)
-expand_margin_top = 3.0
-expand_margin_bottom = 3.0
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wvjsw"]
+bg_color = Color(0.50098467, 0.69661224, 0.7540745, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+shadow_color = Color(0.09436471, 0.22041446, 0.24614808, 0.32941177)
+shadow_size = 5
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pky7w"]
 
@@ -185,18 +190,18 @@ theme_override_colors/default_color = Color(0.27612373, 0.1602523, 0.29894945, 1
 theme_override_fonts/normal_font = ExtResource("2_rvau3")
 theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
-text = "Character"
+text = "Personaje"
 fit_content = true
 scroll_active = false
 
-[node name="DialogueLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1225160028 instance=ExtResource("2_wvjsw")]
+[node name="DialogueLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1464206474 instance=ExtResource("2_wvjsw")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/default_color = Color(0.3281422, 0.28889063, 0.5193781, 1)
 theme_override_fonts/normal_font = ExtResource("2_rvau3")
 theme_override_font_sizes/normal_font_size = 25
-text = "Dialogue..."
+text = "Dialogo"
 
 [node name="Control" type="Control" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=1162966119]
 custom_minimum_size = Vector2(20, 10)
@@ -227,19 +232,21 @@ offset_bottom = -329.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_vertical = 8
-theme_override_constants/separation = 1
 alignment = 1
 script = ExtResource("3_rvau3")
 response_template = NodePath("ResponseExample")
 
 [node name="ResponseExample" type="Button" parent="Balloon/ResponsesMenu" unique_id=914537232]
 layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_pky7w")
+theme_override_colors/font_color = Color(0.19215687, 0.3764706, 0.67058825, 1)
+theme_override_fonts/font = ExtResource("2_rvau3")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wvjsw")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_pky7w")
 theme_override_styles/hover = SubResource("StyleBoxFlat_rvau3")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_wvjsw")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_rvau3")
-text = "Response example"
+text = "Respuesta
+"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1116280512]
 unique_name_in_owner = true

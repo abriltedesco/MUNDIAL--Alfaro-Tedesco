@@ -4,16 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://ba7xq73pnhekh" path="res://assets/backgroundNiv.png" id="1_d7r87"]
 [ext_resource type="FontFile" uid="uid://pr6n8kfsqxqb" path="res://assets/retropix.ttf" id="2_2owot"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6cq3m"]
-bg_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-corner_detail = 12
-expand_margin_left = 5.0
-expand_margin_top = 5.0
-expand_margin_right = 5.0
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2owot"]
+bg_color = Color(0.21960784, 0.23921569, 0.45882353, 0.64705884)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.24313726, 0.24705882, 0.47058824, 1)
+expand_margin_top = 2.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d7r87"]
 bg_color = Color(0.32593971, 0.23308408, 0.18747008, 1)
@@ -48,16 +46,17 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -144.0
-offset_top = -88.0
-offset_right = 141.0
-offset_bottom = -31.0
+offset_left = -142.5
+offset_top = -96.0
+offset_right = 142.5
+offset_bottom = -39.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_colors/font_color = Color(0.11007131, 0.11547995, 0.31633636, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_2owot")
 theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxFlat_6cq3m")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2owot")
 theme_override_styles/hover = SubResource("StyleBoxFlat_d7r87")
 text = "START GAME"
 

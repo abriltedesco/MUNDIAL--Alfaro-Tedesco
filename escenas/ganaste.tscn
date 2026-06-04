@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://k2bfukrcxtv5"]
+
+[ext_resource type="Texture2D" uid="uid://bfq2sjodvpf26" path="res://assets/parque.jpg" id="1_jiltn"]
+[ext_resource type="Script" uid="uid://bhypxp3utlxem" path="res://scripts/ganaste.gd" id="1_twgdn"]
+[ext_resource type="PackedScene" uid="uid://dx33uyvug4c1i" path="res://escenas/dog2.tscn" id="2_twgdn"]
+[ext_resource type="PackedScene" uid="uid://dueiv3oruaibj" path="res://escenas/dog1.tscn" id="3_g0qwb"]
+
+[node name="ganaste" type="Node2D" unique_id=1576550039]
+script = ExtResource("1_twgdn")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2115977161]
+offset_top = -21.0
+offset_right = 1150.0
+offset_bottom = 697.75
+texture = ExtResource("1_jiltn")
+expand_mode = 5
+
+[node name="nani" parent="." unique_id=32347266 instance=ExtResource("2_twgdn")]
+position = Vector2(553, 549)
+
+[node name="kiki" parent="." unique_id=2074595676 instance=ExtResource("3_g0qwb")]
+position = Vector2(36, 562)

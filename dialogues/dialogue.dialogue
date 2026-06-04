@@ -48,3 +48,15 @@ Gallo: Te desafio a este juego... tene cuidado con lo que consumas!
 - Jugar
 	do irAlMinijuego()
 => END
+
+~ ganaste
+Kiki: Ay que emocion! los recuperaste todos
+Nani: No sabes cuanto te lo agradecemos
+Kiki: Eres increible!
+Nani: Asi es! y sabes que? 
+Kiki: tenemos un desafio extra si te divertiste acompañandonos en esta aventura
+Nani: exactamente! aceptas este reto?
+- ¡Por supuesto que acepto!
+- Ya hice mucho... no gracias
+	do get_tree().quit()
+=> END

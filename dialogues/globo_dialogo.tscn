@@ -132,6 +132,12 @@ shadow_size = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rvau3"]
 bg_color = Color(0.1669032, 0.28998426, 0.3495988, 1)
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+shadow_color = Color(0.09411765, 0.21960784, 0.24705882, 0.32941177)
+shadow_size = 5
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wvjsw"]
 
@@ -226,12 +232,13 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -212.75
-offset_top = -399.0
+offset_top = -370.0
 offset_right = 212.75
-offset_bottom = -329.0
+offset_bottom = -334.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_vertical = 8
+theme_override_constants/separation = 20
 alignment = 1
 script = ExtResource("3_rvau3")
 response_template = NodePath("ResponseExample")
@@ -239,6 +246,7 @@ response_template = NodePath("ResponseExample")
 [node name="ResponseExample" type="Button" parent="Balloon/ResponsesMenu" unique_id=914537232]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.19215687, 0.3764706, 0.67058825, 1)
+theme_override_constants/h_separation = 0
 theme_override_fonts/font = ExtResource("2_rvau3")
 theme_override_styles/normal = SubResource("StyleBoxFlat_wvjsw")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_pky7w")

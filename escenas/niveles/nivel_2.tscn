@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cmxphiwuuykvs" path="res://escenas/enemigos/dragon.tscn" id="2_h74xc"]
 [ext_resource type="PackedScene" uid="uid://dx33uyvug4c1i" path="res://escenas/dog2.tscn" id="2_wyhoh"]
 [ext_resource type="PackedScene" uid="uid://c52ob5hy8jrwh" path="res://escenas/hueso.tscn" id="4_h74xc"]
+[ext_resource type="PackedScene" uid="uid://cc708mfd503lv" path="res://escenas/huesosActualizar.tscn" id="6_btu8m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wyhoh"]
 size = Vector2(1223, 20)
@@ -37,3 +38,5 @@ shape = SubResource("RectangleShape2D_wyhoh")
 [node name="hueso" parent="." unique_id=686890677 instance=ExtResource("4_h74xc")]
 position = Vector2(558, 328)
 nivel = 2
+
+[node name="huesosActualizacion" parent="." unique_id=1599886567 instance=ExtResource("6_btu8m")]

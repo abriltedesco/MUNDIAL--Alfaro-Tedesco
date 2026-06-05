@@ -1,6 +1,7 @@
 extends Node2D
 @onready var enemigo = $dragon
 @onready var hueso = $hueso
+@onready var cantidadHuesos=$huesosActualizacion/cantidad
 
 func _ready() -> void:
 	if Progreso.minijuegoGanado(2):
@@ -9,3 +10,4 @@ func _ready() -> void:
 	
 	if Progreso.huesoRecogido(2):
 		hueso.queue_free()
+		cantidadHuesos.text=str(int(cantidadHuesos.text) + 1)

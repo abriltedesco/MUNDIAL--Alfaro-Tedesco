@@ -117,10 +117,10 @@ _data = {
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wvjsw"]
 bg_color = Color(0.50098467, 0.69661224, 0.7540745, 1)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 expand_margin_left = 5.0
 expand_margin_top = 5.0
 expand_margin_right = 5.0

@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cc708mfd503lv"]
+
+[ext_resource type="FontFile" uid="uid://pr6n8kfsqxqb" path="res://assets/retropix.ttf" id="1_7w10c"]
+[ext_resource type="Texture2D" uid="uid://na8ohh556qxj" path="res://assets/hueso.png" id="2_arr2a"]
+
+[node name="huesosActualizacion" type="CanvasLayer" unique_id=1599886567]
+
+[node name="cantidad" type="Label" parent="." unique_id=1022606896]
+anchors_preset = -1
+anchor_left = 0.95000005
+anchor_top = 0.066
+anchor_right = 0.95000005
+anchor_bottom = 0.066
+offset_left = -59.400024
+offset_top = 4.2319984
+offset_right = -41.400024
+offset_bottom = 48.232
+theme_override_fonts/font = ExtResource("1_7w10c")
+theme_override_font_sizes/font_size = 40
+text = "0"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=426752095]
+position = Vector2(1074.672, 66)
+scale = Vector2(0.09750722, 0.11222446)
+texture = ExtResource("2_arr2a")

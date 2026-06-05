@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://csqnl8lip1r47" path="res://minijuegos/perdiste.tscn" id="8_7fvi4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rgjns"]
-size = Vector2(1167, 18)
+size = Vector2(1164, 63)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_43uub"]
 size = Vector2(18, 682)
@@ -39,7 +39,7 @@ texture = ExtResource("2_7fvi4")
 [node name="techo" type="StaticBody2D" parent="paredes" unique_id=320081810]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="paredes/techo" unique_id=1818802428]
-position = Vector2(576, 7)
+position = Vector2(577, 29.5)
 shape = SubResource("RectangleShape2D_rgjns")
 
 [node name="Line2D" type="Line2D" parent="paredes/techo" unique_id=28793884]

@@ -5,15 +5,23 @@ extends Node2D
 
 func _ready() -> void:
 	kiki.movIntro = true
-	nani.play("sleep")
+	nani.movIntro =true
+	
+	nani.play("walkR")
 	kiki.play("walkR")
+	nani.get_node("AnimatedSprite2D").flip_h = true 
 	
 	var tween = create_tween()
-	var posNani = Vector2(nani.position.x - 150, nani.position.y)
-	tween.tween_property(kiki, "position", posNani, 3.0) 
+	
+	# ambas animaciones ocurren a la vez
+	tween.set_parallel(true)
+	tween.tween_property(kiki, "position:x", 500, 3.0) 
+	tween.tween_property(nani, "position:x", 650, 3.0)
+	tween.set_parallel(false) 
 	await tween.finished
 	
-	kiki.play("default")
+	kiki.play("ladrar")
+	nani.play("default")
 	
 	var dialogo = load("res://dialogues/dialogue.dialogue")
 

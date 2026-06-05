@@ -4,6 +4,8 @@ signal recogido
 
 func _on_body_entered(body: Node2D) -> void:
 	Progreso.recogerHueso(nivel)
+	emit_signal("recogido")
+	queue_free()
 		
 	if Progreso.ganoJuegoCompleto():
 		print("Ganaste el juego!!")
@@ -11,7 +13,4 @@ func _on_body_entered(body: Node2D) -> void:
 	else:
 		await get_tree().create_timer(2.0).timeout # para q no sea tan rapido el cambio
 		print(str(Progreso.datos.huesitosRecolectado) + "/4 recolectado") # aca deberiamos desp ponerle mas q un print algun cartelito 
-		get_tree().change_scene_to_file("res://escenas/niveles.tscn")
-	
-	emit_signal("recogido")
-	queue_free() 
+		get_tree().change_scene_to_file("res://escenas/niveles.tscn") 

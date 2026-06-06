@@ -21,12 +21,21 @@ var vidas:int = 3
 var termino:bool = false
 var comidaPos:Vector2
 var regenerarComida: bool=true
+var puntosParaGanar:int 
 
 @onready var gameOverCartel = $perdiste
 @onready var ganasteCartel = $ganaste
 @onready var barra_puntaje: BarraPuntaje = $barraPuntaje
 
 func _ready() -> void:
+	if Progreso.modoDificil:
+		$Timer.wait_time = 0.08 
+		puntosParaGanar = 10
+	else:
+		$Timer.wait_time = 0.15
+		puntosParaGanar = 5
+		
+	nuevoJuego()
 	nuevoJuego()
 	
 func nuevoJuego():
@@ -145,7 +154,7 @@ func chequearComida():
 	if datos[0]==comidaPos:
 		puntaje+=1
 		barra_puntaje.set_puntaje(puntaje)
-		if puntaje == 5:
+		if puntaje == puntosParaGanar:
 			ganaste()
 			return
 		nuevoSegmento(datosViejos[-1])

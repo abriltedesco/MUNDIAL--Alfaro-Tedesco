@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://d1op355o2rq68"]
+
+[ext_resource type="Texture2D" uid="uid://ckned2xj18fe" path="res://assets/banderas/canada.png" id="1_pkbjk"]
+[ext_resource type="Script" uid="uid://cixmrv1w3mkq8" path="res://scripts/bandera_dificil.gd" id="1_xj4mt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xj4mt"]
+size = Vector2(68, 83)
+
+[node name="banderaDificil" type="Area2D" unique_id=819007395]
+script = ExtResource("1_xj4mt")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1900250817]
+position = Vector2(-2.000002, -2.000001)
+scale = Vector2(0.73333335, 0.75)
+texture = ExtResource("1_pkbjk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=897793376]
+shape = SubResource("RectangleShape2D_xj4mt")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

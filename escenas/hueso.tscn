@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://na8ohh556qxj" path="res://assets/hueso.png" id="1_rhrh8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rhrh8"]
-radius = 4.8901978
-height = 22.574951
+radius = 6.5843916
+height = 27.470503
 
 [node name="hueso" type="Area2D" unique_id=686890677]
 scale = Vector2(1.5, 1.5)
@@ -13,12 +13,11 @@ collision_layer = 8
 script = ExtResource("1_aw50r")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1378385826]
-position = Vector2(241.12498, 192)
 scale = Vector2(0.07565135, 0.080160305)
 texture = ExtResource("1_rhrh8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1931392376]
-position = Vector2(241, 192)
+position = Vector2(0, 1.5258789e-05)
 rotation = -0.85346603
 shape = SubResource("CapsuleShape2D_rhrh8")
 

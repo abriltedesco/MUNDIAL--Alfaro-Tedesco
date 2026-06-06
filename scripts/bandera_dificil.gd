@@ -1,35 +1,28 @@
 extends Area2D
 
-@export var escena= ""
+@export var escena = ""
 @export var banderaSprite = ""
 @export var banderaSpriteBloqueada = ""
 @export var nivel = 0
-@export var esDificil = false
-
 var bloqueada = false
 
 func _ready() -> void:
 	if banderaSprite != "":
 		$Sprite2D.texture = load(banderaSprite)
-		
-	if nivel > 0 and Progreso.minijuegoGanado(nivel):
-		bloquear()
 	
+	if nivel > 0 and Progreso.datos.ganadosDificil.has(nivel):
+		bloquear()
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.name != "avion":
-		return
-		
-	if bloqueada:
-		return
+	if body.name != "avion": return
+	if bloqueada: return
 	
 	if escena != "":
-		Progreso.modoDificil = esDificil
+		Progreso.modoDificil = true
 		get_tree().change_scene_to_file(escena)
 
 func bloquear() -> void:
 	bloqueada = true
 	$CollisionShape2D.disabled = true
-	
 	if banderaSpriteBloqueada != "":
 		$Sprite2D.texture = load(banderaSpriteBloqueada)

@@ -44,7 +44,7 @@ position = Vector2(289.75, 589)
 shape = SubResource("RectangleShape2D_43uub")
 
 [node name="hueso" parent="." unique_id=686890677 instance=ExtResource("5_gajck")]
-position = Vector2(437, 112)
+position = Vector2(840, 381)
 
 [node name="huesosActualizacion" parent="." unique_id=1599886567 instance=ExtResource("6_bakxy")]
 

@@ -1,5 +1,6 @@
 extends Node
 
+var modoDificil = false
 const rutaGuardado = "user://partida.tres"
 var datos: DatosJuego
 
@@ -24,12 +25,20 @@ func guardarPartida() -> void:
 	print("partida guardada")
 	
 func marcarMinijuegoGanado(nivel: int) -> void:
-	if !datos.minijuegosGanados.has(nivel):
-		datos.minijuegosGanados.append(nivel)
-		guardarPartida()
+	if modoDificil:
+		if !datos.ganadosDificil.has(nivel):
+			datos.ganadosDificil.append(nivel)
+	else:
+		if !datos.minijuegosGanados.has(nivel):
+			datos.minijuegosGanados.append(nivel)
+			
+	guardarPartida()
 		
 func minijuegoGanado(nivel: int) -> bool:
+	if modoDificil:
+		return datos.ganadosDificil.has(nivel) 
 	return datos.minijuegosGanados.has(nivel)
+	
 	
 func recogerHueso(nivel: int) -> void:
 	if datos.huesosRecogidos.has(nivel):

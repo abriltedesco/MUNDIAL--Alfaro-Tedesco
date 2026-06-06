@@ -11,6 +11,8 @@ signal vidaRestada
 var vida_restada = false
 
 func _ready() -> void:
+	if Progreso.modoDificil:
+		veloc = 600
 	velocity = Vector2(veloc* -1, veloc)
 	
 func restarVida() -> void:

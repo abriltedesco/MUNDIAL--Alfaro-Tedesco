@@ -27,6 +27,7 @@ func _ready() -> void:
 	ganasteCartel.visible = false
 	cantLadrillos = cols * filas
 	
+	
 func restar_ladrillo() -> void:
 	cantLadrillos -= 1
 	

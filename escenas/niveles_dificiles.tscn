@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://dphjuiu6tfdry"]
+
+[ext_resource type="Texture2D" uid="uid://kdl002atjj7n" path="res://assets/mapa.png" id="1_s705q"]
+[ext_resource type="PackedScene" uid="uid://n6tdgnqhxe50" path="res://escenas/avion.tscn" id="3_2igkr"]
+[ext_resource type="PackedScene" uid="uid://d1op355o2rq68" path="res://escenas/bandera_dificil.tscn" id="3_s705q"]
+
+[node name="nivelesDificiles" type="Node2D" unique_id=397258541]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1335239942]
+offset_left = 4.0
+offset_right = 1146.0
+offset_bottom = 656.0
+texture = ExtResource("1_s705q")
+expand_mode = 1
+
+[node name="banderaDificil2" parent="." unique_id=819007395 instance=ExtResource("3_s705q")]
+position = Vector2(957, 261)
+collision_layer = 32
+collision_mask = 16
+escena = "res://escenas/niveles/nivel_2.tscn"
+banderaSprite = "res://assets/banderas/china.png"
+banderaSpriteBloqueada = "res://assets/banderas/china_bloqueada.png"
+nivel = 2
+
+[node name="banderaDificil" parent="." unique_id=1133799387 instance=ExtResource("3_s705q")]
+position = Vector2(423, 477)
+collision_layer = 32
+collision_mask = 16
+escena = "res://escenas/niveles/nivel_1.tscn"
+banderaSprite = "res://assets/banderas/brasil.png"
+banderaSpriteBloqueada = "res://assets/banderas/brasil_bloqueada.png"
+nivel = 1
+
+[node name="banderaDificil3" parent="." unique_id=529267131 instance=ExtResource("3_s705q")]
+position = Vector2(629, 220)
+collision_layer = 32
+collision_mask = 16
+escena = "res://escenas/niveles/nivel_3.tscn"
+banderaSprite = "res://assets/banderas/francia.png"
+banderaSpriteBloqueada = "res://assets/banderas/francia_bloqueada.png"
+nivel = 3
+
+[node name="banderaDificil4" parent="." unique_id=1593124267 instance=ExtResource("3_s705q")]
+position = Vector2(244, 215)
+collision_layer = 32
+collision_mask = 16
+escena = "res://escenas/niveles/nivel_2.tscn"
+banderaSprite = "res://assets/banderas/canada.png"
+banderaSpriteBloqueada = "res://assets/banderas/canada_bloqueada.png"
+nivel = 4
+
+[node name="avion" parent="." unique_id=216925273 instance=ExtResource("3_2igkr")]
+position = Vector2(528, 365)

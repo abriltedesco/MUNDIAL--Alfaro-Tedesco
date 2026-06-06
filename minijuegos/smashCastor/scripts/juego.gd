@@ -5,6 +5,7 @@ extends Node2D
 @onready var gameOverCartel = $perdiste
 @onready var ganasteCartel = $ganaste
 
+var puntosParaGanar = 15
 var puntaje = 0
 var vidas = 3
 var ultimoTipo = null
@@ -20,8 +21,17 @@ func _ready() -> void:
 		pozo.golpeado.connect(_on_pozo_golpeado)
 		
 	actualizarUi()
+	
+	if Progreso.modoDificil:
+		$TiempoLimite.wait_time = 90.0
+		$TiempoLimite.start()
+		
 	timer.wait_time = 0.35
 	timer.start() 
+	
+func _process(delta: float) -> void:
+	if Progreso.modoDificil and !$TiempoLimite.is_stopped():
+		$LabelTiempo.text = "Tiempo: " + str(int($TiempoLimite.time_left))
 
 func _on_timer_timeout() -> void:
 	var pozosDisp = []
@@ -37,10 +47,16 @@ func _on_timer_timeout() -> void:
 	var esHueso = elegirRandom()
 	pozoElegido.asomarse(esHueso)
 	
-	if puntaje < 5 :
-		timer.wait_time = randf_range(0.54, 1.0)
-	else: 
-		timer.wait_time = randf_range(0.35, 0.75)
+	if Progreso.modoDificil:
+		if puntaje < 5:
+			timer.wait_time = randf_range(0.3, 0.6)
+		else: 
+			timer.wait_time = randf_range(0.2, 0.4) 
+	else:
+		if puntaje < 5:
+			timer.wait_time = randf_range(0.54, 1.0)
+		else: 
+			timer.wait_time = randf_range(0.35, 0.75)
 	timer.start()
 	
 func elegirRandom() -> bool:
@@ -64,8 +80,11 @@ func _on_pozo_golpeado(esHueso: bool) -> void:
 		vidas -= 1
 		
 	actualizarUi()
+			
+	if Progreso.modoDificil:
+		puntosParaGanar = 10
 	
-	if puntaje >= 10:
+	if puntaje >= puntosParaGanar:
 		ganar()
 	if vidas <= 0:
 		gameOver()
@@ -75,6 +94,7 @@ func actualizarUi() -> void:
 	$barraPuntaje.set_vidas(vidas)
 	
 func ganar() -> void:
+	$TiempoLimite.stop()
 	ganasteCartel.visible = true
 	timer.stop()
 	
@@ -84,3 +104,6 @@ func ganar() -> void:
 func gameOver() -> void:
 	gameOverCartel.visible = true
 	timer.stop()
+
+func _on_tiempo_limite_timeout() -> void:
+	gameOver()

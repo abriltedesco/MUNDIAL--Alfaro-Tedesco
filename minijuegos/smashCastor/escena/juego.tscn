@@ -42,3 +42,8 @@ escenaAreintentar = "res://minijuegos/smashCastor/escena/juego.tscn"
 [node name="ganaste" parent="." unique_id=962983920 instance=ExtResource("6_rpcol")]
 
 [node name="barraPuntaje" parent="." unique_id=1394473309 instance=ExtResource("6_hnn6f")]
+
+[node name="TiempoLimite" type="Timer" parent="." unique_id=881478817]
+one_shot = true
+
+[connection signal="timeout" from="TiempoLimite" to="." method="_on_tiempo_limite_timeout"]

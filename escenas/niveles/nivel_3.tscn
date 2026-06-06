@@ -24,12 +24,13 @@ texture = ExtResource("1_g7x3m")
 [node name="kiki" parent="." unique_id=2074595676 instance=ExtResource("1_hht2n")]
 visibility_layer = 2
 position = Vector2(266, 586)
+collision_mask = 14
 
 [node name="gallo" parent="." unique_id=1124119009 instance=ExtResource("3_4nfxa")]
 position = Vector2(712, 570)
 
 [node name="hueso" parent="." unique_id=686890677 instance=ExtResource("5_gwphi")]
-position = Vector2(457, 320)
+position = Vector2(810.00006, 594)
 nivel = 3
 
 [node name="limites" type="StaticBody2D" parent="." unique_id=2140423900]
@@ -37,7 +38,7 @@ collision_layer = 2
 collision_mask = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="limites" unique_id=2000603789]
-position = Vector2(573, 262.75)
+position = Vector2(565, 236)
 shape = SubResource("RectangleShape2D_pqwxa")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="limites" unique_id=1295747809]

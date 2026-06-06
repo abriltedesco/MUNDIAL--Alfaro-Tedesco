@@ -34,4 +34,4 @@ func _ready() -> void:
 	Progreso.datos.gano = true
 	Progreso.guardarPartida() 
 	
-	# get_tree().change_scene_to_file("res://escenas/nivelesDificiles.tscn")
+	get_tree().change_scene_to_file("res://escenas/niveles_dificiles.tscn")

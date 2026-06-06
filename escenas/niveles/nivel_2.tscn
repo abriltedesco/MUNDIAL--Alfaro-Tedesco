@@ -40,3 +40,5 @@ position = Vector2(558, 328)
 nivel = 2
 
 [node name="huesosActualizacion" parent="." unique_id=1599886567 instance=ExtResource("6_btu8m")]
+
+[connection signal="recogido" from="hueso" to="." method="_on_hueso_recogido"]

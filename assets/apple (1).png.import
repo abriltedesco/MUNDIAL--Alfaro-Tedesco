@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0s81p4rh283o"
-path="res://.godot/imported/New Piskel (2).png-2a2ca539d3a4f4c35544aeeab3e7a3b9.ctex"
+uid="uid://du7q6n4l1xm1a"
+path="res://.godot/imported/apple (1).png-420bf1131804ae4a902c5fa8294e29be.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/New Piskel (2).png"
-dest_files=["res://.godot/imported/New Piskel (2).png-2a2ca539d3a4f4c35544aeeab3e7a3b9.ctex"]
+source_file="res://assets/apple (1).png"
+dest_files=["res://.godot/imported/apple (1).png-420bf1131804ae4a902c5fa8294e29be.ctex"]
 
 [params]
 

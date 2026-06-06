@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cufjd3ko1s24j"
-path="res://.godot/imported/fondoSerpiente.jpg-01d1218b8939385e71155aa6e4ea57b0.ctex"
+uid="uid://dimkxtjy102yq"
+path="res://.godot/imported/blue flowers 16x16.png-9cbfb229e524cd6ac16e073b72ea747b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fondoSerpiente.jpg"
-dest_files=["res://.godot/imported/fondoSerpiente.jpg-01d1218b8939385e71155aa6e4ea57b0.ctex"]
+source_file="res://minijuegos/snake/blue flowers 16x16.png"
+dest_files=["res://.godot/imported/blue flowers 16x16.png-9cbfb229e524cd6ac16e073b72ea747b.ctex"]
 
 [params]
 

@@ -47,3 +47,5 @@ shape = SubResource("RectangleShape2D_43uub")
 position = Vector2(437, 112)
 
 [node name="huesosActualizacion" parent="." unique_id=1599886567 instance=ExtResource("6_bakxy")]
+
+[connection signal="recogido" from="hueso" to="." method="_on_hueso_recogido"]

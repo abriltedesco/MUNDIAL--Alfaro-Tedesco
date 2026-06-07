@@ -14,12 +14,21 @@ shadow_offset = Vector2(1, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rrxmj"]
 bg_color = Color(9.746477e-07, 0.28216684, 0.26695916, 1)
 border_color = Color(0.62352943, 0.8901961, 0.45490196, 0)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 expand_margin_left = 10.0
 expand_margin_top = 5.0
 expand_margin_right = 10.0
 expand_margin_bottom = 5.0
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rrxmj"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ron8b"]
+bg_color = Color(0.5372549, 0.6313726, 0.5294118, 0.59607846)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="perdiste" type="CanvasLayer" unique_id=1928346468]
 script = ExtResource("1_1ekmo")
@@ -80,14 +89,14 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_rrxmj")
 text = "Volver a intentar"
 
 [node name="salir" type="Button" parent="." unique_id=1606130237]
-offset_left = 306.0
-offset_top = 385.0
-offset_right = 518.0
-offset_bottom = 440.0
+offset_left = 305.0
+offset_top = 389.0
+offset_right = 517.0
+offset_bottom = 437.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_rrxmj")
 theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = SubResource("StyleBoxEmpty_rrxmj")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ron8b")
 text = "Salir"
 
 [connection signal="button_down" from="reintentar" to="." method="_on_reintentar_button_down"]

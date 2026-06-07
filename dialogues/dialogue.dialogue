@@ -21,15 +21,32 @@ Nani: Muchas gracias por darme la pata! Se que juntos lo lograremos.
 
 
 ~ charla_serpiente
-Serpiente: Ay perrito penzzazz que te dare azzzi de rapido el huezzzito? ja!
-Serpiente: Si quierezz que te lo devuelva deberás zzuperar mi juego...
+Kiki: ¡Las playas son tan grandes! Va a ser difícil encontrarlo...
+Kiki: ...ojala no este escondido bajo la arena...
+Serpiente: Pssssss....
+Kiki: ¿Mhh?
+Serpiente: Pssssss....por aca...
+Serpiente: ¿Acaso perdizzzzte un huezzzo, perrito?
+Kiki: ¡Eso es exactamente lo que me paso! 
+Kiki: Menos mal que la encuentro, señora serpiente... ¿podria decirme donde puedo encontrarlo?
+Serpiente: ¿ZZZEÑORA?... y penzzar que yo uzzo eztazzz florezzz para parezzerrr mazzz joven...
+Serpiente: Como zzzeaa... no te conozzzco, no pienzzo hacerte favorezzz
+Kiki: ¿Y si te lo intercambio por algo mas?
+Serpiente: No lo zze... hay pocazz cozzazz que me guzztan mazz que lazz florezzz...
 - Jugar
 	do irAlMinijuego()
 => END
 
 ~ charla_dragon
-Dragon: Podras haber superado a la serpiente pero dudo que a mi... 
-Dragon: Te reto a que lo intentes
+Dragon: Aghh... tanto por hacer...
+Dragon: Realmente lo hacen a uno estresar con tantas cosas
+Dragon: ...¿y ocuparme yo de descubir de donde salio?...No lo puedo creer
+Dragon: ¡AY!¡Que susto!... que haces aca?
+Nani: Perdon que lo moleste, veo que esta ocupado
+Dragon: Aghh...si... disculpa mi mala cara, te puedo ayudar con algoDragon:
+Nani:¡En realidad si! Hace unos dias visite la muralla y ahora estoy buscando un hueso y pensaba que quiza...
+Dragon: ¡Fuiste vos! Dios mio.. a quien se le ocurre dejar huesos en un monumento historico?...si supieras lo que me costo tu hueso... es dificil mantener el respeto con tanta suciedad!
+Dragon: ...bueno...deberias apurarte, estan por limpiar el lugar... ¡los turistas son tan sucios!
 - Jugar
 	do irAlMinijuego()
 => END

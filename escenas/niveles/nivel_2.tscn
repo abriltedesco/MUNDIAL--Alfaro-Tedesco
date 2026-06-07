@@ -1,44 +1,47 @@
 [gd_scene format=3 uid="uid://cs0gsof0v85xj"]
 
 [ext_resource type="Script" uid="uid://c2nfb85qn371n" path="res://scripts/niveles/nivel_2.gd" id="1_68v64"]
-[ext_resource type="Texture2D" uid="uid://dwo834m0rocd6" path="res://assets/china.webp" id="1_rcqas"]
+[ext_resource type="Texture2D" uid="uid://d8u2u4chrgsp" path="res://assets/china2.jpg" id="2_btu8m"]
 [ext_resource type="PackedScene" uid="uid://cmxphiwuuykvs" path="res://escenas/enemigos/dragon.tscn" id="2_h74xc"]
 [ext_resource type="PackedScene" uid="uid://dx33uyvug4c1i" path="res://escenas/dog2.tscn" id="2_wyhoh"]
 [ext_resource type="PackedScene" uid="uid://c52ob5hy8jrwh" path="res://escenas/hueso.tscn" id="4_h74xc"]
 [ext_resource type="PackedScene" uid="uid://cc708mfd503lv" path="res://escenas/huesosActualizar.tscn" id="6_btu8m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wyhoh"]
-size = Vector2(1223, 20)
+size = Vector2(1223, 45)
 
 [node name="nivel_2" type="Node2D" unique_id=1294128552]
 script = ExtResource("1_68v64")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1911484944]
-offset_right = 1162.0
-offset_bottom = 655.0
-texture = ExtResource("1_rcqas")
-
-[node name="nani" parent="." unique_id=32347266 instance=ExtResource("2_wyhoh")]
-position = Vector2(211, 577)
+offset_left = -2.0
+offset_top = -203.0
+offset_right = 1302.0
+offset_bottom = 693.0
+texture = ExtResource("2_btu8m")
 
 [node name="dragon" parent="." unique_id=354094147 instance=ExtResource("2_h74xc")]
-position = Vector2(759, 576)
+position = Vector2(585, 468)
 scale = Vector2(4, 4)
 
 [node name="Limites" type="StaticBody2D" parent="." unique_id=708135692]
 collision_layer = 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Limites" unique_id=761197665]
-polygon = PackedVector2Array(10, 644, 546, 517, 616, 512, 1164, 649, 1156, 6, 4, -7)
+position = Vector2(2, -2)
+polygon = PackedVector2Array(1, 641, 6, 517, 72, 480, 580, 481, 773, 480, 861, 484, 906, 517, 996, 525, 1053, 533, 1148, 656, 1156, 6, 4, -7)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Limites" unique_id=2032867440]
-position = Vector2(588.5, 655)
+position = Vector2(588.5, 667.5)
 shape = SubResource("RectangleShape2D_wyhoh")
 
 [node name="hueso" parent="." unique_id=686890677 instance=ExtResource("4_h74xc")]
-position = Vector2(903, 617)
+position = Vector2(627, 507)
 nivel = 2
 
 [node name="huesosActualizacion" parent="." unique_id=1599886567 instance=ExtResource("6_btu8m")]
+
+[node name="nani" parent="." unique_id=32347266 instance=ExtResource("2_wyhoh")]
+position = Vector2(200, 492)
 
 [connection signal="recogido" from="hueso" to="." method="_on_hueso_recogido"]

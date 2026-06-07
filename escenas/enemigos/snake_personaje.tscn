@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://grc1h0aer7ce"]
 
-[ext_resource type="Texture2D" uid="uid://cd4thvlohn8gy" path="res://assets/snake.png" id="1_3lhxi"]
 [ext_resource type="Script" uid="uid://lwpm141c1t1n" path="res://scripts/enemigos/snake_personaje.gd" id="1_s74oe"]
+[ext_resource type="Texture2D" uid="uid://cp61olp2e1ytt" path="res://assets/snakeF.png" id="2_jc45x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s74oe"]
 size = Vector2(88, 95)
@@ -16,7 +16,7 @@ collision_layer = 4
 script = ExtResource("1_s74oe")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=572072332]
-texture = ExtResource("1_3lhxi")
+texture = ExtResource("2_jc45x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1093330030]
 position = Vector2(2, 0.5)

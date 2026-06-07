@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bx1f6hcxjwoy5" path="res://minijuegos/snake/snake.gd" id="1_kp7at"]
 [ext_resource type="PackedScene" uid="uid://b3k6hw8024aj2" path="res://minijuegos/snake/serpiente.tscn" id="2_025dy"]
 [ext_resource type="Texture2D" uid="uid://c7yom1d78yhlr" path="res://assets/fondoSnake.png" id="2_alg2p"]
-[ext_resource type="Texture2D" uid="uid://du7q6n4l1xm1a" path="res://assets/apple (1).png" id="4_025dy"]
+[ext_resource type="Texture2D" uid="uid://bxp3x0nmbcabt" path="res://assets/pixil-frame-0 (3).png" id="4_025dy"]
 [ext_resource type="PackedScene" uid="uid://d4jsbrh317q78" path="res://minijuegos/ganaste.tscn" id="6_025dy"]
 [ext_resource type="PackedScene" uid="uid://ckwggfc52f1y6" path="res://minijuegos/barra_puntaje.tscn" id="7_025dy"]
 [ext_resource type="PackedScene" uid="uid://csqnl8lip1r47" path="res://minijuegos/perdiste.tscn" id="7_b1k3v"]

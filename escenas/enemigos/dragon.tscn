@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cmxphiwuuykvs"]
 
-[ext_resource type="Texture2D" uid="uid://bwhoam5ydeuii" path="res://assets/dragon.png" id="1_0cqr8"]
 [ext_resource type="Script" uid="uid://c6knislmoitxf" path="res://scripts/enemigos/dragon.gd" id="1_io5n6"]
+[ext_resource type="Texture2D" uid="uid://bhyk2p3x6ieeq" path="res://assets/dragon2.png" id="2_3v0w4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_io5n6"]
 radius = 20.615528
@@ -13,7 +13,8 @@ radius = 38.118237
 script = ExtResource("1_io5n6")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=707751171]
-texture = ExtResource("1_0cqr8")
+texture_filter = 1
+texture = ExtResource("2_3v0w4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1964636462]
 shape = SubResource("CircleShape2D_io5n6")

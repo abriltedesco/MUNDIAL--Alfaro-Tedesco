@@ -25,7 +25,7 @@ texture = ExtResource("2_bakxy")
 
 [node name="kiki" parent="." unique_id=2074595676 instance=ExtResource("3_tbi8e")]
 visibility_layer = 2
-position = Vector2(57, 593)
+position = Vector2(54, 577)
 
 [node name="snakePersonaje" parent="." unique_id=189556083 instance=ExtResource("4_lycuf")]
 position = Vector2(741, 401)
@@ -40,7 +40,7 @@ position = Vector2(-37, -70)
 polygon = PackedVector2Array(-12, 9, -7, 494, 472, 405, 806, 365, 1034, 346, 865, 420, 742, 507, 651, 613, 620, 652, 1162, 655, 1157, 4)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Limites" unique_id=85954502]
-position = Vector2(289.75, 589)
+position = Vector2(290, 571)
 shape = SubResource("RectangleShape2D_43uub")
 
 [node name="hueso" parent="." unique_id=686890677 instance=ExtResource("5_gajck")]

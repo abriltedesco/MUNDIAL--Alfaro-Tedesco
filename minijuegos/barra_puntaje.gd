@@ -6,6 +6,9 @@ class_name BarraPuntaje
 @onready var corazon2 = $vidas/contVidas/corazon2
 @onready var corazon3 = $vidas/contVidas/corazon3
 
+func _ready():
+	$LabelTiempo.visible=false
+
 func set_puntaje(valor: int) -> void:
 	puntaje.text = "PUNTAJE: " + str(valor)
 
@@ -16,3 +19,6 @@ func set_vidas(valor: int) -> void:
 
 func ocultar() -> void:
 	puntaje.visible = false
+	
+func mostrarTiempo() -> void:
+	$LabelTiempo.visible=true

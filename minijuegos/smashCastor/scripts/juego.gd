@@ -31,7 +31,8 @@ func _ready() -> void:
 	
 func _process(delta: float) -> void:
 	if Progreso.modoDificil and !$TiempoLimite.is_stopped():
-		$LabelTiempo.text = "Tiempo: " + str(int($TiempoLimite.time_left))
+		$barraPuntaje.mostrarTiempo()
+		$barraPuntaje/LabelTiempo.text = "Tiempo: " + str(int($TiempoLimite.time_left))
 
 func _on_timer_timeout() -> void:
 	var pozosDisp = []
@@ -99,7 +100,11 @@ func ganar() -> void:
 	timer.stop()
 	
 	Progreso.marcarMinijuegoGanado(4)
-	get_tree().change_scene_to_file("res://escenas/niveles/nivel_4.tscn")
+	
+	if Progreso.modoDificil:
+		get_tree().change_scene_to_file("res://escenas/niveles_dificiles.tscn")
+	else:
+		get_tree().change_scene_to_file("res://escenas/niveles/nivel_4.tscn")
 	
 func gameOver() -> void:
 	gameOverCartel.visible = true

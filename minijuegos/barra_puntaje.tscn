@@ -23,14 +23,31 @@ offset_bottom = 60.0
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_nxf2x")
 
+[node name="LabelTiempo" type="Label" parent="." unique_id=2099617542]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -58.5
+offset_top = 1.0
+offset_right = 58.5
+offset_bottom = 56.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.38039216, 0.43137255, 0.34509805, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_v8ppw")
+theme_override_font_sizes/font_size = 30
+text = "TIEMPO: 0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
 [node name="puntaje" type="Label" parent="." unique_id=1218314282]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = 23.5
-offset_top = 15.0
+offset_top = 3.0
 offset_right = 532.0
-offset_bottom = 48.0
+offset_bottom = 59.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0.38039216, 0.43137255, 0.34509805, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -38,6 +55,7 @@ theme_override_fonts/font = ExtResource("1_v8ppw")
 theme_override_font_sizes/font_size = 30
 text = "PUNTAJE: 0"
 horizontal_alignment = 2
+vertical_alignment = 1
 
 [node name="vidas" type="Control" parent="." unique_id=659779914]
 layout_mode = 3

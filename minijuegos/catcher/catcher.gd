@@ -33,7 +33,10 @@ func _on_kiki_catcher_catch_objeto_bueno() -> void:
 		temporizador.stop()
 		Progreso.marcarMinijuegoGanado(3)
 		await get_tree().create_timer(2.0).timeout
-		get_tree().change_scene_to_file("res://escenas/niveles/nivel_3.tscn")
+		if Progreso.modoDificil:
+			get_tree().change_scene_to_file("res://escenas/niveles_dificiles.tscn")
+		else:
+			get_tree().change_scene_to_file("res://escenas/niveles/nivel_3.tscn")
 	
 func _on_kiki_catcher_catch_objeto_malo() -> void:
 	$kikiCatcher.vidas -= 1

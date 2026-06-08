@@ -11,7 +11,7 @@
 size = Vector2(680.5, 20)
 
 [node name="nivel1" type="Node2D" unique_id=1647993528]
-position = Vector2(4, 0)
+position = Vector2(3, 0)
 script = ExtResource("1_tssy6")
 metadata/_edit_vertical_guides_ = [-874.0]
 

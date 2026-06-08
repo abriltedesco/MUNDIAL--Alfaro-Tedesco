@@ -43,7 +43,7 @@ Dragon: Realmente lo hacen a uno estresar con tantas cosas
 Dragon: ...¿y ocuparme yo de descubir de donde salio?...No lo puedo creer
 Dragon: ¡AY!¡Que susto!... que haces aca?
 Nani: Perdon que lo moleste, veo que esta ocupado
-Dragon: Aghh...si... disculpa mi mala cara, te puedo ayudar con algoDragon:
+Dragon: Aghh...si... disculpa mi mala cara, te puedo ayudar con algo?
 Nani: ¡En realidad si! Hace unos dias visite la muralla y ahora estoy buscando un hueso y pensaba que quiza...
 Dragon: ¡Fuiste vos! Dios mio.. a quien se le ocurre dejar huesos en un monumento historico?...si supieras lo que me costo tu hueso... es dificil mantener el respeto con tanta suciedad!
 Dragon: ...bueno...deberias apurarte, estan por limpiar el lugar... ¡los turistas son tan sucios!
@@ -69,6 +69,7 @@ Kiki: A mi tambien me falta algo, un hueso.. Lo vio usted por aca?
 Gallo: Ahora que lo pienso, creo que un cliente dejo uno el otro dia en la cocina... pero no tengo tiempo para eso! Tengo clientes sin atender!
 Kiki: Es un hueso muy importante... ¿Y si lo ayudo a atender? Tendria usted mas tiempo...
 Gallo: Mhh...esta bien... pero necesito que estes atenta, no me gusta repetir las cosas.
+Gallo: Todos mis pedidos estan saliendo igual: piden croissants, cafe y torta de chocolate.
 - Jugar
 	do irAlMinijuego()
 => END

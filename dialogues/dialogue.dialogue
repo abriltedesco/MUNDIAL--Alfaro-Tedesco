@@ -44,7 +44,7 @@ Dragon: ...¿y ocuparme yo de descubir de donde salio?...No lo puedo creer
 Dragon: ¡AY!¡Que susto!... que haces aca?
 Nani: Perdon que lo moleste, veo que esta ocupado
 Dragon: Aghh...si... disculpa mi mala cara, te puedo ayudar con algoDragon:
-Nani:¡En realidad si! Hace unos dias visite la muralla y ahora estoy buscando un hueso y pensaba que quiza...
+Nani: ¡En realidad si! Hace unos dias visite la muralla y ahora estoy buscando un hueso y pensaba que quiza...
 Dragon: ¡Fuiste vos! Dios mio.. a quien se le ocurre dejar huesos en un monumento historico?...si supieras lo que me costo tu hueso... es dificil mantener el respeto con tanta suciedad!
 Dragon: ...bueno...deberias apurarte, estan por limpiar el lugar... ¡los turistas son tan sucios!
 - Jugar
@@ -83,4 +83,12 @@ Nani: exactamente! aceptas este reto?
 - ¡Por supuesto que acepto!
 - Ya hice mucho... no gracias
 	do get_tree().quit()
+=> END
+
+~ final
+Kiki: Eres verdaderamente genial!
+Nani: Gracias por darnos la pata en esta aventura, esperamos que te hayas divertido!
+Kiki: Hasta la proxima querido amigo!
+Nani: Espero que no haya proxima... no quiero perder de nuevo mis huesitos
+Kiki: Bueeno claro, esperemos que nani sea mas cuidadosa con sus huesitos!
 => END

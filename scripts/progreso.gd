@@ -53,3 +53,10 @@ func huesoRecogido(nivel: int) -> bool:
 	
 func ganoJuegoCompleto() -> bool:
 	return datos.huesitosRecolectado >= datos.totalHuesitos
+	
+func ganoTodosDificiles() -> bool:
+	var lista = datos.get("ganadosDificil")
+	if lista != null and lista.size() >= 4:
+		return true
+	else:
+		return false

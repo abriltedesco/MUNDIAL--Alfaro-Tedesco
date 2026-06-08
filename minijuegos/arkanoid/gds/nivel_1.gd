@@ -42,7 +42,10 @@ func ganar() -> void:
 		
 		await get_tree().create_timer(2.0).timeout 
 		if Progreso.modoDificil:
-			get_tree().change_scene_to_file("res://escenas/niveles_dificiles.tscn")
+			if Progreso.ganoTodosDificiles():
+				get_tree().change_scene_to_file("res://escenas/final.tscn")
+			else:
+				get_tree().change_scene_to_file("res://escenas/niveles_dificiles.tscn")
 		else:
 			get_tree().change_scene_to_file("res://escenas/niveles/nivel_2.tscn")
 

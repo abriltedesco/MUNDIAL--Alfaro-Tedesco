@@ -8,6 +8,8 @@ var puntosParaGanar
 @onready var ganasteCartel = $ganaste
 
 func _ready() -> void:
+	#$pedido.visible=true
+	
 	puntaje=0
 	$kikiCatcher.vidas=3
 	gameOverCartel.visible = false
@@ -42,10 +44,10 @@ func _on_kiki_catcher_catch_objeto_malo() -> void:
 		temporizador.stop()
 
 func _on_timer_timeout() -> void:
-	var nuevoObjeto=objetoEscena.instantiate()
+	var nuevoObjeto = objetoEscena.instantiate()
 	var anchoPantalla = get_viewport_rect().size.x
 	nuevoObjeto.position = Vector2(randf_range(50, anchoPantalla - 50), -50)
-	nuevoObjeto.esBueno = randf() > 0.5
+	nuevoObjeto.esBueno = randf() > 0.4
 	add_child(nuevoObjeto)
 
 func _on_game_over_reempezar() -> void:

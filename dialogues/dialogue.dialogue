@@ -60,8 +60,15 @@ Ardilla: Y ojito que si me tocan pierden vida y me quedo con lo que me pertenece
 => END
 
 ~ charla_gallo
-Gallo: Que te pensas perrito que vas a ganar?
-Gallo: Te desafio a este juego... tene cuidado con lo que consumas!
+Kiki: Ayyy...Paris! No creo que Nani se moleste si paro a comer un croissant...
+Kiki: Disculpe...¿esto es una cafeteria, no?
+Gallo: Me gusta pensar que si! Dios mio... no hay muchos clientes por mi falta de mozos...
+Kiki: ¿Y por que le faltan mozos?
+Gallo: Nadie hace bien los pedidos, es intolerable!
+Kiki: A mi tambien me falta algo, un hueso.. Lo vio usted por aca?
+Gallo: Ahora que lo pienso, creo que un cliente dejo uno el otro dia en la cocina... pero no tengo tiempo para eso! Tengo clientes sin atender!
+Kiki: Es un hueso muy importante... ¿Y si lo ayudo a atender? Tendria usted mas tiempo...
+Gallo: Mhh...esta bien... pero necesito que estes atenta, no me gusta repetir las cosas.
 - Jugar
 	do irAlMinijuego()
 => END

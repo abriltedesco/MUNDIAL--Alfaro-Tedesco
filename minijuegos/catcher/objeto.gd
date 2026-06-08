@@ -3,11 +3,11 @@ extends Area2D
 var velocidadCaida:float=300.0
 @export var esBueno: bool=true
 var spritesBuenos: Array = ["croissant", "torta", "cafe"]
-var spritesMalos: Array  = ["malo1", "bueno"]
+var spritesMalos: Array  = ["malo1", "malo2"]
 
 func _ready() -> void:
-	for nombre in spritesBuenos + spritesMalos:
-		get_node(nombre).visible = false
+	for obj in spritesBuenos + spritesMalos:
+		get_node(obj).visible = false
 	var lista: Array = spritesBuenos if esBueno else spritesMalos
 	get_node(lista[randi() % lista.size()]).visible = true
 	if Progreso.modoDificil:

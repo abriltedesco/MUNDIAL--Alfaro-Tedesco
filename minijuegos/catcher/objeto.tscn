@@ -15,7 +15,7 @@ collision_layer = 2
 collision_mask = 0
 script = ExtResource("1_7gl7d")
 
-[node name="bueno" type="Sprite2D" parent="." unique_id=1819542738]
+[node name="malo2" type="Sprite2D" parent="." unique_id=1819542738]
 texture = ExtResource("1_r3t4l")
 
 [node name="cafe" type="Sprite2D" parent="." unique_id=1077390524]

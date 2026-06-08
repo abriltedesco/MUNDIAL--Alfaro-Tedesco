@@ -13,8 +13,6 @@ func _ready() -> void:
 		cantidadHuesos.text=str(int(cantidadHuesos.text) + 1)
 	else:
 		hueso.recogido.connect(_on_hueso_recogido)
-
-	
 	await DialogueManager.dialogue_ended
 
 func _on_hueso_recogido() -> void:

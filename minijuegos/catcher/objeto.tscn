@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://dpomnjepc474k" path="res://minijuegos/catcher/objeto.gd" id="1_7gl7d"]
 [ext_resource type="Texture2D" uid="uid://xp6a6uycamow" path="res://assets/comida/cookie_o.png" id="1_r3t4l"]
 [ext_resource type="Texture2D" uid="uid://c6w3wjvcm3t01" path="res://assets/comida/donut2_o.png" id="3_5oqlv"]
+[ext_resource type="Texture2D" uid="uid://k47nbiaogbfs" path="res://assets/comida/coffee.png" id="3_epcq0"]
+[ext_resource type="Texture2D" uid="uid://cn4xnd2jumj53" path="res://assets/comida/cake2_o.png" id="4_sbvyr"]
+[ext_resource type="Texture2D" uid="uid://c4fpkxqoad2b2" path="res://assets/comida/croissant_o.png" id="5_2vxpq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7gl7d"]
 size = Vector2(40, 43)
@@ -15,7 +18,16 @@ script = ExtResource("1_7gl7d")
 [node name="bueno" type="Sprite2D" parent="." unique_id=1819542738]
 texture = ExtResource("1_r3t4l")
 
-[node name="malo" type="Sprite2D" parent="." unique_id=672071514]
+[node name="cafe" type="Sprite2D" parent="." unique_id=1077390524]
+texture = ExtResource("3_epcq0")
+
+[node name="torta" type="Sprite2D" parent="." unique_id=1867875649]
+texture = ExtResource("4_sbvyr")
+
+[node name="croissant" type="Sprite2D" parent="." unique_id=1445185027]
+texture = ExtResource("5_2vxpq")
+
+[node name="malo1" type="Sprite2D" parent="." unique_id=672071514]
 texture = ExtResource("3_5oqlv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1796524663]

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cfjqoh7ns0ihp"]
 
 [ext_resource type="Script" uid="uid://ca3tbchv2lu5t" path="res://scripts/enemigos/gallo.gd" id="1_nypa3"]
-[ext_resource type="Texture2D" uid="uid://cw8xsmijigjru" path="res://assets/gallo.png" id="1_x27k3"]
+[ext_resource type="Texture2D" uid="uid://c2bllte5570hj" path="res://assets/gallo2.png" id="2_ff4ja"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nypa3"]
 radius = 95.33625
@@ -16,7 +16,7 @@ script = ExtResource("1_nypa3")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1584442717]
 position = Vector2(-2, -1.000001)
 scale = Vector2(0.5474359, 0.51976746)
-texture = ExtResource("1_x27k3")
+texture = ExtResource("2_ff4ja")
 
 [node name="ZonaDialogo" type="Area2D" parent="." unique_id=2105641816]
 

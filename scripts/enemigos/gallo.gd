@@ -3,7 +3,6 @@ extends StaticBody2D
 var hablando = false
 
 func _on_zona_dialogo_body_entered(body: Node2D) -> void:
-	print("ENTRÓ: ", body.name)
 	if body.name == "kiki" and not hablando and not Progreso.minijuegoGanado(3):
 		hablando = true
 		body.movIntro = true

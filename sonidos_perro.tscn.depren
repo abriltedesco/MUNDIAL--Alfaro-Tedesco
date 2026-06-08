@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cm8d3fn3i6vmm"]
 
 [ext_resource type="Script" uid="uid://by1feh8n73ohd" path="res://sonidos_perro.gd" id="1_g13i8"]
-[ext_resource type="AudioStream" uid="uid://bxub58uwpws3i" path="res://assets/sonidos/ladrido.mp3" id="2_fn0r5"]
-[ext_resource type="AudioStream" uid="uid://7wd04e13cr0v" path="res://assets/sonidos/feliz.wav" id="3_uay5t"]
+[ext_resource type="AudioStream" uid="uid://bxub58uwpws3i" path="res://assets/sonidps/ladrido.mp3" id="2_fn0r5"]
+[ext_resource type="AudioStream" uid="uid://7wd04e13cr0v" path="res://assets/sonidps/feliz.wav" id="3_uay5t"]
 
 [node name="sonidosPerro" type="Node2D" unique_id=771860959]
 script = ExtResource("1_g13i8")

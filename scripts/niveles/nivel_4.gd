@@ -6,10 +6,10 @@ extends Node2D
 func _ready() -> void:
 	$nani.playSonido("caminando")
 	cantidadHuesos.text = str(Progreso.datos.huesitosRecolectado)
-	if Progreso.minijuegoGanado(4):
+	if Progreso.minijuegoGanado(3):
 		enemigo.queue_free()
 		
-	if Progreso.huesoRecogido(4):
+	if Progreso.huesoRecogido(3):
 		hueso.queue_free()
 		cantidadHuesos.text=str(int(cantidadHuesos.text) + 1)
 	else:

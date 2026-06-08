@@ -60,10 +60,12 @@ Dragon: ...bueno...deberias apurarte, estan por limpiar el lugar... ¡los turist
 
 ~ charla_ardilla
 Nani: Hola, Ardilla! Estaba preocupada... no encontraba a nadie en el bosque!
-Ardilla: Es muy comun, estamos todos escondidos por aca... en qu´
-Ardilla: Ah mira vos! llegaste hasta acá... seré chiquita pero tambien rápida 
-Ardilla: A ver si pueden atraparlo a su querido hueso, deberán conseguirlo 10 veces
-Ardilla: Y ojito que si me tocan pierden vida y me quedo con lo que me pertenece
+Ardilla: Es muy comun, estamos todos escondidos por aca... en que puedo ayudarte?
+Nani: Estoy buscando un hueso y creo haberlo perdidon aca, lo viste por aca?
+Ardilla: Ah mira vos! En realidad si encontre un hueso... pero me encariñe con el...
+Nani: Es un hueso importante, realmente necesito recuperarlo
+Ardilla: Mhh.. realmente es una pena... tengo que irme, un placer conocerte!
+Nani: Espera!
 - Jugar
 	do irAlMinijuego()
 => END

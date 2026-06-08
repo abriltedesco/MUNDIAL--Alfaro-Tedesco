@@ -33,7 +33,7 @@ func _ready() -> void:
 		puntosParaGanar = 10
 	else:
 		$Timer.wait_time = 0.15
-		puntosParaGanar = 5
+		puntosParaGanar = 15
 		
 	nuevoJuego()
 	nuevoJuego()

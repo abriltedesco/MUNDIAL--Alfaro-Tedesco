@@ -5,7 +5,7 @@ extends Node2D
 @onready var gameOverCartel = $perdiste
 @onready var ganasteCartel = $ganaste
 
-var puntosParaGanar = 15
+var puntosParaGanar = 20
 var puntaje = 0
 var vidas = 3
 var ultimoTipo = null
@@ -23,7 +23,7 @@ func _ready() -> void:
 	actualizarUi()
 	
 	if Progreso.modoDificil:
-		$TiempoLimite.wait_time = 90.0
+		$TiempoLimite.wait_time = 70.0
 		$TiempoLimite.start()
 		
 	timer.wait_time = 0.35
@@ -49,7 +49,7 @@ func _on_timer_timeout() -> void:
 	pozoElegido.asomarse(esArdilla)
 	
 	if Progreso.modoDificil:
-		if puntaje < 5:
+		if puntaje < 10:
 			timer.wait_time = randf_range(0.3, 0.6)
 		else: 
 			timer.wait_time = randf_range(0.2, 0.4) 

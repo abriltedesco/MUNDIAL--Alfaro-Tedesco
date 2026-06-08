@@ -8,8 +8,6 @@ var puntosParaGanar
 @onready var ganasteCartel = $ganaste
 
 func _ready() -> void:
-	#$pedido.visible=true
-	
 	puntaje=0
 	$kikiCatcher.vidas=3
 	gameOverCartel.visible = false

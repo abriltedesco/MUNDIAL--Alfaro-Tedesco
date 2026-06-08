@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cm8d3fn3i6vmm"]
+[gd_scene format=3 uid="uid://fefn30kyna0v"]
 
 [ext_resource type="Script" uid="uid://by1feh8n73ohd" path="res://sonidos_perro.gd" id="1_g13i8"]
 [ext_resource type="AudioStream" uid="uid://bxub58uwpws3i" path="res://assets/sonidos/ladrido.mp3" id="2_fn0r5"]

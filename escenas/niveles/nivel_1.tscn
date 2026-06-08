@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://grc1h0aer7ce" path="res://escenas/enemigos/snake_personaje.tscn" id="4_lycuf"]
 [ext_resource type="PackedScene" uid="uid://c52ob5hy8jrwh" path="res://escenas/hueso.tscn" id="5_gajck"]
 [ext_resource type="PackedScene" uid="uid://cc708mfd503lv" path="res://escenas/huesosActualizar.tscn" id="6_bakxy"]
+[ext_resource type="PackedScene" uid="uid://bmh8rduy8nnpd" path="res://escenas/botonAnterior.tscn" id="7_tbi8e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_43uub"]
 size = Vector2(680.5, 20)
@@ -47,5 +48,9 @@ shape = SubResource("RectangleShape2D_43uub")
 position = Vector2(840, 381)
 
 [node name="huesosActualizacion" parent="." unique_id=1599886567 instance=ExtResource("6_bakxy")]
+
+[node name="Button" parent="." unique_id=1262916932 instance=ExtResource("7_tbi8e")]
+offset_top = 27.0
+offset_bottom = 114.0
 
 [connection signal="recogido" from="hueso" to="." method="_on_hueso_recogido"]

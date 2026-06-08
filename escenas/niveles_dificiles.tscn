@@ -29,7 +29,6 @@ collision_mask = 16
 escena = "res://minijuegos/snake/snake.tscn"
 banderaSprite = "res://assets/banderas/brasil.png"
 banderaSpriteBloqueada = "res://assets/banderas/brasil_bloqueada.png"
-nivel = 1
 
 [node name="banderaDificil3" parent="." unique_id=529267131 instance=ExtResource("3_s705q")]
 position = Vector2(629, 220)

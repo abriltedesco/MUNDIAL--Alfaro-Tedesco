@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bmh8rduy8nnpd"]
+
+[ext_resource type="FontFile" uid="uid://pr6n8kfsqxqb" path="res://assets/retropix.ttf" id="1_8280g"]
+[ext_resource type="Script" uid="uid://ck321bkobkq66" path="res://scripts/button.gd" id="2_x7bm4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fiey3"]
+
+[node name="Button" type="Button" unique_id=1262916932]
+offset_left = 13.0
+offset_top = 24.0
+offset_right = 72.0
+offset_bottom = 111.0
+theme_override_fonts/font = ExtResource("1_8280g")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fiey3")
+text = "<"
+script = ExtResource("2_x7bm4")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

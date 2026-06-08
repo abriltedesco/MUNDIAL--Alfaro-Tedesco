@@ -45,8 +45,8 @@ func _on_timer_timeout() -> void:
 		return
 		
 	var pozoElegido = pozosDisp.pick_random()
-	var esHueso = elegirRandom()
-	pozoElegido.asomarse(esHueso)
+	var esArdilla = elegirRandom()
+	pozoElegido.asomarse(esArdilla)
 	
 	if Progreso.modoDificil:
 		if puntaje < 5:
@@ -61,21 +61,21 @@ func _on_timer_timeout() -> void:
 	timer.start()
 	
 func elegirRandom() -> bool:
-	var esHueso = randf() < 0.35
+	var esArdilla = randf() < 0.35
 
-	if ultimoTipo != null and repeticionesTipo >= 2 and esHueso == ultimoTipo:
-		esHueso = !ultimoTipo
+	if ultimoTipo != null and repeticionesTipo >= 2 and esArdilla == ultimoTipo:
+		esArdilla = !ultimoTipo
 	
-	if ultimoTipo == esHueso:
+	if ultimoTipo == esArdilla:
 		repeticionesTipo += 1
 	else:
-		ultimoTipo = esHueso
+		ultimoTipo = esArdilla
 		repeticionesTipo = 1
 		
-	return esHueso
+	return esArdilla
 	
-func _on_pozo_golpeado(esHueso: bool) -> void:
-	if esHueso:
+func _on_pozo_golpeado(esArdilla: bool) -> void:
+	if esArdilla:
 		$huesoRecolectado.play()
 		puntaje += 1
 	else:

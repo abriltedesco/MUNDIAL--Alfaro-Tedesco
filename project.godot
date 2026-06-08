@@ -31,6 +31,10 @@ layout/style_directory={}
 layout/style_list=["res://styles/dialogueCuadro.tres"]
 layout/default_style="res://styles/dialogueCuadro.tres"
 
+[display]
+
+mouse_cursor/custom_image="uid://nqsbtgmpgnjm"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")

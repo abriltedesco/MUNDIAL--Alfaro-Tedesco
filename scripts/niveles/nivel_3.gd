@@ -3,7 +3,7 @@ extends Node2D
 @onready var hueso = $hueso
 @onready var cantidadHuesos=$huesosActualizacion/cantidad
 func _ready() -> void:
-	$nani.playSonido("caminando")
+	$kiki.playSonido("caminando")
 	cantidadHuesos.text = str(Progreso.datos.huesitosRecolectado)
 	if Progreso.minijuegoGanado(3):
 		enemigo.queue_free()

@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://byb500354qvsc" path="res://escenas/enemigos/ardilla.tscn" id="3_2is2x"]
 [ext_resource type="PackedScene" uid="uid://c52ob5hy8jrwh" path="res://escenas/hueso.tscn" id="4_hl28h"]
 [ext_resource type="PackedScene" uid="uid://cc708mfd503lv" path="res://escenas/huesosActualizar.tscn" id="6_pntjy"]
+[ext_resource type="PackedScene" uid="uid://bmh8rduy8nnpd" path="res://escenas/botonAnterior.tscn" id="7_2u6ay"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x8fin"]
 size = Vector2(1228, 557)
@@ -48,5 +49,7 @@ position = Vector2(1029, 610)
 nivel = 4
 
 [node name="huesosActualizacion" parent="." unique_id=1599886567 instance=ExtResource("6_pntjy")]
+
+[node name="Button" parent="." unique_id=1262916932 instance=ExtResource("7_2u6ay")]
 
 [connection signal="recogido" from="hueso" to="." method="_on_hueso_recogido"]

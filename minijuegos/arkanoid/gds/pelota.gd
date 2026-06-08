@@ -12,7 +12,7 @@ var vida_restada = false
 
 func _ready() -> void:
 	if Progreso.modoDificil:
-		veloc = 430
+		veloc = 330
 	velocity = Vector2(veloc* -1, veloc)
 	
 func restarVida() -> void:

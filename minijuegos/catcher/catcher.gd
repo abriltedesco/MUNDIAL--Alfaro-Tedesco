@@ -25,6 +25,7 @@ func _ready() -> void:
 		puntosParaGanar = 10
 	
 func _on_kiki_catcher_catch_objeto_bueno() -> void:
+	$sumaPunto.play()
 	puntaje += 1
 	$barraPuntaje.set_puntaje(puntaje)
 	
@@ -42,6 +43,7 @@ func _on_kiki_catcher_catch_objeto_bueno() -> void:
 			get_tree().change_scene_to_file("res://escenas/niveles/nivel_3.tscn")
 	
 func _on_kiki_catcher_catch_objeto_malo() -> void:
+	$restaPunto.play()
 	$kikiCatcher.vidas -= 1
 	$barraPuntaje.set_vidas($kikiCatcher.vidas)
 		

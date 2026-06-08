@@ -2,16 +2,23 @@
 Kiki: Hola Nani
 Nani: Hola Kiki..
 do nani.play("llorando")
+do nani.playSonido("triste")
 Kiki: ¿Qué pasó? ¿Por qué lloras?
 Nani: Perdí todos mis huesitos por el mundo...
 do kiki.play("ladrar")
+do kiki.playSonido("ladrido")
 Kiki: No te preocupes! Yo te ayudaré a buscarlos
 do kiki.play("walkF")
+do nani.playSonido("feliz")
 Nani: Pero... no podemos solas.
 Kiki: Tienes razón... [wait=3] AY! Ya se quien podría ayudarnos
 Nani: Enserio????
+do nani.play("dejaDeLlorar")
+do nani.play("default")
 Kiki: Si!!! [wait=2] ¿Te unirás a nuestra aventura?
 - ¡Por supuesto que las ayudaré!
+	do nani.playSonido("feliz")
+	do kiki.playSonido("feliz")
 - No puedo ahora...
 	do get_tree().quit()
 Kiki: Que alegría que te nos unas!
@@ -78,6 +85,7 @@ Gallo: Todos mis pedidos estan saliendo igual: piden croissants, cafe y torta de
 Kiki: Ay que emocion! los recuperaste todos
 Nani: No sabes cuanto te lo agradecemos
 Kiki: Eres increible!
+do nani.playSonido("feliz")
 Nani: Asi es! y sabes que? 
 Kiki: tenemos un desafio extra si te divertiste acompañandonos en esta aventura
 Nani: exactamente! aceptas este reto?
@@ -89,7 +97,9 @@ Nani: exactamente! aceptas este reto?
 ~ final
 Kiki: Eres verdaderamente genial!
 Nani: Gracias por darnos la pata en esta aventura, esperamos que te hayas divertido!
+do nani.playSonido("feliz")
 Kiki: Hasta la proxima querido amigo!
 Nani: Espero que no haya proxima... no quiero perder de nuevo mis huesitos
+do nani.play("ladrar")
 Kiki: Bueeno claro, esperemos que nani sea mas cuidadosa con sus huesitos!
 => END

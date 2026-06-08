@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dy6nni60lxusk" path="res://assets/dogs/mix.png" id="1_mtmyj"]
 [ext_resource type="Script" uid="uid://pwpglr4jn3bm" path="res://scripts/dog_1.gd" id="1_sxf1b"]
+[ext_resource type="PackedScene" uid="uid://cm8d3fn3i6vmm" path="res://sonidos_perro.tscn" id="3_p5xao"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sxf1b"]
 atlas = ExtResource("1_mtmyj")
@@ -152,3 +153,5 @@ animation = &"ladrar"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=813979889]
 position = Vector2(0, 22.25)
 shape = SubResource("RectangleShape2D_fxkju")
+
+[node name="sonidosPerro" parent="." unique_id=771860959 instance=ExtResource("3_p5xao")]

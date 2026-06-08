@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://ckwggfc52f1y6" path="res://minijuegos/barra_puntaje.tscn" id="5_2yt0b"]
 [ext_resource type="PackedScene" uid="uid://csqnl8lip1r47" path="res://minijuegos/perdiste.tscn" id="7_lmv6b"]
 [ext_resource type="PackedScene" uid="uid://d4jsbrh317q78" path="res://minijuegos/ganaste.tscn" id="8_4gv61"]
+[ext_resource type="AudioStream" uid="uid://cu8jpep4c6xgr" path="res://assets/sonidps/ardillaTocada.mp3" id="8_5qyle"]
+[ext_resource type="AudioStream" uid="uid://erkefejh34ck" path="res://assets/sonidps/comer.mp3" id="9_7xw0x"]
 
 [node name="catcher" type="Node2D" unique_id=688498017]
 script = ExtResource("1_1i6gj")
@@ -31,6 +33,12 @@ autostart = true
 [node name="ganaste" parent="." unique_id=962983920 instance=ExtResource("8_4gv61")]
 
 [node name="barraPuntaje" parent="." unique_id=1394473309 instance=ExtResource("5_2yt0b")]
+
+[node name="restaPunto" type="AudioStreamPlayer2D" parent="." unique_id=1738035359]
+stream = ExtResource("8_5qyle")
+
+[node name="sumaPunto" type="AudioStreamPlayer2D" parent="." unique_id=95528933]
+stream = ExtResource("9_7xw0x")
 
 [connection signal="catchObjetoBueno" from="kikiCatcher" to="." method="_on_kiki_catcher_catch_objeto_bueno"]
 [connection signal="catchObjetoMalo" from="kikiCatcher" to="." method="_on_kiki_catcher_catch_objeto_malo"]

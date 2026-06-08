@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://csqnl8lip1r47" path="res://minijuegos/perdiste.tscn" id="5_hnn6f"]
 [ext_resource type="PackedScene" uid="uid://ckwggfc52f1y6" path="res://minijuegos/barra_puntaje.tscn" id="6_hnn6f"]
 [ext_resource type="PackedScene" uid="uid://d4jsbrh317q78" path="res://minijuegos/ganaste.tscn" id="6_rpcol"]
+[ext_resource type="AudioStream" uid="uid://cu8jpep4c6xgr" path="res://assets/sonidps/ardillaTocada.mp3" id="7_eqhoe"]
+[ext_resource type="AudioStream" uid="uid://l53l1c6flcey" path="res://assets/sonidps/hueso.mp3" id="7_rpcol"]
 
 [node name="juego" type="Node2D" unique_id=95531039]
 script = ExtResource("1_wg1hr")
@@ -45,5 +47,11 @@ escenaAreintentar = "res://minijuegos/smashCastor/escena/juego.tscn"
 
 [node name="TiempoLimite" type="Timer" parent="." unique_id=881478817]
 one_shot = true
+
+[node name="ardilla" type="AudioStreamPlayer2D" parent="." unique_id=324921199]
+stream = ExtResource("7_eqhoe")
+
+[node name="huesoRecolectado" type="AudioStreamPlayer2D" parent="." unique_id=568643453]
+stream = ExtResource("7_rpcol")
 
 [connection signal="timeout" from="TiempoLimite" to="." method="_on_tiempo_limite_timeout"]

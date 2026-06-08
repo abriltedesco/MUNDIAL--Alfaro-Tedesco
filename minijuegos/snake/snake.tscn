@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://d4jsbrh317q78" path="res://minijuegos/ganaste.tscn" id="6_025dy"]
 [ext_resource type="PackedScene" uid="uid://ckwggfc52f1y6" path="res://minijuegos/barra_puntaje.tscn" id="7_025dy"]
 [ext_resource type="PackedScene" uid="uid://csqnl8lip1r47" path="res://minijuegos/perdiste.tscn" id="7_b1k3v"]
+[ext_resource type="AudioStream" uid="uid://l53l1c6flcey" path="res://assets/sonidps/hueso.mp3" id="8_b1k3v"]
+[ext_resource type="AudioStream" uid="uid://cu8jpep4c6xgr" path="res://assets/sonidps/ardillaTocada.mp3" id="9_nl33x"]
 
 [node name="snake" type="Node2D" unique_id=1677063918]
 script = ExtResource("1_kp7at")
@@ -30,5 +32,11 @@ offset = Vector2(25, 25)
 escenaAreintentar = "res://minijuegos/snake/snake.tscn"
 
 [node name="barraPuntaje" parent="." unique_id=1394473309 instance=ExtResource("7_025dy")]
+
+[node name="sumaPunto" type="AudioStreamPlayer2D" parent="." unique_id=824659283]
+stream = ExtResource("8_b1k3v")
+
+[node name="restaPunto" type="AudioStreamPlayer2D" parent="." unique_id=598107271]
+stream = ExtResource("9_nl33x")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

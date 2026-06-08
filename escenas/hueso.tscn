@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dq4agausxlo0g" path="res://scripts/hueso.gd" id="1_aw50r"]
 [ext_resource type="Texture2D" uid="uid://na8ohh556qxj" path="res://assets/hueso.png" id="1_rhrh8"]
+[ext_resource type="AudioStream" uid="uid://cd63ic37j5oko" path="res://assets/sonidps/recolectar.wav" id="3_4tdxv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rhrh8"]
 radius = 6.5843916
@@ -20,5 +21,8 @@ texture = ExtResource("1_rhrh8")
 position = Vector2(0, 1.5258789e-05)
 rotation = -0.85346603
 shape = SubResource("CapsuleShape2D_rhrh8")
+
+[node name="sonido" type="AudioStreamPlayer2D" parent="." unique_id=524871160]
+stream = ExtResource("3_4tdxv")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -10,6 +10,7 @@ func _on_body_entered(body: Node2D) -> void:
 		
 		Progreso.recogerHueso(nivel)
 		emit_signal("recogido")
+		$sonido.play()
 		
 		if Progreso.ganoJuegoCompleto():
 			get_tree().change_scene_to_file("res://escenas/ganaste.tscn")

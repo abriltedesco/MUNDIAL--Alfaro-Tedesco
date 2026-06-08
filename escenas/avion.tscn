@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://imid7eomkbff" path="res://scripts/avion.gd" id="1_pcra2"]
 [ext_resource type="Texture2D" uid="uid://c5y00xhi7pbmu" path="res://assets/kikiA.png" id="2_pcra2"]
 [ext_resource type="Texture2D" uid="uid://dh2pd3v6j07xr" path="res://assets/naniA.png" id="3_v8k2v"]
+[ext_resource type="AudioStream" uid="uid://cws4k0ugkahra" path="res://assets/sonidps/avion.mp3" id="5_v8k2v"]
 
 [node name="avion" type="CharacterBody2D" unique_id=216925273]
 collision_layer = 16
@@ -33,3 +34,6 @@ texture = ExtResource("3_v8k2v")
 position = Vector2(0.6000061, -1.5999985)
 rotation = 1.5707964
 polygon = PackedVector2Array(0, -44, -16, -34, -11, -15, -67, -15, -67, 12, -12, 12, -25, 40, -26, 49, -15, 54, 19, 54, 26, 49, 26, 39, 11, 11, 52, 12, 59, 11, 65, 6, 65, -9, 63, -14, 57, -15, 11, -15, 17, -33)
+
+[node name="sonido" type="AudioStreamPlayer2D" parent="." unique_id=1728484594]
+stream = ExtResource("5_v8k2v")

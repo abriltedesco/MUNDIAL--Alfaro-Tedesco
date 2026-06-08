@@ -1,5 +1,6 @@
 extends CharacterBody2D
 @onready var animacion = $AnimatedSprite2D
+@onready var sonido = $sonidosPerro
 var movIntro = false
 const SPEED = 200.0 
 
@@ -37,7 +38,13 @@ func moverse() -> void:
 func play(nombreAnimacion: String) -> void:
 	$AnimatedSprite2D.play(nombreAnimacion)
 	
-	if nombreAnimacion == "llorando" or nombreAnimacion == "triste":
+	if nombreAnimacion == "llorando" or nombreAnimacion == "triste" or nombreAnimacion == "dejaDeLlorar":
 		$AnimatedSprite2D.scale = Vector2(0.2, 0.2)
 	else:
 		$AnimatedSprite2D.scale = Vector2(4.0, 4.0) 
+		
+func playSonido(nombre) -> void:
+	sonido.playSonido(nombre)
+	
+func detenerCaminata() -> void:
+	sonido.detenerCaminar()

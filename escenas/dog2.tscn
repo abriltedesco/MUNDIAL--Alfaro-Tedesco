@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dq1qxqx4wun6q" path="res://assets/dogs/llorando1.png" id="4_hh77p"]
 [ext_resource type="Texture2D" uid="uid://0plt7pxmnihk" path="res://assets/dogs/llorando2.png" id="5_3hcfe"]
 [ext_resource type="Texture2D" uid="uid://bknvgyvpd5fsr" path="res://assets/dogs/feliz.png" id="7_b8rlx"]
+[ext_resource type="PackedScene" uid="uid://cm8d3fn3i6vmm" path="res://sonidos_perro.tscn" id="8_b8rlx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8uoa2"]
 atlas = ExtResource("1_q6qqt")
@@ -237,12 +238,12 @@ script = ExtResource("1_1l066")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1501835711]
 texture_filter = 1
-position = Vector2(63.000004, 40.00001)
-scale = Vector2(0.2294426, 0.23103276)
+position = Vector2(0.25781298, 0.37726402)
+scale = Vector2(0.09157698, 0.08785527)
 sprite_frames = SubResource("SpriteFrames_tb13o")
-frame = 3
-frame_progress = 0.6433077
+frame_progress = 0.65065205
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1544336448]
-position = Vector2(0.0625, 31.125)
 shape = SubResource("RectangleShape2D_u644f")
+
+[node name="sonidosPerro" parent="." unique_id=771860959 instance=ExtResource("8_b8rlx")]

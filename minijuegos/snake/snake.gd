@@ -134,6 +134,7 @@ func chequearEstaEnMapa():
 		restarVida()
 		
 func restarVida() -> void:
+	$restaPunto.play()
 	vidas -= 1
 	$Timer.stop()
 	juegoEmpezado = false
@@ -153,6 +154,7 @@ func chequearComida():
 		return
 	if datos[0]==comidaPos:
 		puntaje+=1
+		$sumaPunto.play()
 		barra_puntaje.set_puntaje(puntaje)
 		if puntaje == puntosParaGanar:
 			ganaste()

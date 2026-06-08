@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://bhypxp3utlxem" path="res://scripts/ganaste.gd" id="1_twgdn"]
 [ext_resource type="PackedScene" uid="uid://dx33uyvug4c1i" path="res://escenas/dog2.tscn" id="2_twgdn"]
 [ext_resource type="PackedScene" uid="uid://dueiv3oruaibj" path="res://escenas/dog1.tscn" id="3_g0qwb"]
+[ext_resource type="AudioStream" uid="uid://dgwlksdhfypfk" path="res://assets/sonidps/ganarFinal.mp3" id="5_g0qwb"]
+[ext_resource type="AudioStream" uid="uid://cy7eu3ngy360e" path="res://assets/sonidps/parque.mp3" id="6_fbasp"]
 
 [node name="ganaste" type="Node2D" unique_id=1576550039]
 script = ExtResource("1_twgdn")
@@ -20,3 +22,10 @@ position = Vector2(36, 562)
 
 [node name="nani" parent="." unique_id=32347266 instance=ExtResource("2_twgdn")]
 position = Vector2(1027, 534)
+
+[node name="sonidoGanaste" type="AudioStreamPlayer2D" parent="." unique_id=419083041]
+stream = ExtResource("5_g0qwb")
+
+[node name="sonidoParque" type="AudioStreamPlayer2D" parent="." unique_id=2072942365]
+stream = ExtResource("6_fbasp")
+autoplay = true

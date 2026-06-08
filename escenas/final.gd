@@ -1,9 +1,13 @@
 extends Node2D
+@onready var kiki = $kiki
+@onready var nani = $nani
 
 func _ready() -> void:
-	$kiki.play("ladrar")
-	$nani.play("default")
+	$sonidoParque.play()
+	kiki.play("ladrar")
+	nani.play("default")
 	
+	$sonidoGanaste.play()
 	var dialogo = load("res://dialogues/dialogue.dialogue")
 	var escenaGlobo = load("res://dialogues/globo_dialogo.tscn").instantiate()
 	add_child(escenaGlobo)

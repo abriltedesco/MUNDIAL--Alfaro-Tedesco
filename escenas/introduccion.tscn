@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dx33uyvug4c1i" path="res://escenas/dog2.tscn" id="2_2tfop"]
 [ext_resource type="PackedScene" uid="uid://dueiv3oruaibj" path="res://escenas/dog1.tscn" id="3_m7esa"]
 [ext_resource type="Texture2D" uid="uid://bfq2sjodvpf26" path="res://assets/parque.jpg" id="4_2tfop"]
+[ext_resource type="AudioStream" uid="uid://cy7eu3ngy360e" path="res://assets/sonidps/parque.mp3" id="5_m7esa"]
 
 [node name="introduccion" type="Node2D" unique_id=795473019]
 script = ExtResource("1_bgv6q")
@@ -20,3 +21,7 @@ position = Vector2(553, 549)
 
 [node name="kiki" parent="." unique_id=2074595676 instance=ExtResource("3_m7esa")]
 position = Vector2(36, 562)
+
+[node name="sonidoParque" type="AudioStreamPlayer2D" parent="." unique_id=977979805]
+stream = ExtResource("5_m7esa")
+autoplay = true

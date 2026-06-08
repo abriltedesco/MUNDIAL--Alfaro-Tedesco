@@ -4,11 +4,15 @@ extends Node2D
 @onready var nani = $nani
 
 func _ready() -> void:
+	$sonidoParque.play()
 	kiki.movIntro = true
 	nani.movIntro =true
+	$sonidoGanaste.play()
 	
 	nani.play("walkR")
 	kiki.play("walkR")
+	kiki.playSonido("caminando")
+	nani.playSonido("caminando")
 	nani.get_node("AnimatedSprite2D").flip_h = true 
 	
 	var tween = create_tween()
@@ -19,9 +23,13 @@ func _ready() -> void:
 	tween.tween_property(nani, "position:x", 650, 3.0)
 	tween.set_parallel(false) 
 	await tween.finished
+	kiki.detenerCaminata()
+	nani.detenerCaminata()
 	
 	kiki.play("ladrar")
+	kiki.playSonido("ladrido")
 	nani.play("default")
+	nani.playSonido("feliz")
 	
 	var dialogo = load("res://dialogues/dialogue.dialogue")
 

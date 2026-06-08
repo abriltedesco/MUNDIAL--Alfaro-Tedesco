@@ -1,5 +1,6 @@
 extends CharacterBody2D
 @onready var animacion = $AnimatedSprite2D
+@onready var sonido = $sonidosPerro
 var movIntro = false
 const SPEED = 200.0 
 
@@ -35,3 +36,8 @@ func moverse() -> void:
 
 func play(nombreAnimacion: String) -> void:
 	animacion.play(nombreAnimacion)
+	
+func playSonido(nombre) -> void:
+	sonido.playSonido(nombre)
+func detenerCaminata() -> void:
+	sonido.detenerCaminar()

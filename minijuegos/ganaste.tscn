@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://d4jsbrh317q78"]
 
 [ext_resource type="FontFile" uid="uid://pr6n8kfsqxqb" path="res://assets/retropix.ttf" id="1_1fn7c"]
+[ext_resource type="Script" uid="uid://by4fkg5600m46" path="res://minijuegos/ganaste.gd" id="1_ti7kr"]
 [ext_resource type="Texture2D" uid="uid://wsak508n12oh" path="res://assets/paw.png" id="2_bctok"]
+[ext_resource type="AudioStream" uid="uid://bamg8q1nputcj" path="res://assets/sonidps/exito.wav" id="3_hk7j4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bctok"]
 bg_color = Color(0, 0.46666667, 0.44313726, 1)
@@ -11,6 +13,7 @@ shadow_size = 8
 shadow_offset = Vector2(1, 1)
 
 [node name="ganaste" type="CanvasLayer" unique_id=962983920]
+script = ExtResource("1_ti7kr")
 
 [node name="Panel" type="Panel" parent="." unique_id=840307921]
 anchors_preset = 8
@@ -50,3 +53,6 @@ vertical_alignment = 1
 position = Vector2(857, 406)
 texture = ExtResource("2_bctok")
 flip_h = true
+
+[node name="sonido" type="AudioStreamPlayer2D" parent="." unique_id=1723998357]
+stream = ExtResource("3_hk7j4")

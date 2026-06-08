@@ -2,6 +2,9 @@ extends CharacterBody2D
 const SPEED = 250.0
 var puedeMoverse = true
 
+func _ready() -> void:
+	$sonido.play()
+
 func _physics_process(delta: float) -> void:
 	if puedeMoverse:
 		var direccion=Input.get_vector("moverI","moverD","moverArr","moverAb")

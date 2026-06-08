@@ -76,8 +76,10 @@ func elegirRandom() -> bool:
 	
 func _on_pozo_golpeado(esHueso: bool) -> void:
 	if esHueso:
+		$huesoRecolectado.play()
 		puntaje += 1
 	else:
+		$ardilla.play()
 		vidas -= 1
 		
 	actualizarUi()
@@ -96,6 +98,7 @@ func actualizarUi() -> void:
 	
 func ganar() -> void:
 	$TiempoLimite.stop()
+	ganasteCartel.playSonido()
 	ganasteCartel.visible = true
 	timer.stop()
 	

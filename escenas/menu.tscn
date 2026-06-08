@@ -14,7 +14,7 @@ border_color = Color(0.24313726, 0.24705882, 0.47058824, 1)
 expand_margin_top = 2.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d7r87"]
-bg_color = Color(0.32593971, 0.23308408, 0.18747008, 1)
+bg_color = Color(0.16862746, 0.2901961, 0.34901962, 1)
 corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15

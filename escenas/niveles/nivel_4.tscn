@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://blkou0fv6xaxe"]
 
-[ext_resource type="Texture2D" uid="uid://dgqupi53jnvtf" path="res://assets/toronto.webp" id="1_0mfq6"]
 [ext_resource type="Script" uid="uid://c8ats7rliyubv" path="res://scripts/niveles/nivel_4.gd" id="1_1namu"]
+[ext_resource type="Texture2D" uid="uid://dmno0msynu8bm" path="res://assets/fondocanada.jpg" id="2_pntjy"]
 [ext_resource type="PackedScene" uid="uid://dx33uyvug4c1i" path="res://escenas/dog2.tscn" id="2_x8fin"]
 [ext_resource type="PackedScene" uid="uid://byb500354qvsc" path="res://escenas/enemigos/ardilla.tscn" id="3_2is2x"]
 [ext_resource type="PackedScene" uid="uid://c52ob5hy8jrwh" path="res://escenas/hueso.tscn" id="4_hl28h"]
@@ -17,11 +17,13 @@ size = Vector2(1253.5, 81)
 script = ExtResource("1_1namu")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1691739291]
+clip_contents = true
 offset_left = -54.0
-offset_top = -3.0
-offset_right = 1189.0
-offset_bottom = 692.0
-texture = ExtResource("1_0mfq6")
+offset_top = 4.0
+offset_right = 1190.0
+offset_bottom = 656.0
+texture = ExtResource("2_pntjy")
+expand_mode = 1
 
 [node name="nani" parent="." unique_id=32347266 instance=ExtResource("2_x8fin")]
 position = Vector2(211, 577)

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://000ky6tg407b"]
 
 [ext_resource type="Script" uid="uid://bpiaym3nivo2v" path="res://minijuegos/smashCastor/scripts/juego.gd" id="1_wg1hr"]
-[ext_resource type="Texture2D" uid="uid://c7dw21ph0ovpk" path="res://minijuegos/smashCastor/assets/fondo.webp" id="1_x8kjt"]
+[ext_resource type="Texture2D" uid="uid://0h6bvrfk4w5b" path="res://minijuegos/smashCastor/assets/fondoSmash.png" id="2_eqhoe"]
 [ext_resource type="PackedScene" uid="uid://cffxbuj61mmi" path="res://minijuegos/smashCastor/escena/pozo.tscn" id="2_x8kjt"]
 [ext_resource type="PackedScene" uid="uid://csqnl8lip1r47" path="res://minijuegos/perdiste.tscn" id="5_hnn6f"]
 [ext_resource type="PackedScene" uid="uid://ckwggfc52f1y6" path="res://minijuegos/barra_puntaje.tscn" id="6_hnn6f"]
@@ -13,9 +13,9 @@
 script = ExtResource("1_wg1hr")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=987820046]
-offset_right = 1325.0
-offset_bottom = 773.0
-texture = ExtResource("1_x8kjt")
+offset_right = 1155.0
+offset_bottom = 649.6875
+texture = ExtResource("2_eqhoe")
 expand_mode = 5
 
 [node name="pozo" parent="." unique_id=1238289553 instance=ExtResource("2_x8kjt")]

@@ -1,34 +1,34 @@
 extends Area2D
 
-signal golpeado(esHueso: bool)
+signal golpeado(esArdilla: bool)
 
-@onready var spriteHueso = $hueso
+@onready var spriteHoja = $hoja
 @onready var spriteArdilla = $squirrel
 
 var tweenActual: Tween = null
 var arriba = false
-var muestraHueso = false
+var muestraArdilla = false
 
 func _ready():
 	input_pickable = true
 	
-	spriteHueso.visible = false
+	spriteHoja.visible = false
 	spriteArdilla.visible = false
-	spriteHueso.position.y = 0
+	spriteHoja.position.y = 0
 	spriteArdilla.position.y = 0
 	
-func asomarse(esHueso:bool) -> void:
+func asomarse(esArdilla:bool) -> void:
 	if arriba:
 		return
 		
 	arriba = true
-	muestraHueso = esHueso
+	muestraArdilla = esArdilla
 	
 	var objeto
-	if muestraHueso:
-		objeto = spriteHueso
-	else:
+	if muestraArdilla:
 		objeto = spriteArdilla
+	else:
+		objeto = spriteHoja
 	
 	objeto.visible = true
 	objeto.position.y = 0
@@ -44,13 +44,13 @@ func asomarse(esHueso:bool) -> void:
 
 func esconderse() -> void:
 	arriba = false
-	spriteHueso.visible = false
 	spriteArdilla.visible = false
-	spriteHueso.position.y = 0
+	spriteHoja.visible = false
 	spriteArdilla.position.y = 0
+	spriteHoja.position.y = 0
 	
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		if arriba:
-			golpeado.emit(muestraHueso)
+			golpeado.emit(muestraArdilla)
 			esconderse()

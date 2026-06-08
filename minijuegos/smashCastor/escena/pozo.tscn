@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://djoj1qpogp41h" path="res://minijuegos/smashCastor/scripts/pozo.gd" id="1_5x3ai"]
 [ext_resource type="Texture2D" uid="uid://drafitm3l8n7g" path="res://minijuegos/smashCastor/assets/pozo.png" id="2_balve"]
-[ext_resource type="Texture2D" uid="uid://na8ohh556qxj" path="res://assets/hueso.png" id="3_2b60a"]
+[ext_resource type="Texture2D" uid="uid://rm7b5abfcb83" path="res://minijuegos/smashCastor/assets/hoja.png" id="3_5x3ai"]
 [ext_resource type="Texture2D" uid="uid://c7xxhp2d7s86j" path="res://minijuegos/smashCastor/assets/squirrel.png" id="4_voixg"]
 
 [node name="pozo" type="Area2D" unique_id=1238289553]
@@ -13,10 +13,10 @@ position = Vector2(-2, 1.0000019)
 scale = Vector2(1.825, 1.6375)
 texture = ExtResource("2_balve")
 
-[node name="hueso" type="Sprite2D" parent="." unique_id=1508513064]
+[node name="hoja" type="Sprite2D" parent="." unique_id=1508513064]
 position = Vector2(-0.92187595, -3.953123)
 scale = Vector2(0.1079033, 0.116044566)
-texture = ExtResource("3_2b60a")
+texture = ExtResource("3_5x3ai")
 
 [node name="squirrel" type="Sprite2D" parent="." unique_id=1777857770]
 position = Vector2(-4.7683716e-07, -13)
